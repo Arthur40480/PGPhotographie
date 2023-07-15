@@ -1,8 +1,12 @@
+// import { Routes, Route } from "react-router-dom"
+
 function App() {
 
   return (
     <>
-    <div>Pierre Gibert Photographie</div>
+    <main className="main-app">
+      <h1>Pierre Gibert Photography</h1>
+    </main>
     </>
   )
 }
