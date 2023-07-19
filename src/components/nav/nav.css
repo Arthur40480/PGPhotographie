@@ -81,7 +81,7 @@ span {
     list-style-type: none;
 }
 
-li {
+.menu-nav li {
     margin-bottom: 40px;
     font-size:  60px;
     font-weight: bold;
