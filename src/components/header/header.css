@@ -1,0 +1,7 @@
+.header {
+    position: relative;
+    overflow: hidden;
+    background-image: url("../../assets/background_header.jpg");
+    background-size: cover;
+    height: 1050px;
+}
