@@ -1,0 +1,38 @@
+@keyframes cursor-animation {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+      50% {
+        opacity: 0;
+        transform: translate(-50%, 500%);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -50%);
+      }
+}
+
+.container-mouse-img {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%px;
+    height: 120px;
+}
+
+.container-cursor {
+  position: relative;
+}
+
+.mouse-cursor {
+    position: absolute;
+    top: 54px;
+    left: 54px;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: black;
+    animation: cursor-animation 2s infinite ease-in-out;
+}

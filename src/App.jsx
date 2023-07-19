@@ -1,12 +1,13 @@
-// import { Routes, Route } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
+import Home from "./pages/Home/Home"
+import "./App.css"
+
 
 function App() {
 
   return (
     <>
-    <main className="main-app">
-      <h1>Pierre Gibert Photography</h1>
-    </main>
+      <Home />
     </>
   )
 }
