@@ -30,8 +30,8 @@ function Nav() {
 
                 <ul className="menu-nav">
                     <li><NavLink exact to="/" activeClassName="active" className="nav-link">Accueil</NavLink></li>
-                    <li><NavLink to="/gallerie" activeClassName="active" className="nav-link">Galerie</NavLink></li>
-                    <li><NavLink to="/liens" activeClassName="active" className="nav-link">Liens utiles</NavLink></li>
+                    <li><NavLink to="/galerie" activeClassName="active" className="nav-link">Galerie</NavLink></li>
+                    <li><NavLink to="/liens-utiles" activeClassName="active" className="nav-link">Liens utiles</NavLink></li>
                     <li><NavLink to="/contact" activeClassName="active" className="nav-link">Contact</NavLink></li>
                 </ul>
             </nav>

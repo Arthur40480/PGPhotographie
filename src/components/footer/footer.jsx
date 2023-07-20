@@ -7,11 +7,11 @@ function Footer() {
         <footer>
             <img className="footer-logo" src={logo} alt="Troisième logo du site" />
             <ul className="footer-list">
-                <li><a href="">Accueil</a></li>
-                <li><a href="">Galerie</a></li>
-                <li><a href="">Liens utiles</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Mentions légales</a></li>
+                <li><NavLink exact to="/" className="footer-link">Accueil</NavLink></li>
+                <li><NavLink to="/galerie" className="footer-link">Galerie</NavLink></li>
+                <li><NavLink to="/liens-utiles" className="footer-link">Liens utiles</NavLink></li>
+                <li><NavLink to="/contact" className="footer-link">Contact</NavLink></li>
+                <li><NavLink to="/mentions-legales" className="footer-link">Mentions légales</NavLink></li>
             </ul>
             <p className="copyright">Copyright 2023 Pierre Gibert Photographie. Tous droits réservés.</p>
         </footer>
