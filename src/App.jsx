@@ -9,7 +9,6 @@ import MentionsLegales from "./pages/MentionsLegales/MentionsLegales"
 import Error from "./pages/Error/Error"
 import "./App.css"
 
-
 function App() {
 
   return (
