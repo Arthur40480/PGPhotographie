@@ -2,7 +2,6 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./nav.css"
 import croix from "../../../public/croix.svg"
-import logo from "../../assets/logo2.png"
 
 function Nav() {
     
@@ -26,7 +25,6 @@ function Nav() {
             <nav className="nav" 
             style={{right: isOpen ? "0px" : "-100%" }}>
                 <img className="close-nav" src={croix} onClick={openOrCloseNav} alt="Image de croix"/>
-                <img className="logo-nav" src={logo} alt="Deuxième logo du site" />
 
                 <ul className="menu-nav">
                     <li><NavLink exact to="/" activeClassName="active" className="nav-link">Accueil</NavLink></li>
