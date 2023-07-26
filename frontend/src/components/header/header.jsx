@@ -1,6 +1,6 @@
-import "./header.css"
-import Banner from "../banner/banner"
-import Nav from "../nav/nav"
+import "./header.css";
+import Banner from "../banner/banner";
+import Nav from "../nav/nav";
 
 
 function Header() {
@@ -12,6 +12,6 @@ function Header() {
             </header>
         </>
     )
-}
+};
 
 export default Header;
