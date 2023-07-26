@@ -1,6 +1,6 @@
-import { NavLink } from "react-router-dom"
-import logo from "../../assets/Logo3.png"
-import "./footer.css"
+import { NavLink } from "react-router-dom";
+import logo from "../../assets/Logo3.png";
+import "./footer.css";
 
 function Footer() {
     return (
@@ -16,6 +16,6 @@ function Footer() {
             <p className="copyright">Copyright 2023 Pierre Gibert Photographie. Tous droits réservés.</p>
         </footer>
     )
-}
+};
 
 export default Footer;

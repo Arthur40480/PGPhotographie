@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "./galleryButton.css"
+import "./galleryButton.css";
 
 function GalleryButton() {
     return (
@@ -36,6 +36,6 @@ function GalleryButton() {
             </NavLink>
         </div>
     )
-}
+};
 
 export default GalleryButton;

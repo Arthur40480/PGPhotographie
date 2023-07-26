@@ -1,0 +1,40 @@
+@import "../../styles/variables.css";
+
+.news-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    width: 100%;
+    min-height: 400px;
+    background-color: var(--secondary-color);
+}
+
+.news-section span {
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.news-section-title {
+    margin-bottom: 40px;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    background-color: var(--tertiary-color);
+}
+
+.news-img {
+    color: white;
+}
+
+.news-content {
+    margin: 20px  ;
+}
+
+.news-description {
+    margin-top: 10px;
+}
+
+.news-content-title {
+    margin-bottom: 10px;
+}

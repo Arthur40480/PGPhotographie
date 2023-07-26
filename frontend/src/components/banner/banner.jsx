@@ -1,5 +1,5 @@
-import "./banner.css"
-import Logo1 from "../../assets/logo1.png"
+import "./banner.css";
+import Logo1 from "../../assets/logo1.png";
 
 
 function Banner() {
@@ -12,6 +12,6 @@ function Banner() {
             </a>
         </>
     )
-}
+};
 
 export default Banner;

@@ -1,9 +1,9 @@
-import "./WelcomSection.css"
-import img1 from "../../assets/accueil_img_1.jpg"
-import img2 from "../../assets/accueil_img_2.jpg"
-import guillement1 from "../../../public/guillemet1.svg"
-import guillement2 from "../../../public/guillemet2.svg"
-import GalleryButton from "../galleryButton/galleryButton"
+import "./WelcomSection.css";
+import img1 from "../../assets/accueil_img_1.jpg";
+import img2 from "../../assets/accueil_img_2.jpg";
+import guillement1 from "../../../public/guillemet1.svg";
+import guillement2 from "../../../public/guillemet2.svg";
+import GalleryButton from "../galleryButton/galleryButton";
 
 function WelcomSection() {
     return(
@@ -28,6 +28,6 @@ function WelcomSection() {
             </section>
         </>
     )
-}
+};
 
 export default WelcomSection;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "./nav.css"
-import croix from "../../../public/croix.svg"
+import "./nav.css";
+import croix from "../../../public/croix.svg";
 
 function Nav() {
     
@@ -18,7 +18,7 @@ function Nav() {
                 item.classList.remove("li-animation");
               }
         })
-    }
+    };
     
     return (
         <>
@@ -43,6 +43,6 @@ function Nav() {
             </div>
         </>
     )
-}
+};
 
 export default Nav;

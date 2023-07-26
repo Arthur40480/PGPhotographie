@@ -1,13 +1,13 @@
-import { Routes, Route } from "react-router-dom"
-import Header from "./components/header/header"
-import Footer from "./components/footer/footer"
-import Home from "./pages/Home/Home"
-import Contact from "./pages/Contact/Contact"
-import Gallery from "./pages/Gallery/Gallery"
-import LiensUtiles from "./pages/LiensUtiles/LiensUtiles"
-import MentionsLegales from "./pages/MentionsLegales/MentionsLegales"
-import Error from "./pages/Error/Error"
-import "./App.css"
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
+import Home from "./pages/Home/Home";
+import Contact from "./pages/Contact/Contact";
+import Gallery from "./pages/Gallery/Gallery";
+import LiensUtiles from "./pages/LiensUtiles/LiensUtiles";
+import MentionsLegales from "./pages/MentionsLegales/MentionsLegales";
+import Error from "./pages/Error/Error";
+import "./App.css";
 
 function App() {
 
@@ -25,6 +25,6 @@ function App() {
       <Footer />
     </>
   )
-}
+};
 
-export default App
+export default App;
