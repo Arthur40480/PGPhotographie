@@ -16,14 +16,16 @@ function News() {
         return (
             <section className="news-section">
                 <h2 className="news-section-title">Actualités</h2>
-                {events.map(( {id, attributes }) => (
-                    <div key={id} className="news-content">
-                        <h3 className="news-content-title">{attributes.name}</h3>
-                        <p><span>Lieu:</span> {attributes.place}</p>
-                        <p><span>Dates:</span> {attributes.start_date} / {attributes.end_date}</p>
-                        <p className="news-description">{attributes.description}</p>
-                    </div>
-                ))}
+                { error ? (
+                    <p className="news-error">Un erreur est survenue !</p>
+                ) : ( events.map(( { id, attributes }) => (
+                        <div key={id} className="news-content">
+                            <h3 className="news-content-title">{attributes.name}</h3>
+                            <p><span>Lieu:</span> {attributes.place}</p>
+                            <p><span>Dates:</span> {attributes.start_date} / {attributes.end_date}</p>
+                            <p className="news-description">{attributes.description}</p>
+                        </div>
+                )))}
             </section>
         )
 };
