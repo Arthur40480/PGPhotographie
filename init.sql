@@ -1,0 +1,2 @@
+CREATE USER strapi;
+CREATE DATABASE strapi;
