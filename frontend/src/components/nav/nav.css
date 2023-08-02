@@ -71,6 +71,10 @@ span {
     z-index: 999;
 }
 
+.nav .active {
+    border-bottom: 4px solid white;
+}
+
 .close-nav {
     position: absolute;
     top: 10px;
@@ -116,7 +120,3 @@ span {
     color: inherit;
 }
 
-/* Styles pour les liens actifs */
-.active {
-    border-bottom: 4px solid var(--text-color);
-}

@@ -3,35 +3,26 @@ import "./collapse.css";
 import arrow_icon from "./../../../public/12.svg";
 import arrow_icon2 from "./../../../public/13.svg"
 
-function Collapse() {
+function Collapse({ data: { attributes: { title, subcategories } }, style }) {
 
+    console.log("subcategories dans Collapse:", subcategories.data);
     const [ isOpen, setIsOpen ] = useState(false);
+
     const categorie = [ 
         "Paysage",
         "Portrait",
         "Animaux",
         "Voiture",
         "Nature",
-        "Sport",
-        "Voiture",
-        "Moto",
-        "Paysage",
-        "Portrait",
-        "Animaux",
-        "Voiture",
-        "Nature",
-        "Sport",
-        "Voiture"];
+        "Sport",];
 
     function arrayTreatment(array) {
         const groupes = [];
         for (let i = 0; i < array.length; i += 20) {
             groupes.push(array.slice(i, i + 20));
         }
-        return groupes
+        console.log(groupes);
     };
-
-    const listGroups = arrayTreatment(categorie);
 
     function listEltCreation(array) {
         return array.map((element, index) => (
@@ -52,18 +43,13 @@ function Collapse() {
 
     return (
         <>
-            <nav className="collapse-nav">
+            <nav className="collapse-nav" style={style}>
                 <div className="collapse-header-nav">
-                    <h2 className="collapse-nav-title">Couleur</h2>
+                    <h2 className="collapse-nav-title">{title}</h2>
                     <img 
                     onClick={openCollapse} 
                     className={ isOpen ? "collapse-nav-icon opening" : "collapse-nav-icon closing" } 
                     src={arrow_icon} alt="Îcone de flêche"></img>
-                </div>
-                <div 
-                className="content-nav-category-open"
-                style={{display: isOpen ? "none" : "flex" }}>
-                    {listEltCreation(listGroups)}
                 </div>
             </nav>
         </>

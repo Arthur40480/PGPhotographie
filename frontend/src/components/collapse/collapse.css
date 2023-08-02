@@ -21,7 +21,7 @@
 
 @keyframes moveRight {
     0% {
-      transform: translateX(0); /* Position initiale */
+        transform: translateX(0); /* Position initiale */
     }
     50% {
         transform: translateX(10px); /* Déplacement vers la droite */
@@ -33,22 +33,25 @@
 
 /* Collapse */
 .collapse-nav {
+    position: absolute;
     display: flex;
     flex-direction: column;
     min-width: 15%;
     max-width: 20%;
     background-color: var(--tertiary-color);
-    opacity: 0.9;
     color: white;
-    box-shadow: 0 2px 4px var(--tertiary-color);
     border-radius: 5px;
+}
+
+.collapse-nav:hover {
+    opacity: 1;
 }
 
 .collapse-header-nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 5px;
+    margin: 10px;
 }
 
 .collapse-nav-title {
