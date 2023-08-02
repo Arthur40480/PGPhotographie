@@ -89,6 +89,8 @@ hr {
     width: 40%;
     margin-top: 135px;
     margin-bottom: 105px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 hr:before {
