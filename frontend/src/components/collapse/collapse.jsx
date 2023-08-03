@@ -5,41 +5,26 @@ import arrow_icon2 from "./../../../public/13.svg"
 
 function Collapse({ data: { attributes: { title, subcategories } }, style }) {
 
-    console.log("subcategories dans Collapse:", subcategories.data);
     const [ isOpen, setIsOpen ] = useState(false);
-
-    const categorie = [ 
-        "Paysage",
-        "Portrait",
-        "Animaux",
-        "Voiture",
-        "Nature",
-        "Sport",];
-
-    function arrayTreatment(array) {
-        const groupes = [];
-        for (let i = 0; i < array.length; i += 20) {
-            groupes.push(array.slice(i, i + 20));
-        }
-        console.log(groupes);
-    };
-
-    function listEltCreation(array) {
-        return array.map((element, index) => (
-            <ul className="collapse-nav-list" key={index}>
-                { element.map((cat) => (
-                    <li className="collapse-nav-li" key={cat}>
-                        <img className="collapse-li-nav-icon" src={arrow_icon2} alt="Îcone de flêche"></img>
-                        {cat}
-                    </li>
-                ))}
-            </ul>
-        ))
-    };
+    const listSubCategories = subcategories.data;
 
     function openCollapse() {
         setIsOpen(!isOpen);
     };
+
+    function listEltCreation(array) {
+        return (
+            <ul className="collapse-nav-list"
+            style={{display: isOpen ? "block" : "none"}}>
+                {array.map((cat, index) => (
+                    <li className="collapse-nav-li" key={cat + "" + index}>
+                        <img className="collapse-li-nav-icon" src={arrow_icon2} alt="Îcone de flêche"></img>
+                        {cat.attributes.title}
+                    </li>
+                ))}
+            </ul>
+        )
+    }
 
     return (
         <>
@@ -48,9 +33,10 @@ function Collapse({ data: { attributes: { title, subcategories } }, style }) {
                     <h2 className="collapse-nav-title">{title}</h2>
                     <img 
                     onClick={openCollapse} 
-                    className={ isOpen ? "collapse-nav-icon opening" : "collapse-nav-icon closing" } 
+                    className={ isOpen ? "collapse-nav-icon closing" : "collapse-nav-icon opening" } 
                     src={arrow_icon} alt="Îcone de flêche"></img>
                 </div>
+                {listEltCreation(listSubCategories)}
             </nav>
         </>
     )
