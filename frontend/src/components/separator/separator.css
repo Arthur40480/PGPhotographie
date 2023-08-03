@@ -1,0 +1,51 @@
+@import "../../styles/variables.css";
+
+@keyframes changeColor {
+    0%, 100% {
+        background-color: var(--text-color);
+    }
+    50% {
+        background-color: var(--secondary-color);
+    }
+    75% {
+        background-color: var(--tertiary-color);
+    }
+}
+
+@keyframes moveUpAndDown {
+    0%, 100% {
+      transform: translateY(-30px); 
+    }
+    50% {
+      transform: translateY(30px); 
+    }
+}
+
+.circle-1 {
+    animation: changeColor 3s infinite, moveUpAndDown 2s infinite;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circle-2 {
+    animation: changeColor 3s infinite, moveUpAndDown 2s infinite;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circle-3 {
+    animation: changeColor 3s infinite, moveUpAndDown 2s infinite;
+    animation-delay: 0.4s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circle-4 {
+    animation: changeColor 3s infinite, moveUpAndDown 2s infinite;
+    animation-delay: 0.6s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circle-5 {
+    animation: changeColor 3s infinite, moveUpAndDown 2s infinite;
+    animation-delay: 0.8s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
