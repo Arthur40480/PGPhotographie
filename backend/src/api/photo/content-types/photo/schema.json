@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "photos",
+  "info": {
+    "singularName": "photo",
+    "pluralName": "photos",
+    "displayName": "Photo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Legend": {
+      "type": "string"
+    },
+    "src": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "subcategory": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::subcategory.subcategory",
+      "inversedBy": "photos"
+    }
+  }
+}

@@ -20,6 +20,12 @@
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "subcategories"
+    },
+    "photos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::photo.photo",
+      "mappedBy": "subcategory"
     }
   }
 }
