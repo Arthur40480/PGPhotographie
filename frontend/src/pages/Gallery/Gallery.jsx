@@ -1,50 +1,39 @@
+import "./gallery.css";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import "./Gallery.css";
-import Collapse from "../../components/collapse/collapse";
-import Separator from "../../components/separator/separator";
-import backgroundGallery1 from "../../assets/categorie1_galerie.jpg"
-import backgroundGallery2 from "../../assets/categorie2_galerie.jpg"
+import PhotoContainer from "../../components/photoContainer/photoContainer.jsx";
 
 
 function Gallery() {
-  const [ categories, setCategories ] = useState([]);
+    const [ photoData, setPhotoData ] = useState([]);
+    const [ photoInfo, setPhotoInfo ] = useState([]);
+    const { id } = useParams();
+    
+    useEffect(() => {
+        axios.get("http://localhost:1337/api/subcategories?populate[0]=photos.src")
+            .then(({data}) => setPhotoData(data.data[id - 1].attributes.photos.data))
+    }, []);
 
-  const collapseStyle1 = {
-    position: "absolute",
-    top: "50px",
-    right: "50px",
-  };
+    useEffect(() => {
+        if(photoData.length > 0) {
+            const photoObject = extractPhotoData(photoData);
+            setPhotoInfo(photoObject);
+        }
+    }, [photoData]);
 
-  const collapseStyle2 = {
-    position: "absolute",
-    top: "50px",
-    left: "50px", 
-  };
-
-  useEffect(() => {
-    axios.get("http://localhost:1337/api/categories?populate=*")
-    .then(({ data }) => setCategories(data.data))
-  }, []);
+    function extractPhotoData(array) {
+        const photoObject = array.map(photo => ({
+            url: `http://localhost:1337${photo.attributes.src.data[0].attributes.url}`,
+            legend: photo.attributes.Legend
+        }));
+        return photoObject;
+    }
 
     return (
-      <main className="gallery-main">
-        <h1 className="gallery-title">Galerie</h1>
-        <section className="first-category-container">
-          <img className="first-background-img-gallery" src={backgroundGallery1} alt="Photo d'un bar laisser à l'abandon"></img>
-          { categories[0] && (
-            <Collapse data={categories[0]} style={collapseStyle1} />
-          )}
-        </section>
-        <Separator />
-        <section className="second-category-container">
-          <img className="second-background-img-gallery" src={backgroundGallery2} alt="Photo d'un bar laisser à l'abandon"></img>
-          { categories[0] && (
-            <Collapse data={categories[1]} style={collapseStyle2} />
-          )}
-        </section>
-      </main>
+        <>
+            <PhotoContainer data={photoInfo}/>
+        </>
     )
-  }
-  
-  export default Gallery;
+}
+export default Gallery;
