@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
-import "./galleryButton.css";
+import "./categoryButton.css";
 
-function GalleryButton() {
+function CategoryButton() {
     return (
         <div className="button-container">
-            <NavLink to="/galerie" activeClassName="active" className="gallery-link">
-                <div>Galerie </div>
+            <NavLink to="/Category" activeClassName="active" className="gallery-link">
+                <div>Galerie</div>
                 <div>
                 <svg width="50px" height="27px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -38,4 +38,4 @@ function GalleryButton() {
     )
 };
 
-export default GalleryButton;
+export default CategoryButton;
