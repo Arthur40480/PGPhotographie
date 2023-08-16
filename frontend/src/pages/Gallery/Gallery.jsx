@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PhotoContainer from "../../components/photoContainer/photoContainer.jsx";
 
-
 function Gallery() {
+    
     const [ photoData, setPhotoData ] = useState([]);
     const [ photoInfo, setPhotoInfo ] = useState([]);
     const { id } = useParams();
@@ -32,7 +32,7 @@ function Gallery() {
 
     return (
         <>
-            <PhotoContainer data={photoInfo}/>
+            <PhotoContainer data={photoInfo} />
         </>
     )
 }
