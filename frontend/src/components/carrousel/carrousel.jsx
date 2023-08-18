@@ -17,7 +17,7 @@ function Carrousel({ onClose, data, selectedImg }) {
     function ShowPreviousImg() {
         setImgCurrent(imgCurrent ===  0 ? lengthData - 1 : imgCurrent - 1)
     };
-    
+
     return (
         <>
             <div className="popup-container">
@@ -33,12 +33,41 @@ function Carrousel({ onClose, data, selectedImg }) {
                 <div className="legend-container">
                     <p className="legend">{selectedData.legend}</p>
                 </div>
-                <div className="little-carrousel">
-                    {data.slice(imgCurrent, imgCurrent + 5).map((photo, index) => (
-                        <div className="miniature-container" key={index}>
+                <div className="thumbnail-carrousel">
+                {lengthData >= 5 && (
+                    data.slice(imgCurrent, imgCurrent + 5).map((photo, index) => (
+                        <div 
+                        className={`thumbnail-container ${index === 0 ? 'current-thumbnail' : ''}`}
+                        key={index}
+                        >
                             <img src={photo.url} alt={photo.legend} />
                         </div>
-                    ))}
+                    ))
+                )}
+                {imgCurrent + 5 > lengthData && lengthData >= 5 && (
+                    data.slice(0, imgCurrent + 5 - lengthData).map((photo, index) => (
+                        <div className="thumbnail-container" key={index}>
+                            <img src={photo.url} alt={photo.legend} />
+                        </div>
+                    ))
+                )}
+                {lengthData < 5 && (
+                    data.slice(imgCurrent, lengthData).map((photo, index) => (
+                        <div 
+                        className={`thumbnail-container ${index === 0 ? 'current-thumbnail' : ''}`}
+                        key={index}
+                        >
+                            <img src={photo.url} alt={photo.legend} />
+                        </div>
+                    ))
+                )}
+                {imgCurrent + lengthData > lengthData && lengthData < 5 && (
+                    data.slice(0, imgCurrent ).map((photo, index) => (
+                        <div className="thumbnail-container" key={index}>
+                            <img src={photo.url} alt={photo.legend} />
+                        </div>
+                    ))
+                )}
                 </div>
             </div>
         </>
