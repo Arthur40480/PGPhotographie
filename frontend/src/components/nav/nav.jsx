@@ -14,7 +14,7 @@ function Nav() {
         navItems.forEach((item) => {
             if(isOpen === false) {
                 item.classList.add("li-animation");
-              }else {
+              } else {
                 item.classList.remove("li-animation");
               }
         })
