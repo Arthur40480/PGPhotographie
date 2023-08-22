@@ -1,0 +1,42 @@
+.container-gallery-title {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    overflow: hidden;
+    font-family: 'Cinzel', sans-serif;
+}
+
+.gallery-title {
+    margin-bottom: 100px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.gallery-title span {
+    position: relative;
+    padding: 1em;
+}
+
+.gallery-title span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    background: #000000;
+    width: 1200px;
+    top: 50%;
+    margin-top: -1px;
+    right: 100%;
+}
+
+.gallery-title span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    background: #000000;
+    width: 1200px;
+    top: 50%;
+    margin-top: -1px;
+    left: 100%;
+}

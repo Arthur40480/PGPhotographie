@@ -6,17 +6,26 @@ import { useState } from "react";
 function Carrousel({ onClose, data, selectedImg }) {
     
     const [ imgCurrent, setImgCurrent ] = useState(selectedImg);
+    const [isImageTransitioning, setImageTransitioning] = useState(false);
 
     const selectedData = data[imgCurrent];
     const lengthData = data.length;
 
     function ShowNextImg() {
-        setImgCurrent(imgCurrent === lengthData - 1 ? 0 : imgCurrent + 1);
-    };
-
+        setImageTransitioning(true);
+        setTimeout(() => {
+            setImgCurrent(imgCurrent === lengthData - 1 ? 0 : imgCurrent + 1);
+            setImageTransitioning(false);
+        }, 300);
+    }
+    
     function ShowPreviousImg() {
-        setImgCurrent(imgCurrent ===  0 ? lengthData - 1 : imgCurrent - 1)
-    };
+        setImageTransitioning(true);
+        setTimeout(() => {
+            setImgCurrent(imgCurrent === 0 ? lengthData - 1 : imgCurrent - 1);
+            setImageTransitioning(false);
+        }, 300); 
+    }
 
     return (
         <>
@@ -26,7 +35,7 @@ function Carrousel({ onClose, data, selectedImg }) {
                 <div className="carrousel-container">
                     <img src={buttonNext} className="button-arrow-carrousel previous" onClick={ShowPreviousImg} alt="Boutton pour parcourir les photos" />
                     <div>
-                        <img src={selectedData.url} className="photo-carrousel" alt={`Photo ${selectedData.legend}`} />
+                        <img src={selectedData.url} className={`photo-carrousel ${isImageTransitioning ? "transitioning" : ""}`} alt={`Photo ${selectedData.legend}`} />
                     </div>
                     <img src={buttonNext} className="button-arrow-carrousel next" onClick={ShowNextImg} alt="Boutton pour parcourir les photos" />
                 </div>
@@ -38,8 +47,7 @@ function Carrousel({ onClose, data, selectedImg }) {
                     data.slice(imgCurrent, imgCurrent + 5).map((photo, index) => (
                         <div 
                         className={`thumbnail-container ${index === 0 ? 'current-thumbnail' : ''}`}
-                        key={index}
-                        >
+                        key={index}>
                             <img src={photo.url} alt={photo.legend} />
                         </div>
                     ))
@@ -53,18 +61,15 @@ function Carrousel({ onClose, data, selectedImg }) {
                 )}
                 {lengthData < 5 && (
                     data.slice(imgCurrent, lengthData).map((photo, index) => (
-                        <div 
-                        className={`thumbnail-container ${index === 0 ? 'current-thumbnail' : ''}`}
-                        key={index}
-                        >
-                            <img src={photo.url} alt={photo.legend} />
+                        <div className={`thumbnail-container ${index === 0 ? 'current-thumbnail' : ''}`} key={index}>
+                            <img src={photo.url} alt={photo.legend}/>
                         </div>
                     ))
                 )}
                 {imgCurrent + lengthData > lengthData && lengthData < 5 && (
                     data.slice(0, imgCurrent ).map((photo, index) => (
                         <div className="thumbnail-container" key={index}>
-                            <img src={photo.url} alt={photo.legend} />
+                            <img src={photo.url} alt={photo.legend}/>
                         </div>
                     ))
                 )}
