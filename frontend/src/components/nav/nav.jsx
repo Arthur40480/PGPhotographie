@@ -14,7 +14,7 @@ function Nav() {
         navItems.forEach((item) => {
             if(isOpen === false) {
                 item.classList.add("li-animation");
-              }else {
+              } else {
                 item.classList.remove("li-animation");
               }
         })
@@ -30,7 +30,7 @@ function Nav() {
                     <li><NavLink exact to="/" activeClassName="active" className="nav-link">Accueil</NavLink></li>
                     <li><NavLink to="/category" activeClassName="active" className="nav-link">Galerie</NavLink></li>
                     <li><NavLink to="/liens-utiles" activeClassName="active" className="nav-link">Liens utiles</NavLink></li>
-                    <li><NavLink to="/contact" activeClassName="active" className="nav-link">Contact</NavLink></li>
+                    <li><a href="mailto:thomaspc@hotmail.fr" className="nav-link">Contact</a></li>
                 </ul>
             </nav>
             <div onClick={openOrCloseNav} className="trigger-nav"

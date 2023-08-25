@@ -41,6 +41,7 @@
     background-color: var(--tertiary-color);
     color: white;
     border-radius: 5px;
+    font-family: 'Cinzel', sans-serif;
 }
 
 .collapse-nav:hover {
@@ -95,6 +96,8 @@
     width: 50px;
 }
 
-
-
+.nav-link {
+    text-decoration: none;
+    font-size: 20px;
+}
 

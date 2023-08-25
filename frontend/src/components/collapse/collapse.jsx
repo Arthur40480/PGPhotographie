@@ -5,7 +5,7 @@ import arrow_icon from "./../../../public/12.svg";
 import arrow_icon2 from "./../../../public/13.svg"
 
 function Collapse({ data: { attributes: { title, subcategories } }, style }) {
-
+    
     const [ isOpen, setIsOpen ] = useState(false);
     const listSubCategories = subcategories.data;
 
@@ -20,7 +20,8 @@ function Collapse({ data: { attributes: { title, subcategories } }, style }) {
                 {array.map((cat, index) => (
                     <li className="collapse-nav-li" key={cat + "" + index}>
                         <img className="collapse-li-nav-icon" src={arrow_icon2} alt="Îcone de flêche"></img>
-                        <NavLink to={`/picture/${cat.id}`}>{cat.attributes.title}</NavLink>
+                        <NavLink className="nav-link" 
+                        to={`/gallery/${cat.id}?categoryTitle=${encodeURIComponent(cat.attributes.title)}`}>{cat.attributes.title}</NavLink>
                     </li>
                 ))}
             </ul>

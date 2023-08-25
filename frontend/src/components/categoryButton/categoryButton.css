@@ -4,6 +4,7 @@
     display: flex;
     margin-top: 50px;
     justify-content: center;
+    font-family: 'Cinzel', sans-serif;
 }
 
 .gallery-link {

@@ -1,7 +1,7 @@
 import "./news.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
-
+import separator from "../../../public/separateur.svg";
 function News() {
 
     const [error, setError] = useState(null)
@@ -15,7 +15,9 @@ function News() {
     
         return (
             <section className="news-section">
-                <h2 className="news-section-title">Actualités</h2>
+                <div className="news-container-title">
+                    <h2 className="news-section-title"><span>Actualités</span></h2>
+                </div>
                 { error ? (
                     <p className="news-error">Une erreur est survenue !</p>
                 ) : ( events.map(( { id, attributes }) => (
@@ -24,6 +26,9 @@ function News() {
                             <p><span>Lieu:</span> {attributes.place}</p>
                             <p><span>Dates:</span> {attributes.start_date} / {attributes.end_date}</p>
                             <p className="news-description">{attributes.description}</p>
+                            <div className="separator-container">
+                                <img className="separator" src={separator} alt="séparateur d'actualités" />
+                            </div>
                         </div>
                 )))}
             </section>
