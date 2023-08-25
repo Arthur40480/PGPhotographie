@@ -27,6 +27,14 @@ function Carrousel({ onClose, data, selectedImg }) {
         }, 300); 
     }
 
+    const handleImageClick = (index) => {
+        setImageTransitioning(true);
+        setTimeout(() => {
+            setImgCurrent(i => i < lengthData - 1 ? i + index : i + index - (lengthData - 1));
+            setImageTransitioning(false);
+        }, 300); 
+    };
+
     return (
         <>
             <div className="popup-container">
@@ -47,28 +55,29 @@ function Carrousel({ onClose, data, selectedImg }) {
                     data.slice(imgCurrent, imgCurrent + 5).map((photo, index) => (
                         <div 
                         className={`thumbnail-container ${index === 0 ? 'current-thumbnail' : ''}`}
-                        key={index}>
+                        key={index}
+                        onClick={() => handleImageClick(index)}>
                             <img src={photo.url} alt={photo.legend} />
                         </div>
                     ))
                 )}
                 {imgCurrent + 5 > lengthData && lengthData >= 5 && (
                     data.slice(0, imgCurrent + 5 - lengthData).map((photo, index) => (
-                        <div className="thumbnail-container" key={index}>
+                        <div className="thumbnail-container" key={index} onClick={() => handleImageClick(index)}>
                             <img src={photo.url} alt={photo.legend} />
                         </div>
                     ))
                 )}
                 {lengthData < 5 && (
                     data.slice(imgCurrent, lengthData).map((photo, index) => (
-                        <div className={`thumbnail-container ${index === 0 ? 'current-thumbnail' : ''}`} key={index}>
+                        <div className={`thumbnail-container ${index === 0 ? 'current-thumbnail' : ''}`} key={index} onClick={() => handleImageClick(index)}>
                             <img src={photo.url} alt={photo.legend}/>
                         </div>
                     ))
                 )}
                 {imgCurrent + lengthData > lengthData && lengthData < 5 && (
                     data.slice(0, imgCurrent ).map((photo, index) => (
-                        <div className="thumbnail-container" key={index}>
+                        <div className="thumbnail-container" key={index} onClick={() => handleImageClick(index)}>
                             <img src={photo.url} alt={photo.legend}/>
                         </div>
                     ))
