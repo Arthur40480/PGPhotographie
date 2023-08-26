@@ -29,7 +29,7 @@ function Nav() {
                 <ul className="menu-nav">
                     <li><NavLink exact to="/" activeClassName="active" className="nav-link">Accueil</NavLink></li>
                     <li><NavLink to="/category" activeClassName="active" className="nav-link">Galerie</NavLink></li>
-                    <li><NavLink to="/liens-utiles" activeClassName="active" className="nav-link">Liens utiles</NavLink></li>
+                    <li><NavLink to="/golden-book" activeClassName="active" className="nav-link">Livre d'Or</NavLink></li>
                     <li><a href="mailto:thomaspc@hotmail.fr" className="nav-link">Contact</a></li>
                 </ul>
             </nav>

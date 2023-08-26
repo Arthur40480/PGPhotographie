@@ -1,0 +1,90 @@
+@import "../../styles/variables.css";
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    width: 98%;
+    margin: auto;
+    padding: 40px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    font-family: "Cinzel", sans-serif;
+    font-weight: bolder;
+}
+
+.form-golden-book {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.form-golden-book input, textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.img-form-container {
+    width: 60%;
+}
+
+.img-form-container img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.form-golden-book label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.short-label {
+    width: 150px;
+}
+
+.large-label {
+    width: 630px;
+}
+
+.form-golden-book input {
+    margin-top: 8px;
+    width: 150px;
+    height: 30px;
+}
+
+.large-field {
+    margin-top: 8px;
+    width: 630px;
+    height: 260px;
+    resize: none;
+}
+
+.form-golden-book-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    background-color: var(--tertiary-color);
+    font-weight: bold;
+    font-family: "Cinzel", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.form-golden-book-button img {
+    margin-left: 5px;
+    width: 22px;
+}
+
+.required-fields {
+    color: var(--tertiary-color);
+    background: none;
+}
