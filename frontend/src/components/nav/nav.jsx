@@ -33,6 +33,9 @@ function Nav() {
                     <li><a href="mailto:thomaspc@hotmail.fr" className="nav-link">Contact</a></li>
                 </ul>
             </nav>
+            <div className="black-box" onClick={openOrCloseNav} style={{display: isOpen ? "flex" : "none"}}>
+                <span></span>
+            </div>
             <div onClick={openOrCloseNav} className="trigger-nav"
             style={{display: isOpen ? "none" : "flex"}}>
                 <div className="element-nav">

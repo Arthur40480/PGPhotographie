@@ -31,10 +31,10 @@ function Form() {
         const handleInputChange = (event) => {
             const { name, value } = event.target;
             setFormData((prevData) => ({
-              ...prevData,
-              [name]: value
+                ...prevData,
+                [name]: value
             }));
-          };
+        };
 
     return (
         <>
@@ -48,13 +48,13 @@ function Form() {
                     <div>
                         Votre prénom <span className="required-fields">*</span>
                     </div>
-                    <input type="text" name="firstname" value={formData.firstname} onChange={handleInputChange}/>
+                    <input type="text" name="firstname" value={formData.firstname} onChange={handleInputChange} required/>
                 </label>
                 <label className="large-label">
                     <div>
                         Votre commentaire <span className="required-fields">*</span>
                     </div>
-                    <textarea name="comment" className="large-field" value={formData.comment} onChange={handleInputChange}/>
+                    <textarea name="comment" className="large-field" value={formData.comment} onChange={handleInputChange} required/>
                 </label>
                 <button type="submit" className="form-golden-book-button">
                     Envoyer
