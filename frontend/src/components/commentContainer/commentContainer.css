@@ -75,6 +75,7 @@
     font-size: 18px;
     border: solid 1px var(--tertiary-color);
     border-radius: 50px;
+    transition: opacity 0,3s ease-in-out;
 }
 
 .current-button-paging-comment {
@@ -92,5 +93,5 @@
 }
 
 .button-paging-comment:hover {
-    opacity: 0.8;
+    opacity: 0.7;
 }

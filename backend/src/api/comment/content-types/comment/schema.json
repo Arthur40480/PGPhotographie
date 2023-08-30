@@ -14,14 +14,24 @@
   "attributes": {
     "firstname": {
       "type": "string",
-      "required": false
+      "required": true,
+      "regex": "^[a-zA-ZÀ-ÿ]+(?: [a-zA-ZÀ-ÿ]+)?$",
+      "unique": false,
+      "maxLength": 20,
+      "minLength": 2
     },
     "lastname": {
-      "type": "string"
+      "type": "string",
+      "regex": "^[a-zA-ZÀ-ÿ]+(?: [a-zA-ZÀ-ÿ]+)?$",
+      "minLength": 2,
+      "maxLength": 20
     },
     "comment": {
       "type": "text",
-      "required": false
+      "required": true,
+      "regex": "^[a-zA-ZÀ-ÿ0-9\\s\\.,!?()\\-\\_+=*&#@%$£€:;\"'\\/]+$",
+      "maxLength": 800,
+      "minLength": 1
     },
     "validate": {
       "type": "boolean",

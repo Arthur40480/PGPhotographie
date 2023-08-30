@@ -1,0 +1,18 @@
+@import "../../styles/variables.css";
+
+.modal-container {
+    position: fixed;
+    top: 40%;
+    left: 38,5%;
+    padding: 4px;
+    height: 200px;
+    width: 400px;
+    background-color: var(--tertiary-color);
+    color: white;
+    z-index: 998;
+    border-radius: 6px;
+}
+
+.modal-message {
+    margin-top: 50px;
+}

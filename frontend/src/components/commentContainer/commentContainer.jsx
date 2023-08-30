@@ -19,10 +19,16 @@ function CommentContainer() {
     }, []);
 
     function reverseData(data) {
+        console.log(data);
         const reversed = [...data].reverse();
+        console.log(reversed);
         setCommentObject(reversed);
     };
 
+    function currentComment() {
+        const n = commentObject.filter(comment => comment.attributes.validate === true);
+        const m = n.slice(indexOfFirstComment, indexOfLastComment);
+    }
     function formatDate(string) {
         const originalDate = string;
         const newDate = originalDate.slice(0, 10);
