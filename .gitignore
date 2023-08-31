@@ -112,3 +112,9 @@ exports
 dist
 build
 .strapi-updater.json
+
+############################
+# ReCaptcha
+############################
+
+pg-photographie-ba7e98c5be66.json

@@ -4,8 +4,12 @@ import send from "../../../public/send.svg";
 import { useState } from 'react';
 import axios from 'axios';
 import ModalWindow from "../modalWindow/modalWindow";
+import ReCAPTCHA from "react-google-recaptcha";
+import React from 'react';
 
 function Form() {
+
+        const recaptchaRef = React.createRef();
 
         const nameRegEx = /^(?=.{0,30}$)[a-zA-ZÀ-ÿ]+(?: [a-zA-ZÀ-ÿ]+)?$/;
         const commentRegEx = /^[a-zA-ZÀ-ÿ0-9\s\.,!?()\-\_+=*&#@%$£€:;"'\/]{2,800}$/;
@@ -49,13 +53,13 @@ function Form() {
                 [name]: ""
             }))
         };
-
-        const handleFormSubmit = (event) => {
+        
+        const handleFormSubmit = async (event) => {
             event.preventDefault();
             const isValid = validForm();
 
             if(isValid) {
-                handleSubmit(event);
+                await handleSubmit(event);
             }
         }
 
@@ -82,10 +86,15 @@ function Form() {
             return isValid;
         };
 
+        const onSubmitWithReCAPTCHA = async () => {
+            const token = await recaptchaRef.current.executeAsync();
+            handleFormSubmit();
+        };
+
     return (
         <>
         <section className="form-container">
-            <form className="form-golden-book" onSubmit={handleFormSubmit}>
+            <form className="form-golden-book" onSubmit={() => {onSubmitWithReCAPTCHA}}>
                 <label className="short-label">
                     Votre nom
                     <input type="text" name="lastname" value={formData.lastname} onChange={handleInputChange}/>
@@ -109,6 +118,11 @@ function Form() {
                     Envoyer
                     <img src={send} alt="Îcon d'avion en papier" />
                 </button>
+                <ReCAPTCHA
+                        ref={recaptchaRef}
+                        size="invisible"
+                        sitekey="6Lc6aewnAAAAABdRrE1jz03zeT63vVNux58wdH8H"
+                    />
             </form>
             <div className="img-form-container">
                 <img src={img} alt="Photo de paysage" />

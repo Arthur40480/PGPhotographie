@@ -13,8 +13,8 @@ function CommentContainer() {
     const currentComments = commentObject.filter(comment => comment.attributes.validate === true).slice(indexOfFirstComment, indexOfLastComment);
 
     useEffect(() => {
-        axios.get("http://localhost:1337/api/comments")
-        .then(({ data }) => reverseData(data.data))
+        axios.get("http://localhost:1337/api/comments?pagination[page]=1&pagination[pageSize]=10")
+        .then(( data ) => console.log(data))
         .catch((error) => console.log(error))
     }, []);
 
