@@ -1,18 +1,17 @@
 import "./form.css";
 import img from "../../assets/form_img.jpg";
 import send from "../../../public/send.svg";
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import axios from 'axios';
-import ModalWindow from "../modalWindow/modalWindow";
 import ReCAPTCHA from "react-google-recaptcha";
 import React from 'react';
 
 function Form() {
 
-        const recaptchaRef = React.createRef();
-
+        const recaptchaRef = React.useRef();
         const nameRegEx = /^(?=.{0,30}$)[a-zA-ZÀ-ÿ]+(?: [a-zA-ZÀ-ÿ]+)?$/;
         const commentRegEx = /^[a-zA-ZÀ-ÿ0-9\s\.,!?()\-\_+=*&#@%$£€:;"'\/]{2,800}$/;
+        const siteKey = "6Lc6aewnAAAAABdRrE1jz03zeT63vVNux58wdH8H";
 
         const [ formData, setFormData ] = useState({
             firstname: '',
@@ -26,42 +25,45 @@ function Form() {
             comment: ''
         });
     
-        const handleSubmit = async (event) => {
-            event.preventDefault();
-            try {
-                const response = axios.post("http://localhost:1337/api/comments", 
-                {
+        const handleSubmit = (event) => {
+            recaptchaRef.current.executeAsync()
+                .then((token) => {
+                // Vous pouvez appliquer le token aux données du formulaire ici si nécessaire
+                // formData.recaptchaToken = token;
+
+                return axios.post("http://localhost:1337/api/comments",
+                    {
                     "data": {
                         firstname: formData.firstname,
                         lastname: formData.lastname,
-                        comment: formData.comment
+                        comment: formData.comment,
+                      // Ajoutez le token ReCAPTCHA ici si nécessaire
+                        recaptchaToken: token
                     }
+                    });
+                })
+                .then((response) => {
+                console.log("Réponse de la requête:", response.data);
+                console.log("Formulaire envoyé avec succès !");
+                })
+                .catch((error) => {
+                console.log("ERREUR", error);
+                console.log("Formulaire erroné !");
                 });
-            } catch (error) {
-                console.log("ERREUR", error)
-            }
-        }
-        
-        const handleInputChange = (event) => {
-            const { name, value } = event.target;
-            setFormData((prevData) => ({
-                ...prevData,
-                [name]: value
-            }));
-            setformErrors((prevErrors) => ({
-                ...prevErrors,
-                [name]: ""
-            }))
+
+            event.preventDefault(); // Vous pouvez déplacer cette ligne à l'intérieur de la promesse si nécessaire
         };
         
         const handleFormSubmit = async (event) => {
             event.preventDefault();
             const isValid = validForm();
-
-            if(isValid) {
-                await handleSubmit(event);
+            if (isValid) {
+                handleSubmit(event);
+                console.log("Formulaire envoyé avec succès !");
+            } else {
+                console.log("Formulaire erroné !");
             }
-        }
+        };
 
         function validForm() {
             var isValid = true;
@@ -85,16 +87,34 @@ function Form() {
             setformErrors(newError);
             return isValid;
         };
-
-        const onSubmitWithReCAPTCHA = async () => {
-            const token = await recaptchaRef.current.executeAsync();
-            handleFormSubmit();
+        
+        const handleInputChange = (event) => {
+            const { name, value } = event.target;
+            setFormData((prevData) => ({
+                ...prevData,
+                [name]: value
+            }));
+            setformErrors((prevErrors) => ({
+                ...prevErrors,
+                [name]: ""
+            }))
         };
+
+        function onChange(value) {
+            console.log("Captcha value:", value);
+        }
+        
 
     return (
         <>
         <section className="form-container">
-            <form className="form-golden-book" onSubmit={() => {onSubmitWithReCAPTCHA}}>
+            <form className="form-golden-book" onSubmit={handleFormSubmit}>
+                <ReCAPTCHA
+                    ref={recaptchaRef}
+                    size="invisible"
+                    sitekey="6Lc6aewnAAAAABdRrE1jz03zeT63vVNux58wdH8H"
+                    onChange={onChange}
+            />
                 <label className="short-label">
                     Votre nom
                     <input type="text" name="lastname" value={formData.lastname} onChange={handleInputChange}/>
@@ -118,11 +138,6 @@ function Form() {
                     Envoyer
                     <img src={send} alt="Îcon d'avion en papier" />
                 </button>
-                <ReCAPTCHA
-                        ref={recaptchaRef}
-                        size="invisible"
-                        sitekey="6Lc6aewnAAAAABdRrE1jz03zeT63vVNux58wdH8H"
-                    />
             </form>
             <div className="img-form-container">
                 <img src={img} alt="Photo de paysage" />
