@@ -1,5 +1,16 @@
 @import "../../styles/variables.css";
 
+@keyframes progressive { /*-- Animation menu --*/
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .comment-container {
     display: flex;
     flex-direction: column;
@@ -11,17 +22,20 @@
     background-color: var(--secondary-color);
     border-radius: 10px;
     font-family: "Cinzel", sans-serif;
+    box-shadow: 0px 3px 5px var(--text-color);
 }
 
 .comment-card {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     width: 70%;
     background-color: white;
     border: 3px solid var(--tertiary-color);
     border-radius: 6px;
+    box-shadow: 0px 3px 5px var(--text-color);
+    animation: progressive 1s ease-in-out both;
 }
 
 .comment-header {
@@ -34,12 +48,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 8px;
+    margin-right: 20px;
     width: 50px;
     height: 50px;
     font-size: 24px;
     font-weight: bold;
     border-radius: 50%;
+    box-shadow: 0px 3px 5px var(--text-color);
 }
 
 .comment-author {
@@ -54,10 +69,13 @@
     font-weight: bold;
     border-radius: 6px;
     background-color: var(--secondary-color);
+    box-shadow: 0px 3px 5px var(--text-color);
 }
 
 .comment-content {
     margin: 0 10px 10px 68px;
+    max-width: 100%;
+    word-wrap: break-word;
     font-size: 15px;
     font-family: "Roboto", sans-serif;
     line-height: 1.6;
@@ -76,6 +94,7 @@
     border: solid 1px var(--tertiary-color);
     border-radius: 50px;
     transition: opacity 0,3s ease-in-out;
+    box-shadow: 0px 3px 5px var(--text-color);
 }
 
 .current-button-paging-comment {

@@ -1,20 +1,22 @@
 import "./commentContainer.css";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function CommentContainer() {
 
     const [commentObject, setCommentObject] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const commentsPerPage = 8;
+    console.log(currentPage);
 
+    const commentsPerPage = 8;
+    const commentContainerRef = useRef(null);
     const indexOfLastComment = currentPage * commentsPerPage;
     const indexOfFirstComment = indexOfLastComment - commentsPerPage;
     const currentComments = commentObject.filter(comment => comment.attributes.validate === true).slice(indexOfFirstComment, indexOfLastComment);
 
     useEffect(() => {
-        axios.get("http://localhost:1337/api/comments?pagination[page]=1&pagination[pageSize]=10")
-        .then(( data ) => console.log(data))
+        axios.get("http://localhost:1337/api/comments?pagination[page]=1&pagination[pageSize]=100")
+        .then(({ data }) => reverseData(data.data))
         .catch((error) => console.log(error))
     }, []);
 
@@ -25,10 +27,6 @@ function CommentContainer() {
         setCommentObject(reversed);
     };
 
-    function currentComment() {
-        const n = commentObject.filter(comment => comment.attributes.validate === true);
-        const m = n.slice(indexOfFirstComment, indexOfLastComment);
-    }
     function formatDate(string) {
         const originalDate = string;
         const newDate = originalDate.slice(0, 10);
@@ -36,14 +34,14 @@ function CommentContainer() {
         const formattedDate = `${reverseDate[2]} - ${reverseDate[1]} - ${reverseDate[0]}`
         
         return formattedDate;
-    }
+    };
 
     function firstLetter(string) {
         const originalName = string;
         const firstLetter = originalName.charAt(0);
         
         return firstLetter;
-    }
+    };
 
     function getRandomColor() {
         var letters = '0123456789ABCDEF';
@@ -52,11 +50,21 @@ function CommentContainer() {
             color += letters[Math.floor(Math.random() * 10) + 6];
         }
         return color;
-    }
+    };
+
+    function changeCommentPage(page) {
+        setCurrentPage(page);
+        setTimeout(() => {
+            commentContainerRef.current.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }, 0)
+    };
 
     return (
         <>
-            <section className="comment-container">
+            <section className="comment-container" ref={commentContainerRef}>
             {currentComments.map((comment, index) => (
                 <div key={index} className="comment-card">
                     <header className="comment-header">
@@ -69,7 +77,7 @@ function CommentContainer() {
             ))}
                 <div className="paging-comment-container">
                 {Array.from({ length: Math.ceil(commentObject.filter(comment => comment.attributes.validate === true).length / commentsPerPage) }, (_, index) => (
-                    <button key={index} onClick={() => setCurrentPage(index + 1)} className={currentPage === index + 1 ? "current-button-paging-comment" : "button-paging-comment"}>
+                    <button key={index} onClick={() => changeCommentPage(index + 1)} className={currentPage === index + 1 ? "current-button-paging-comment" : "button-paging-comment"}>
                         {index + 1}
                     </button>
                 ))}

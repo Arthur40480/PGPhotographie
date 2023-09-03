@@ -112,7 +112,7 @@ function Form() {
                 <ReCAPTCHA
                     ref={recaptchaRef}
                     size="invisible"
-                    sitekey="6Lc6aewnAAAAABdRrE1jz03zeT63vVNux58wdH8H"
+                    sitekey={siteKey}
                     onChange={onChange}
             />
                 <label className="short-label">
