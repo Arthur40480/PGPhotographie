@@ -11,6 +11,7 @@
     border-radius: 10px;
     font-family: "Cinzel", sans-serif;
     font-weight: bolder;
+    box-shadow: 0px 3px 5px var(--text-color);
 }
 
 .form-golden-book {
@@ -22,12 +23,13 @@
 .form-golden-book input, textarea {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    box-shadow: 0px 3px 5px var(--text-color);
 }
 
 .error-message {
     margin-top: 5px;
     font-family: "Roboto", sans-serif;
-    color: red;
+    color: var(--tertiary-color);
     font-size: 14px;
 }
 
@@ -38,6 +40,7 @@
 .img-form-container img {
     width: 100%;
     border-radius: 2px;
+    box-shadow: 0px 3px 5px var(--text-color);
 }
 
 .form-golden-book label {
@@ -75,21 +78,27 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
-    width: 150px;
-    height: 40px;
+    width: 200px;
+    height: 60px;
     border-radius: 4px;
     border: none;
     color: white;
     background-color: var(--tertiary-color);
     font-weight: bold;
     font-family: "Cinzel", sans-serif;
-    font-size: 20px;
+    font-size: 24px;
     cursor: pointer;
+    box-shadow: 0px 3px 5px var(--text-color);
+    transition: opacity 0.3s ease;
+}
+
+.form-golden-book-button:hover {
+    opacity: 0.7;
 }
 
 .form-golden-book-button img {
-    margin-left: 5px;
-    width: 22px;
+    margin-left: 8px;
+    width: 30px;
 }
 
 .required-fields {

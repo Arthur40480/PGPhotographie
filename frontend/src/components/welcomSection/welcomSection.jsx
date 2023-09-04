@@ -1,4 +1,4 @@
-import "./WelcomSection.css";
+import "./welcomSection.css";
 import img1 from "../../assets/accueil_img_1.jpg";
 import img2 from "../../assets/accueil_img_2.jpg";
 import guillement1 from "../../../public/guillemet1.svg";

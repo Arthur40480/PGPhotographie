@@ -1,6 +1,12 @@
 @import "../../styles/variables.css";
 
 /* ---- COVER IMG HOME ---- */
+.home-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .home-cover {
     width: 100%;
     height: 1000px;

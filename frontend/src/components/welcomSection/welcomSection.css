@@ -4,10 +4,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 98%;
     background-color: var(--secondary-color);
     height: 400px;
     margin-bottom: 100px;
     font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px var(--text-color);
 }
 
 .content-container {
@@ -38,6 +41,7 @@
 
 .content p {
     font-size: 20px;
+    font-weight: bold;
     line-height: 1.6;
 }
 
@@ -56,7 +60,8 @@
 .welcom-img {
     width: 100%;
     height: 354px;
-    border-radius: 4px;
+    border-radius: 2px;
     object-fit: cover;
+    box-shadow: 0px 3px 5px var(--text-color);
 }
 
