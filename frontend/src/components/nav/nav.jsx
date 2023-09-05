@@ -39,9 +39,9 @@ function Nav() {
             <div onClick={openOrCloseNav} className="trigger-nav"
             style={{display: isOpen ? "none" : "flex"}}>
                 <div className="element-nav">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span className="white-bar"></span>
+                    <span className="white-bar"></span>
+                    <span className="white-bar"></span>
                 </div>
             </div>
         </>

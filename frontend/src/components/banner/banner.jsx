@@ -7,7 +7,7 @@ function Banner() {
         <>
             <a href="/">
                 <div className="banner">
-                    <img src={Logo1} alt="Premier logo du site" />
+                    <img src={Logo1} alt="Premier logo du site" className="logo-img"/>
                 </div>
             </a>
         </>
