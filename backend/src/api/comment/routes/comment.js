@@ -6,4 +6,12 @@
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::comment.comment');
+module.exports = createCoreRouter('api::comment.comment',  { 
+    config: {
+        create: {
+            policies: [
+                'recaptcha',
+            ]
+        }  
+    }
+});

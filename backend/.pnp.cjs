@@ -32,6 +32,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@strapi/plugin-users-permissions", "virtual:ddc78f884079832d0257903d64d38450f924fa9f7660e3bacc3d184150f5cbc1554b4abb45a0fb56f447e84b214b5e6a5735d96b4922f7e7e7aef8e72603bedc#npm:4.11.7"],\
             ["@strapi/strapi", "npm:4.11.7"],\
             ["@strapi/utils", "npm:4.12.0"],\
+            ["axios", "npm:1.5.0"],\
             ["better-sqlite3", "npm:8.0.1"],\
             ["pg", "virtual:ddc78f884079832d0257903d64d38450f924fa9f7660e3bacc3d184150f5cbc1554b4abb45a0fb56f447e84b214b5e6a5735d96b4922f7e7e7aef8e72603bedc#npm:8.8.0"]\
           ],\
@@ -5011,6 +5012,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/axios-npm-1.4.0-4d7ce8ca3e-7fb6a4313b.zip/node_modules/axios/",\
           "packageDependencies": [\
             ["axios", "npm:1.4.0"],\
+            ["follow-redirects", "virtual:4d7ce8ca3e1e44d82523fba2ad95e1be18c4e9f8dec6d551377587540da3ed75bd8bd3e812280309a3b90cfdb0560f076f3552a20839f7f15665207a4fbd588a#npm:1.15.2"],\
+            ["form-data", "npm:4.0.0"],\
+            ["proxy-from-env", "npm:1.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.5.0", {\
+          "packageLocation": "./.yarn/cache/axios-npm-1.5.0-35a845e191-e7405a5dbb.zip/node_modules/axios/",\
+          "packageDependencies": [\
+            ["axios", "npm:1.5.0"],\
             ["follow-redirects", "virtual:4d7ce8ca3e1e44d82523fba2ad95e1be18c4e9f8dec6d551377587540da3ed75bd8bd3e812280309a3b90cfdb0560f076f3552a20839f7f15665207a4fbd588a#npm:1.15.2"],\
             ["form-data", "npm:4.0.0"],\
             ["proxy-from-env", "npm:1.1.0"]\
@@ -12113,6 +12124,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@strapi/plugin-users-permissions", "virtual:ddc78f884079832d0257903d64d38450f924fa9f7660e3bacc3d184150f5cbc1554b4abb45a0fb56f447e84b214b5e6a5735d96b4922f7e7e7aef8e72603bedc#npm:4.11.7"],\
             ["@strapi/strapi", "npm:4.11.7"],\
             ["@strapi/utils", "npm:4.12.0"],\
+            ["axios", "npm:1.5.0"],\
             ["better-sqlite3", "npm:8.0.1"],\
             ["pg", "virtual:ddc78f884079832d0257903d64d38450f924fa9f7660e3bacc3d184150f5cbc1554b4abb45a0fb56f447e84b214b5e6a5735d96b4922f7e7e7aef8e72603bedc#npm:8.8.0"]\
           ],\

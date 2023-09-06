@@ -3314,6 +3314,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "axios@npm:1.5.0"
+  dependencies:
+    follow-redirects: ^1.15.0
+    form-data: ^4.0.0
+    proxy-from-env: ^1.1.0
+  checksum: e7405a5dbbea97760d0e6cd58fecba311b0401ddb4a8efbc4108f5537da9b3f278bde566deb777935a960beec4fa18e7b8353881f2f465e4f2c0e949fead35be
+  languageName: node
+  linkType: hard
+
 "babel-plugin-macros@npm:^3.1.0":
   version: 3.1.0
   resolution: "babel-plugin-macros@npm:3.1.0"
@@ -9534,6 +9545,7 @@ __metadata:
     "@strapi/plugin-users-permissions": 4.11.7
     "@strapi/strapi": 4.11.7
     "@strapi/utils": ^4.12.0
+    axios: ^1.5.0
     better-sqlite3: 8.0.1
     pg: 8.8.0
   languageName: unknown
