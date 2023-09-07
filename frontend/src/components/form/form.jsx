@@ -40,18 +40,17 @@ function Form() {
                       // Ajoutez le token ReCAPTCHA ici si nécessaire
                         recaptchaToken: token
                     }
-                    });
-                })
-                .then((response) => {
+                });
+                
+            }).then((response) => {
                 console.log("Réponse de la requête:", response.data);
                 console.log("Formulaire envoyé avec succès !");
+                event.preventDefault(); 
                 })
                 .catch((error) => {
                 console.log("ERREUR", error);
                 console.log("Formulaire erroné !");
                 });
-
-            event.preventDefault(); // Vous pouvez déplacer cette ligne à l'intérieur de la promesse si nécessaire
         };
         
         const handleFormSubmit = async (event) => {

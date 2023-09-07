@@ -48,7 +48,7 @@
     height: 12px;
 }
 
-span {
+.white-bar {
     background-color: white;
     width: 25px;
     height: 2px;
@@ -57,7 +57,6 @@ span {
 /* Menu de navigation */
 .nav {
     display: flex;
-    align-items: center;
     justify-content: center;
     position: fixed;
     top: 0;
@@ -89,6 +88,7 @@ span {
     display: flex;
     flex-direction: column;
     list-style-type: none;
+    margin-top: 45%;
 }
 
 .menu-nav li {
@@ -127,4 +127,24 @@ span {
     width: 75%;     
     height: 100%; 
     z-index: 999;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1024px) {
+
+    .trigger-nav {
+        width:  80px;
+        height: 80px;
+    }
+
+    .white-bar {
+        background-color: white;
+        width: 30px;
+        height: 2px;
+    }
+
+    .nav {
+        width: 33%;
+    }
 }
