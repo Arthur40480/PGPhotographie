@@ -94,4 +94,25 @@
     width: 100%;
 }
 
+@media screen and (max-width: 767px) {
 
+    .news-section {
+        margin-bottom: 50px;
+    }
+
+    .news-section-title {
+        font-size: 26px;
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .news-section {
+        margin-bottom: 20px;
+    }
+
+    .news-section-title {
+        font-size: 24px;
+    }
+}

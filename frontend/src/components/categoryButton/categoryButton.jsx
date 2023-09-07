@@ -5,7 +5,7 @@ function CategoryButton() {
     return (
         <div className="button-container">
             <NavLink to="/Category" activeClassName="active" className="gallery-link">
-                <div>Galerie</div>
+                <div className="button-content">Galerie</div>
                 <div>
                 <svg width="50px" height="27px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
