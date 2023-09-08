@@ -86,12 +86,16 @@
     margin-top: 10px;
 }
 
-.separator-container {
+.separator-news-container {
     display: flex;
     margin-top: 20px;
     margin-bottom: 12px;
     justify-content: center;
     width: 100%;
+}
+
+.separator-news-container img {
+    width: 300px;
 }
 
 @media screen and (max-width: 767px) {
