@@ -11,14 +11,14 @@ function Category() {
 
   const collapseStyle1 = {
     position: "absolute",
-    top: "80px",
-    right: "80px",
+    top: "10%",
+    right: "10%",
   };
 
   const collapseStyle2 = {
     position: "absolute",
-    top: "80px",
-    left: "80px", 
+    top: "10%",
+    left: "10%", 
   };
 
   useEffect(() => {
