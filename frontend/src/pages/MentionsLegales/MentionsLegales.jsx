@@ -1,8 +1,8 @@
-function MentionsLegales() {
+function LegalNotice() {
     return(
         <>
         </>
     )
 }
 
-export default MentionsLegales;
+export default LegalNotice;
