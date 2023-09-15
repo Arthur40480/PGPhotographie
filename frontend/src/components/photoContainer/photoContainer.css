@@ -23,7 +23,7 @@
     position: relative;
     display: flex;
     margin: 20px;
-    flex-basis: calc(30%);
+    width: 30%;
     height: 400px;
 }
 
@@ -57,4 +57,50 @@
     opacity: 1;
     transition: opacity 0.3s ease;
     animation: rotateIcon 2s forwards;
+}
+
+@media screen and (max-width: 1230px) {
+
+    .picture-section {
+        padding: 20px 0 20px 0;
+    }
+    
+    .picture-card {
+        margin: 16px;
+        width: 45%;
+        height: 380px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .picture-section {
+        padding: 15px 0 15px 0;
+    }
+
+    .picture-card {
+        margin: 12px;
+        width: 46%;
+        height: 360px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+    .picture-section {
+        padding: 15px 0 15px 0;
+    }
+
+    .picture-card {
+        margin: 10px;
+        width: 90%;
+        height: 320px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .picture-card {
+        height: 280px;
+    }
 }

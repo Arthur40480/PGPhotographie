@@ -8,6 +8,7 @@ function Collapse({ data: { attributes: { title, subcategories } }, style }) {
     
     const [ isOpen, setIsOpen ] = useState(false);
     const listSubCategories = subcategories.data;
+    console.log(listSubCategories);
 
     function openCollapse() {
         setIsOpen(!isOpen);
