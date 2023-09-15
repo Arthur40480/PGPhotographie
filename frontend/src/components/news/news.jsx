@@ -26,7 +26,7 @@ function News() {
                             <p><span>Lieu:</span> {attributes.place}</p>
                             <p><span>Dates:</span> {attributes.start_date} / {attributes.end_date}</p>
                             <p className="news-description">{attributes.description}</p>
-                            <div className="separator-container">
+                            <div className="separator-news-container">
                                 <img className="separator" src={separator} alt="séparateur d'actualités" />
                             </div>
                         </div>

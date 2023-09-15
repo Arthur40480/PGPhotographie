@@ -1,8 +1,17 @@
 @import "../../styles/variables.css";
 
+.category-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-main section:nth-child(4) {
+    margin-bottom: 50px;
+}
+
 .container-category-title {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 100px auto 0 auto;
     width: 60%;
     overflow: hidden;
     font-family: 'Cinzel', sans-serif;
@@ -43,48 +52,87 @@
     text-align: center;
 }
 
-.first-category-container {
+.container-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    width: 100%;
-    height: 1000px;
-    overflow: hidden;
-}
-
-.first-category-container:hover .first-background-img-category {
-    transform: scale(1.2);
-}
-
-.first-background-img-category {
-    position: absolute;
-    top: -20%;
-    width: 100%;
-    transition: 7s ease;
-}
-.separator-container {
-    height: 200px;
-    margin: 0;
+    width: 98%;
+    height: 800px;
     background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px var(--text-color);
+    padding: 30px;
 }
 
-.separator-container img {
-    width: 350px;
-}
-
-.second-category-container {
-    position: relative;
-    width: 100%;
-    height: 1000px;
-    overflow: hidden;
-}
-
-.second-category-container:hover .second-background-img-category {
-    transform: scale(1.2);
-}
-
-.second-background-img-category {
-    position: absolute;
+.background-img-category {
     width: 100%;
     height: 100%;
-    transition: 5s ease;
-    object-position: center;
+    border-radius: 4px;
+    box-shadow: 0px 3px 5px var(--text-color);
+    object-fit: cover;
+}
+
+.separator-category-container {
+    display: flex;
+    margin: 50px 0;
+    justify-content: center;
+    width: 100%;
+}
+
+.separator-category-container img {
+    width: 300px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .category-title {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
+
+    .container-category-title {
+        margin: 50px auto 0 auto;
+        width: 60%;
+    }
+
+    .container-category {
+        padding: 25px;
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .container-category-title {
+        width: 80%;
+    }
+    
+    .category-title {
+        font-size: 30px;
+    }
+
+    .container-category {
+        padding: 18px;
+        height: 400px;
+    }
+
+    .separator-category-container {
+        display: flex;
+        margin: 25px 0;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .separator-category-container img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .container-category {
+        padding: 12px;
+        height: 400px;
+    }
 }

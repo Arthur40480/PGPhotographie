@@ -37,12 +37,12 @@
     display: flex;
     flex-direction: column;
     min-width: 15%;
-    max-width: 20%;
+    max-width: 25%;
     background-color: var(--tertiary-color);
     color: white;
     border-radius: 5px;
     font-family: 'Cinzel', sans-serif;
-    box-shadow: 0px 3px 5px var(--text-color);
+    border: solid 2px var(--secondary-color)
 }
 
 .collapse-nav:hover {
@@ -97,8 +97,53 @@
     width: 50px;
 }
 
-.nav-link {
+.collapse-nav-link {
     text-decoration: none;
+    color: var(--secondary-color);
     font-size: 20px;
 }
 
+@media screen and (max-width: 1024px) {
+
+    .collapse-nav-title {
+        font-size: 18px;
+    }
+
+    .collapse-nav-icon {
+        margin: 0 20px;
+        width: 25px;
+    }
+
+    .collapse-nav-li img {
+        margin-right: 15px;
+        vertical-align: middle;
+        width: 30px;
+    }
+
+    .collapse-nav-link {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .collapse-nav-title {
+        font-size: 16px;
+    }
+
+    .collapse-nav-icon {
+        width: 20px;
+    }
+
+    .collapse-nav {
+        max-width: 40%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .collapse-nav {
+        max-width: 60%;
+    }
+
+}

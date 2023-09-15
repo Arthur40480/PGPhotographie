@@ -18,7 +18,7 @@ footer {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
-    width: 70%;
+    width: 90%;
     list-style: none;
     font-family: 'Cinzel', sans-serif;
 }
@@ -36,7 +36,44 @@ footer {
 }
 
 .copyright {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
+}
+
+.end {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .footer-link {
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+        text-decoration: none;
+        transition: color 0.5s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .footer-logo {
+        width: 200px;
+        margin: 10px 0 10px 0;
+    }
+
+    .footer-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-list li {
+        margin-top: 10px;
+    }
+
+    .footer-link {
+        font-size: 18px;
+        margin-top: 10px;
+    }
 }

@@ -86,7 +86,7 @@
     margin-top: 10px;
 }
 
-.separator-container {
+.separator-news-container {
     display: flex;
     margin-top: 20px;
     margin-bottom: 12px;
@@ -94,4 +94,29 @@
     width: 100%;
 }
 
+.separator-news-container img {
+    width: 300px;
+}
 
+@media screen and (max-width: 767px) {
+
+    .news-section {
+        margin-bottom: 50px;
+    }
+
+    .news-section-title {
+        font-size: 26px;
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .news-section {
+        margin-bottom: 20px;
+    }
+
+    .news-section-title {
+        font-size: 24px;
+    }
+}

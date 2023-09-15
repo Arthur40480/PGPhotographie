@@ -11,14 +11,14 @@ function Category() {
 
   const collapseStyle1 = {
     position: "absolute",
-    top: "50px",
-    right: "50px",
+    top: "10%",
+    right: "10%",
   };
 
   const collapseStyle2 = {
     position: "absolute",
-    top: "50px",
-    left: "50px", 
+    top: "10%",
+    left: "10%", 
   };
 
   useEffect(() => {
@@ -31,17 +31,17 @@ function Category() {
         <div className="container-category-title">
           <h1 className="category-title"><span>Galerie</span></h1>
         </div>
-        <section className="first-category-container">
-          <img className="first-background-img-category" src={backgroundGallery1} alt="Photo d'un bar laisser à l'abandon"></img>
+        <section className="container-category">
+          <img className="background-img-category" src={backgroundGallery1} alt="Photo d'un bar laisser à l'abandon"></img>
           { categories[0] && (
             <Collapse data={categories[0]} style={collapseStyle1} />
           )}
         </section>
-        <section className="separator-container">
+        <section className="separator-category-container">
           <img src={separator} alt="Séparateur des deux catégories" />
         </section>
-        <section className="second-category-container">
-          <img className="second-background-img-category" src={backgroundGallery2} alt="Photo d'un bar laisser à l'abandon"></img>
+        <section className="container-category">
+          <img className="background-img-category" src={backgroundGallery2} alt="Photo d'un bar laisser à l'abandon"></img>
           { categories[0] && (
             <Collapse data={categories[1]} style={collapseStyle2} />
           )}

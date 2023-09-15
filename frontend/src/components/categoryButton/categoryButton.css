@@ -2,7 +2,7 @@
 
 .button-container {
     display: flex;
-    margin-top: 50px;
+    margin: 50px 0 20px 0;
     justify-content: center;
     font-family: 'Cinzel', sans-serif;
 }
@@ -11,7 +11,7 @@
     display: flex;
     padding: 10px 30px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
     color: white;
     background-color: var(--tertiary-color);
@@ -80,5 +80,35 @@ path.two {
     }
     100% {
         fill: white;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .button-content {
+        margin-top: 1px;
+    }
+
+    .gallery-link {
+        font-size: 26px;
+    }
+
+    .button-container {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .button-content {
+        margin-top: 3px;
+    }
+
+    .gallery-link {
+        font-size: 20px;
+    }
+
+    .button-container {
+        margin-top: 30px;
     }
 }

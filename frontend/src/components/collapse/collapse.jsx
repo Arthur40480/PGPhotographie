@@ -20,7 +20,7 @@ function Collapse({ data: { attributes: { title, subcategories } }, style }) {
                 {array.map((cat, index) => (
                     <li className="collapse-nav-li" key={cat + "" + index}>
                         <img className="collapse-li-nav-icon" src={arrow_icon2} alt="Îcone de flêche"></img>
-                        <NavLink className="nav-link" 
+                        <NavLink className="collapse-nav-link" 
                         to={`/gallery/${cat.id}?categoryTitle=${encodeURIComponent(cat.attributes.title)}`}>{cat.attributes.title}</NavLink>
                     </li>
                 ))}

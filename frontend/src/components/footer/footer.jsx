@@ -23,7 +23,8 @@ function Footer() {
                 <a href="mailto:thomaspc@hotmail.fr" className="footer-link">Contact</a>
                 <li><NavLink to="/mentions-legales" className="footer-link">Mentions légales</NavLink></li>
             </ul>
-            <p className="copyright">Copyright 2023 Pierre Gibert Photographie. Tous droits réservés.</p>
+            <p className="copyright">Copyright 2023 Pierre Gibert Photographie.</p>
+            <p className="copyright end">Tous droits réservés.</p>
         </footer>
     )
 };

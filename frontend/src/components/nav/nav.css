@@ -28,8 +28,8 @@
     justify-content: center;
     position: fixed;
     background-color: var(--text-color);
-    width: 60px;
-    height: 60px;   
+    width: 90px;
+    height: 90px;   
     top: 0;
     right: 0;
     cursor: pointer;
@@ -50,7 +50,7 @@
 
 .white-bar {
     background-color: white;
-    width: 25px;
+    width: 34px;
     height: 2px;
 }
 
@@ -93,7 +93,7 @@
 
 .menu-nav li {
     margin: 50px;
-    font-size:  30px;
+    font-size:  26px;
     font-weight: bold;
     cursor: pointer;
     opacity: 0;
@@ -133,18 +133,47 @@
 
 @media screen and (max-width: 1024px) {
 
-    .trigger-nav {
-        width:  80px;
-        height: 80px;
+    .nav {
+        width: 33%;
     }
 
-    .white-bar {
-        background-color: white;
-        width: 30px;
-        height: 2px;
+    .menu-nav li {
+        font-size:  20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .trigger-nav {
+        width: 70px;
+        height: 70px;
+    }
+
+    .menu-nav li {
+        font-size:  18px;
     }
 
     .nav {
-        width: 33%;
+        width: 42%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .trigger-nav {
+        width: 70px;
+        height: 70px;
+    }
+
+    .menu-nav li {
+        font-size:  18px;
+    }
+
+    .nav {
+        width: 49%;
+    }
+    
+    .menu-nav li {
+        margin: 40px;
     }
 }
