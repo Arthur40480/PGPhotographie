@@ -1,0 +1,41 @@
+@import "../../styles/variables.css";
+
+.error-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 100px;
+    padding: 40px;
+    width: 98%;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px var(--text-color);
+    font-family: "Roboto", sans-serif;
+}
+
+.error-title {
+    margin-bottom: 40px;
+    color: var(--tertiary-color);
+    font-size: 60px;
+}
+
+.error-content {
+    margin-bottom: 20px;
+}
+
+.error-return {
+    margin-bottom: 10px;
+}
+
+.error-home-link {
+    text-decoration: none;
+    color: var(--tertiary-color);
+    font-weight: bold;
+    font-size: 26px;
+    border-bottom: 2px solid transparent;
+}
+
+.error-home-link:hover {
+    border-bottom: 2px solid var(--tertiary-color);
+}
