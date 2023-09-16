@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "pg-photographie",
+  "private_key_id": "ba7e98c5be66c5c11740ad5658c68461451e3911",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDHVGz3FbvXDWF/\nhL6kYB/tweyI8NEa5Cs7ikrZFKaFFpKCvOkbC5fSpLnvZ6v3uBgJgiO57jHFSSP8\nSWs682cWiuaTZ8x7sNx5wRGJQQkAYwEhLSUFe6yE5T3NlLo4gbGzy05sZvdzc0T6\nt5Sq1DG334k1N5jTtGzhIVIUkIt4gwcWGfWN0/AknZh2XNL+OO2GTMP3hUtG/l6A\n36it3vKi7P1XUX527eV7HFwjA/+ntn+GNP41tSeOlzvMgWhSynjiW8Zv8YLZyLbA\nM7zl4B3LZCFl6Ci+PNZF7nDph9KexKXIMwt09Em+0EeR4aXdyX0fKWjRFwJ9I0eM\nQjdqUZ/VAgMBAAECggEAH1cYn9vIsjYeIYbdU6pycrdGKbzVX9lGq+ChRpLu4KeN\nJyWtMA2pVBsGygu+l98X1mziEaKQLEEE+a6Qf88T4xE5Ui1kkwEalUEkMPSrBebL\nH2yB8OQCWs3RYxCym95WcpqxbK1e1EXoL1RseVSOMacho16ntoecg+Qxi96zMyH9\nyg1QoeZzYm1ECZtQbLVorvRH+BlBLK2LcroZyH45D1nv53Cfq4JBKQbXHuoWXM7t\n1WumDLTEMxIlrUoO3GQlFFRAZOCEiFxJkGrEGynmceDFBwkinlH8DOuzdDzh8jGD\nNI7A1VxYea+qyIrWAZ3H0d26oxtBc4qHyu2ITISqgQKBgQDpGl/svIYOySNkgliB\no7pbvNyKzEeMplupP6hf07CefKeLerT7Jcy2XriDCK0jkOmb1lifam8iT+EqUw/a\n/4vYKqwER0cWk9FuaoLFMMcq6729ftw3G6dVKuXw3+pFJsriNHeTs1N0pxgJ03Vr\n9rmG3Ntcg+uhqQdJB6WtcgqAgQKBgQDa6MljxdST+icrJ8O/RP73cKJK1ghg/3XK\n/ikUZ20D63ce1fVrzgw3tMipbUnj8tf6kN/a/LfHIFSl+CFbk3qdWg86lNB5VPhV\nhzDx/rkMOFtVEbf18lfubzrZkJqSrYWex/yZb5nXxNFKgJbIbznQPm2QD2KBgoP4\nkaJXMxp1VQKBgBypK4Y2H92NiZaAGFXIRc+lxxAh0eJPShHjS9aMdrjl5svViI8g\ntKzvtIwX8wHefXq1vivLsGJto+fKUrbAmPc5N/FGukziW+vRmMaaGsMCPVAhWv5D\nni1wmtklDu71uBhcDx/P+sDrEp+Sqmtd6K3WVfpoFf7Ig6bNE+fhj70BAoGAA1Ed\npA5eTzOuHkBG/gHsnxEs1Fdz3wxf24iIVM/QXgvWTThOtKh1lO5/T9nhEbwfO6Ow\nUKAdpL2/qpgc4UdVx0aTDn8svXnlHV6kBjam1SGReLOBBw/59xnmWV+QiAJrEOHU\n2PpQ6W0JAsj5/+V3ick4XcNt6apxl3WVcR7MGtUCgYAwX/WrgJ5Tjc2LdA5I6/ko\nDfw6yuOGOiGk7p3SjnqNnnpirDb6BmCJzGon5yMxlvwTpn81VeWLRz9FkCoPq7ME\n0WTpPIBdMJVG3B4j6CAsK8U5KmgddBiboVO3RSY8HvOagUglX5pYDWCrxaVciPYi\n1Y4Fhsnw8od4TWyoLBVj7A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "recaptcha@pg-photographie.iam.gserviceaccount.com",
+  "client_id": "106547030948240024636",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/recaptcha%40pg-photographie.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

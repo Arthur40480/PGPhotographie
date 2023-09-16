@@ -7,6 +7,14 @@ import { useEffect } from 'react';
 function Footer() {
 
     const location = useLocation();
+    const email = [
+        'p', 'i', 'e', 'r', 'r', 'e', 'g', 'i', 'b', 'e', 'r', 't', 
+        '.', 
+        'p', 'h', 'o', 't', 'o', 'g', 'r', 'a', 'p', 'h', 'i', 'e',
+        '@',
+        'g', 'm', 'a', 'i', 'l',
+        '.', 'c', 'o', 'm'
+    ].join('');
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -20,7 +28,7 @@ function Footer() {
                 <li><NavLink exact to="/" className="footer-link">Accueil</NavLink></li>
                 <li><NavLink to="/galerie" className="footer-link">Galerie</NavLink></li>
                 <li><NavLink to="/liens-utiles" className="footer-link">Liens utiles</NavLink></li>
-                <a href="mailto:thomaspc@hotmail.fr" className="footer-link">Contact</a>
+                <a href={`mailto:${email}`} className="footer-link">Contact</a>
                 <li><NavLink to="/mentions-legales" className="footer-link">Mentions légales</NavLink></li>
             </ul>
             <p className="copyright">Copyright 2023 Pierre Gibert Photographie. Tous droits réservés.</p>
