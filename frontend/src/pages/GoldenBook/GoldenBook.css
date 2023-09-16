@@ -5,15 +5,14 @@
 }
 
 .container-golden-book-title {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 100px auto 0 auto;
     width: 60%;
     overflow: hidden;
     font-family: 'Cinzel', sans-serif;
 }
 
 .golden-book-title {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-size: 50px;
     text-align: center;
 }
@@ -56,4 +55,27 @@
 .golden-book-separator {
     margin: 40px;
     width: 350px;
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .container-golden-book-title {
+        margin: 50px auto 0 auto;
+    }
+
+    .golden-book-title {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .container-golden-book-title {
+        width: 80%;
+    }
+
+    .golden-book-separator {
+        width: 250px;
+    }
+
 }

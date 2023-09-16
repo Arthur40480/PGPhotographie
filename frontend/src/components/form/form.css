@@ -34,11 +34,15 @@
 }
 
 .img-form-container {
-    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 60%;
 }
 
 .img-form-container img {
-    width: 100%;
+    margin-left: 20px;
+    max-width: 100%;
     border-radius: 2px;
     box-shadow: 0px 3px 5px var(--text-color);
 }
@@ -65,7 +69,7 @@
 
 .large-field {
     margin-top: 8px;
-    width: 630px;
+    width: 100%;
     height: 260px;
     resize: none;
 }
@@ -104,4 +108,77 @@
 .required-fields {
     color: var(--tertiary-color);
     background: none;
+}
+
+@media screen and (max-width: 1680px) {
+
+    .large-field {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1360px) {
+
+    .large-field {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .form-golden-book {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .short-label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+    }
+    
+    .large-label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+    }
+
+    .form-golden-book input {
+        width: 100%;
+    }
+
+    .large-field {
+        width: 100%;
+    }
+
+    .img-form-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .short-label {
+        width: 60%;
+    }
+    
+    .large-label {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .short-label {
+        width: 80%;
+    }
+    
+    .large-label {
+        width: 95%;
+    }
+
 }
