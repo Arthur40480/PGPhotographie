@@ -40,17 +40,14 @@ function Carrousel({ onClose, data, selectedImg }) {
             <div className="popup-container">
                 <img src={buttonClose} className="button-close-popup" onClick={onClose} alt="Button pour fermer le carrousel" />
                 <p className="paging">{imgCurrent + 1}/{data.length}</p>
-                <div className="carrousel-container">
-                    <img src={buttonNext} className="button-arrow-carrousel previous" onClick={ShowPreviousImg} alt="Boutton pour parcourir les photos" />
-                    <div>
-                        <img src={selectedData.url} className={`photo-carrousel ${isImageTransitioning ? "transitioning" : ""}`} alt={`Photo ${selectedData.legend}`} />
-                    </div>
-                    <img src={buttonNext} className="button-arrow-carrousel next" onClick={ShowNextImg} alt="Boutton pour parcourir les photos" />
+                <div className="carrousel-container"> 
+                    <img src={selectedData.url} className={`photo-carrousel ${isImageTransitioning ? "transitioning" : ""}`} alt={`Photo ${selectedData.legend}`} />
                 </div>
                 <div className="legend-container">
                     <p className="legend">{selectedData.legend}</p>
                 </div>
                 <div className="thumbnail-carrousel">
+                    <img src={buttonNext} className="button-arrow-carrousel previous" onClick={ShowPreviousImg} alt="Boutton pour parcourir les photos" />
                 {lengthData >= 5 && (
                     data.slice(imgCurrent, imgCurrent + 5).map((photo, index) => (
                         <div 
@@ -82,6 +79,7 @@ function Carrousel({ onClose, data, selectedImg }) {
                         </div>
                     ))
                 )}
+                    <img src={buttonNext} className="button-arrow-carrousel next" onClick={ShowNextImg} alt="Boutton pour parcourir les photos" />
                 </div>
             </div>
         </>

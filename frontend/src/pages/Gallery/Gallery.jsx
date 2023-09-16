@@ -10,7 +10,6 @@ function Gallery() {
     const [ photoInfo, setPhotoInfo ] = useState([]);
     const { id } = useParams();
     const categoryTitle = new URLSearchParams(window.location.search).get("categoryTitle");
-    console.log(categoryTitle);
 
     useEffect(() => {
         axios.get("http://localhost:1337/api/subcategories?populate[0]=photos.src")
