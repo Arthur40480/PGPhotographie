@@ -4,8 +4,16 @@ import "./nav.css";
 import croix from "../../../public/croix.svg";
 
 function Nav() {
-    
-    const [isOpen, setIsOpen] = useState(false)
+
+    const [isOpen, setIsOpen] = useState(false);
+    const email = [
+        'p', 'i', 'e', 'r', 'r', 'e', 'g', 'i', 'b', 'e', 'r', 't', 
+        '.', 
+        'p', 'h', 'o', 't', 'o', 'g', 'r', 'a', 'p', 'h', 'i', 'e',
+        '@',
+        'g', 'm', 'a', 'i', 'l',
+        '.', 'c', 'o', 'm'
+    ].join('');
 
     function openOrCloseNav() {
         const navItems = document.querySelectorAll(".menu-nav li");
@@ -14,12 +22,16 @@ function Nav() {
         navItems.forEach((item) => {
             if(isOpen === false) {
                 item.classList.add("li-animation");
+<<<<<<< HEAD
               } else {
+=======
+            }else {
+>>>>>>> 09f1461 (Add Javascript Obfuscation for mailto)
                 item.classList.remove("li-animation");
-              }
-        })
+            }
+        });
     };
-    
+
     return (
         <>
             <nav className="nav" 
@@ -28,9 +40,15 @@ function Nav() {
 
                 <ul className="menu-nav">
                     <li><NavLink exact to="/" activeClassName="active" className="nav-link">Accueil</NavLink></li>
+<<<<<<< HEAD
                     <li><NavLink to="/category" activeClassName="active" className="nav-link">Galerie</NavLink></li>
                     <li><NavLink to="/golden-book" activeClassName="active" className="nav-link">Livre d'Or</NavLink></li>
                     <li><a href="mailto:thomaspc@hotmail.fr" className="nav-link">Contact</a></li>
+=======
+                    <li><NavLink to="/galerie" activeClassName="active" className="nav-link">Galerie</NavLink></li>
+                    <li><NavLink to="/liens-utiles" activeClassName="active" className="nav-link">Liens utiles</NavLink></li>
+                    <li><a href={`mailto:${email}`} className="nav-link">Contact</a></li>                    
+>>>>>>> 09f1461 (Add Javascript Obfuscation for mailto)
                 </ul>
             </nav>
             <div className="black-box" onClick={openOrCloseNav} style={{display: isOpen ? "flex" : "none"}}>
