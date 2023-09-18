@@ -8,7 +8,7 @@ function News() {
     const [events, setEvents] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:1337/api/eventss")
+        axios.get("http://localhost:1337/api/events")
         .then(( { data } ) => setEvents(data.data))
         .catch((error) => setError(error))
     }, []);
