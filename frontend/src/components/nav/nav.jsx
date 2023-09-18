@@ -22,11 +22,7 @@ function Nav() {
         navItems.forEach((item) => {
             if(isOpen === false) {
                 item.classList.add("li-animation");
-<<<<<<< HEAD
-              } else {
-=======
             }else {
->>>>>>> 09f1461 (Add Javascript Obfuscation for mailto)
                 item.classList.remove("li-animation");
             }
         });
@@ -37,18 +33,11 @@ function Nav() {
             <nav className="nav" 
             style={{right: isOpen ? "0px" : "-100%" }}>
                 <img className="close-nav" src={croix} onClick={openOrCloseNav} alt="Image de croix"/>
-
                 <ul className="menu-nav">
                     <li><NavLink exact to="/" activeClassName="active" className="nav-link">Accueil</NavLink></li>
-<<<<<<< HEAD
                     <li><NavLink to="/category" activeClassName="active" className="nav-link">Galerie</NavLink></li>
                     <li><NavLink to="/golden-book" activeClassName="active" className="nav-link">Livre d'Or</NavLink></li>
-                    <li><a href="mailto:thomaspc@hotmail.fr" className="nav-link">Contact</a></li>
-=======
-                    <li><NavLink to="/galerie" activeClassName="active" className="nav-link">Galerie</NavLink></li>
-                    <li><NavLink to="/liens-utiles" activeClassName="active" className="nav-link">Liens utiles</NavLink></li>
                     <li><a href={`mailto:${email}`} className="nav-link">Contact</a></li>                    
->>>>>>> 09f1461 (Add Javascript Obfuscation for mailto)
                 </ul>
             </nav>
             <div className="black-box" onClick={openOrCloseNav} style={{display: isOpen ? "flex" : "none"}}>
