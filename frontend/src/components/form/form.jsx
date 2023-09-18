@@ -45,6 +45,7 @@ function Form() {
             }).then((response) => {
                 console.log("Réponse de la requête:", response.data);
                 console.log("Formulaire envoyé avec succès !");
+                emptyField()
                 event.preventDefault(); 
                 })
                 .catch((error) => {
@@ -101,7 +102,17 @@ function Form() {
 
         function onChange(value) {
             console.log("Captcha value:", value);
-        }
+        };
+
+        function emptyField() {
+            const formField = document.querySelectorAll('input[type="text"]');
+            const textareaField = document.getElementsByClassName('large-field')[0];
+        
+            formField.forEach(input => {
+                input.value = "";
+            });
+            textareaField.value = "";
+        };
         
 
     return (
