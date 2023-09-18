@@ -15,7 +15,7 @@ function CommentContainer() {
     const currentComments = commentObject.filter(comment => comment.attributes.validate === true).slice(indexOfFirstComment, indexOfLastComment);
 
     useEffect(() => {
-        axios.get("http://localhost:1337/api/comments?pagination[page]=1&pagination[pageSize]=100")
+        axios.get("http://localhost:1337/api/comments?populate=*")
         .then(({ data }) => reverseData(data.data))
         .catch((error) => console.log(error))
     }, []);
