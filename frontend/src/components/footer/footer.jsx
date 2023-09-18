@@ -21,7 +21,6 @@ function Footer() {
                 <li><NavLink to="/category" className="footer-link">Galerie</NavLink></li>
                 <li><NavLink to="/golden-book" className="footer-link">Livre d'Or</NavLink></li>
                 <a href="mailto:thomaspc@hotmail.fr" className="footer-link">Contact</a>
-                <li><NavLink to="/mentions-legales" className="footer-link">Mentions légales</NavLink></li>
             </ul>
             <p className="copyright">Copyright 2023 Pierre Gibert Photographie.</p>
             <p className="copyright end">Tous droits réservés.</p>
