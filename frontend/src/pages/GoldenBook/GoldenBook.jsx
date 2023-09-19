@@ -2,6 +2,7 @@ import "./GoldenBook.css";
 import Form from "../../components/form/form";
 import separator from "./../../../public/separateur.svg";
 import CommentContainer from "../../components/commentContainer/commentContainer";
+import ConfirmationMessage from "../../components/confirmationMessage/confirmationMessage";
 
 function GoldenBook() {
     return(

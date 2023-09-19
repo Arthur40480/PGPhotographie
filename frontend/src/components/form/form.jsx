@@ -5,6 +5,7 @@ import { useState, useRef } from 'react';
 import axios from 'axios';
 import ReCAPTCHA from "react-google-recaptcha";
 import React from 'react';
+import ConfirmationMessage from "../confirmationMessage/confirmationMessage";
 
 function Form() {
 
@@ -12,6 +13,9 @@ function Form() {
         const nameRegEx = /^(?=.{0,30}$)[a-zA-ZÀ-ÿ]+(?: [a-zA-ZÀ-ÿ]+)?$/;
         const commentRegEx = /^[a-zA-ZÀ-ÿ0-9\s\.,!?()\-\_+=*&#@%$£€:;"'\/]{2,800}$/;
         const siteKey = "6Lc6aewnAAAAABdRrE1jz03zeT63vVNux58wdH8H";
+
+        const [isFormValid, setIsFormValid] = useState(false);
+        const [isVisible, setIsVisible] = useState(false);
 
         const [ formData, setFormData ] = useState({
             firstname: '',
@@ -28,16 +32,12 @@ function Form() {
         const handleSubmit = (event) => {
             recaptchaRef.current.executeAsync()
                 .then((token) => {
-                // Vous pouvez appliquer le token aux données du formulaire ici si nécessaire
-                // formData.recaptchaToken = token;
-
                 return axios.post("http://localhost:1337/api/comments",
                     {
                     "data": {
                         firstname: formData.firstname,
                         lastname: formData.lastname,
                         comment: formData.comment,
-                      // Ajoutez le token ReCAPTCHA ici si nécessaire
                         recaptchaToken: token
                     }
                 });
@@ -47,6 +47,8 @@ function Form() {
                 console.log("Formulaire envoyé avec succès !");
                 emptyField()
                 event.preventDefault(); 
+                setIsFormValid(true);
+                setIsVisible(true);
                 })
                 .catch((error) => {
                 console.log("ERREUR", error);
@@ -102,6 +104,12 @@ function Form() {
 
         function onChange(value) {
             console.log("Captcha value:", value);
+        }
+
+        const handleCloseConfirmation = () => {
+            setIsVisible(false); 
+        };
+
         };
 
         function emptyField() {
@@ -113,8 +121,7 @@ function Form() {
             });
             textareaField.value = "";
         };
-        
-
+       
     return (
         <>
         <section className="form-container">
@@ -153,6 +160,9 @@ function Form() {
                 <img src={img} alt="Photo de paysage" />
             </div>
         </section>
+        {isFormValid && isVisible && (
+            <ConfirmationMessage handleClose={handleCloseConfirmation}/>
+        )}
         </>
     )
 };
