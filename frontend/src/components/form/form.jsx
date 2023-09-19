@@ -43,10 +43,14 @@ function Form() {
                 });
                 
             }).then((response) => {
+                event.preventDefault();
+                setFormData({
+                    firstname: '',
+                    lastname: '',
+                    comment: ''
+                });
                 console.log("Réponse de la requête:", response.data);
-                console.log("Formulaire envoyé avec succès !");
-                emptyField()
-                event.preventDefault(); 
+                console.log("Formulaire envoyé avec succès !"); 
                 setIsFormValid(true);
                 setIsVisible(true);
                 })
@@ -110,18 +114,6 @@ function Form() {
             setIsVisible(false); 
         };
 
-        };
-
-        function emptyField() {
-            const formField = document.querySelectorAll('input[type="text"]');
-            const textareaField = document.getElementsByClassName('large-field')[0];
-        
-            formField.forEach(input => {
-                input.value = "";
-            });
-            textareaField.value = "";
-        };
-       
     return (
         <>
         <section className="form-container">
