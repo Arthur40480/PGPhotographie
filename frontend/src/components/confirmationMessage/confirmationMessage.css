@@ -42,3 +42,36 @@
     margin: 10px;
     color: white;
 }
+
+@media screen and (max-width: 1024px) {
+    
+    .confirmation-msg-container {
+        width: 50%;
+    }
+
+    .confirmation-msg-content {
+        text-align: center;
+    }
+
+    .confirmation-msg-txt {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .confirmation-msg-container {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .confirmation-msg-container {
+        width: 70%;
+    }
+
+    .confirmation-msg-txt {
+        font-size: 18px;
+    }
+}
