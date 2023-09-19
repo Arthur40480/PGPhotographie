@@ -7,6 +7,7 @@ function Carrousel({ onClose, data, selectedImg }) {
     
     const [ imgCurrent, setImgCurrent ] = useState(selectedImg);
     const [isImageTransitioning, setImageTransitioning] = useState(false);
+    console.log(imgCurrent);
 
     const selectedData = data[imgCurrent];
     const lengthData = data.length;
@@ -30,9 +31,18 @@ function Carrousel({ onClose, data, selectedImg }) {
     const handleImageClick = (index) => {
         setImageTransitioning(true);
         setTimeout(() => {
-            setImgCurrent(i => i < lengthData - 1 ? i + index : i + index - (lengthData - 1));
+            // Calculez le nouvel indice en ajoutant simplement l'indice de la miniature cliquée à imgCurrent.
+            let newIndex = imgCurrent + index;
+
+             // Assurez-vous que le nouvel indice reste dans la plage valide de 0 à lengthData - 1.
+            if (newIndex < 0) {
+                newIndex += lengthData;
+            } else if (newIndex >= lengthData) {
+                newIndex -= lengthData;
+            }
+            setImgCurrent(newIndex);
             setImageTransitioning(false);
-        }, 300); 
+        }, 300);
     };
 
     return (
