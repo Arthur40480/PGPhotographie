@@ -12,9 +12,9 @@ function WelcomSection() {
                 </div>
                 <div className="content-container">
                     <div className="content">
-                        <p>Entrez dans mon univers capturé par l'objectif,<br></br>
+                        <p>Entrez dans mon univers capturé par l&rsquo;objectif,<br></br>
                         où chaque instant est figé avec passion et créativité.<br></br>
-                        Bienvenue dans l'album de  mes images.</p>
+                        Bienvenue dans l&rsquo;album de  mes images.</p>
                     </div>
                     <CategoryButton />
                 </div>
@@ -24,6 +24,6 @@ function WelcomSection() {
             </section>
         </>
     )
-};
+}
 
 export default WelcomSection;

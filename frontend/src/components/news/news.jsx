@@ -33,6 +33,6 @@ function News() {
                 )))}
             </section>
         )
-};
+}
 
 export default News;

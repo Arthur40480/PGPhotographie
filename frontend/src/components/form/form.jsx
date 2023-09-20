@@ -1,7 +1,7 @@
 import "./form.css";
 import img from "../../assets/form_img.jpg";
 import send from "../../../public/send.svg";
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import ReCAPTCHA from "react-google-recaptcha";
 import React from 'react';
@@ -92,7 +92,7 @@ function Form() {
 
             setformErrors(newError);
             return isValid;
-        };
+        }
         
         const handleInputChange = (event) => {
             const { name, value } = event.target;
@@ -157,6 +157,6 @@ function Form() {
         )}
         </>
     )
-};
+}
 
 export default Form;

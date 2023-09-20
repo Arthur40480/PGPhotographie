@@ -26,7 +26,7 @@ function Nav() {
                 item.classList.remove("li-animation");
             }
         });
-    };
+    }
 
     return (
         <>
@@ -36,7 +36,7 @@ function Nav() {
                 <ul className="menu-nav">
                     <li><NavLink exact to="/" activeClassName="active" className="nav-link">Accueil</NavLink></li>
                     <li><NavLink to="/category" activeClassName="active" className="nav-link">Galerie</NavLink></li>
-                    <li><NavLink to="/golden-book" activeClassName="active" className="nav-link">Livre d'Or</NavLink></li>
+                    <li><NavLink to="/golden-book" activeClassName="active" className="nav-link">Livre d&rsquo;Or</NavLink></li>
                     <li><a href={`mailto:${email}`} className="nav-link">Contact</a></li>                    
                 </ul>
             </nav>
@@ -53,6 +53,6 @@ function Nav() {
             </div>
         </>
     )
-};
+}
 
 export default Nav;

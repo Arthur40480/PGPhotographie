@@ -2,7 +2,8 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./collapse.css";
 import arrow_icon from "./../../../public/12.svg";
-import arrow_icon2 from "./../../../public/13.svg"
+import arrow_icon2 from "./../../../public/13.svg";
+import PropTypes from 'prop-types';
 
 function Collapse({ data: { attributes: { title, subcategories } }, style }) {
     
@@ -12,7 +13,7 @@ function Collapse({ data: { attributes: { title, subcategories } }, style }) {
 
     function openCollapse() {
         setIsOpen(!isOpen);
-    };
+    }
 
     function listEltCreation(array) {
         return (
@@ -43,6 +44,11 @@ function Collapse({ data: { attributes: { title, subcategories } }, style }) {
             </nav>
         </>
     )
-};
+}
+
+Collapse.propTypes = {
+    data: PropTypes.array,
+    style: PropTypes.object
+}
 
 export default Collapse;
