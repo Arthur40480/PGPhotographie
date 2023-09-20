@@ -1,6 +1,7 @@
 import "./confirmationMessage.css";
 import closeConfirmationMsg from "../../../public/croix.svg";
 import sendIcon from "../../../public/confirmationMessage.svg";
+import PropTypes from 'prop-types';
 
 function ConfirmationMessage({ handleClose }) {
 
@@ -18,6 +19,10 @@ function ConfirmationMessage({ handleClose }) {
         </div>
         </> 
     )
-};
+}
+
+ConfirmationMessage.propTypes = {
+    handleClose: PropTypes.func
+}
 
 export default ConfirmationMessage;

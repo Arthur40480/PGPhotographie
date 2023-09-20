@@ -14,7 +14,7 @@ function Gallery() {
     useEffect(() => {
         http.get("api/subcategories?populate[0]=photos.src")
             .then(({data}) => setPhotoData(data.data[id - 1].attributes.photos.data))
-    }, []);
+    }, [id]);
 
     useEffect(() => {
         if(photoData.length > 0) {

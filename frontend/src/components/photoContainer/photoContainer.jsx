@@ -1,7 +1,8 @@
 import "./photoContainer.css";
 import Carrousel from "../carrousel/carrousel";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import loupe from "../../../public/loupe.svg";
+import PropTypes from 'prop-types';
 
 function PhotoContainer({ data }) {
 
@@ -43,6 +44,10 @@ function PhotoContainer({ data }) {
             </section>
         </>
     )
-};
+}
+
+PhotoContainer.propTypes = {
+    data: PropTypes.array
+}
 
 export default PhotoContainer;
