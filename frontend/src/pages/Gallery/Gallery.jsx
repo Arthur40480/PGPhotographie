@@ -1,6 +1,6 @@
-import "./gallery.css";
+import "./Gallery.css";
 import http from "./../../services/http.js";
-import { useParams, useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PhotoContainer from "../../components/photoContainer/photoContainer.jsx";
 

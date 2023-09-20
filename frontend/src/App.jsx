@@ -3,7 +3,7 @@ import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import Home from "./pages/Home/Home";
 import Category from "./pages/Category/category";
-import Gallery from "./pages/Gallery/gallery";
+import Gallery from "./pages/Gallery/Gallery";
 import GoldenBook from "./pages/GoldenBook/GoldenBook";
 import Error from "./pages/Error/Error";
 import "./App.css";
