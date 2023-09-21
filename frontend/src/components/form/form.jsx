@@ -2,7 +2,7 @@ import "./form.css";
 import img from "../../assets/form_img.jpg";
 import send from "../../../public/send.svg";
 import { useState, useRef } from 'react';
-import axios from 'axios';
+import http from "./../../services/http.js";
 import ReCAPTCHA from "react-google-recaptcha";
 import React from 'react';
 import ConfirmationMessage from "../confirmationMessage/confirmationMessage";
@@ -32,7 +32,7 @@ function Form() {
         const handleSubmit = (event) => {
             recaptchaRef.current.executeAsync()
                 .then((token) => {
-                return axios.post("http://localhost:1337/api/comments",
+                return http.post("api/comments",
                     {
                     "data": {
                         firstname: formData.firstname,

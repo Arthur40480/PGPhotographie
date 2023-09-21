@@ -1,5 +1,5 @@
 import "./gallery.css";
-import axios from "axios";
+import http from "./../../services/http.js";
 import { useParams, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PhotoContainer from "../../components/photoContainer/photoContainer.jsx";
@@ -12,7 +12,7 @@ function Gallery() {
     const categoryTitle = new URLSearchParams(window.location.search).get("categoryTitle");
 
     useEffect(() => {
-        axios.get("http://localhost:1337/api/subcategories?populate[0]=photos.src")
+        http.get("api/subcategories?populate[0]=photos.src")
             .then(({data}) => setPhotoData(data.data[id - 1].attributes.photos.data))
     }, []);
 

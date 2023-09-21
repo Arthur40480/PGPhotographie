@@ -1,5 +1,5 @@
 import "./news.css";
-import axios from "axios";
+import http from "./../../services/http.js";
 import { useState, useEffect } from "react";
 import separator from "../../../public/separateur.svg";
 function News() {
@@ -8,7 +8,7 @@ function News() {
     const [events, setEvents] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:1337/api/events")
+        http.get("api/events")
         .then(( { data } ) => setEvents(data.data))
         .catch((error) => setError(error))
     }, []);

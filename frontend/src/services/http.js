@@ -1,7 +1,7 @@
 import Axios from 'axios';
 
 const http = Axios.create({
-  baseURL: process.env.REACT_APP_URL,
+  baseURL: import.meta.env.VITE_REACT_APP_URL,
 });
 
 export default http;
