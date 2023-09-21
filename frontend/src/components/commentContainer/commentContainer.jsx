@@ -25,7 +25,7 @@ function CommentContainer() {
         const reversed = [...data].reverse();
         console.log(reversed);
         setCommentObject(reversed);
-    };
+    }
 
     function formatDate(string) {
         const originalDate = string;
@@ -34,14 +34,14 @@ function CommentContainer() {
         const formattedDate = `${reverseDate[2]} - ${reverseDate[1]} - ${reverseDate[0]}`
         
         return formattedDate;
-    };
+    }
 
     function firstLetter(string) {
         const originalName = string;
         const firstLetter = originalName.charAt(0);
         
         return firstLetter;
-    };
+    }
 
     function getRandomColor() {
         var letters = '0123456789ABCDEF';
@@ -50,7 +50,7 @@ function CommentContainer() {
             color += letters[Math.floor(Math.random() * 10) + 6];
         }
         return color;
-    };
+    }
 
     function changeCommentPage(page) {
         setCurrentPage(page);
@@ -60,7 +60,7 @@ function CommentContainer() {
                 block: "start"
             });
         }, 0)
-    };
+    }
 
     return (
         <>
@@ -85,6 +85,6 @@ function CommentContainer() {
             </section>
         </>
     )
-};
+}
 
 export default CommentContainer;
