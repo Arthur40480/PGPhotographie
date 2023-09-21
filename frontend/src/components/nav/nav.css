@@ -92,11 +92,18 @@
 }
 
 .menu-nav li {
+    display: flex;
+    align-items: center;
     margin: 50px;
     font-size:  26px;
     font-weight: bold;
     cursor: pointer;
     opacity: 0;
+}
+
+.icon-nav {
+    margin-left: 30px;
+    width: 40px;
 }
 
 .li-animation {
@@ -140,7 +147,13 @@
     .menu-nav li {
         font-size:  20px;
     }
+
+    .icon-nav {
+        margin-left: 20px;
+        width: 30px;
+    }
 }
+
 
 @media screen and (max-width: 767px) {
 
@@ -155,6 +168,11 @@
 
     .nav {
         width: 42%;
+    }
+
+    .icon-nav {
+        margin-left: 10px;
+        width: 30px;
     }
 }
 
