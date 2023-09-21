@@ -22,7 +22,7 @@ function Category() {
   };
 
   useEffect(() => {
-    http.get("api/categories?populate=*")
+    http.get("/api/categories?populate=*")
     .then(({ data }) => setCategories(data.data))
   }, []);
 

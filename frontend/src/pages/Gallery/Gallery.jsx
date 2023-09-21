@@ -5,14 +5,13 @@ import { useState, useEffect } from "react";
 import PhotoContainer from "../../components/photoContainer/photoContainer.jsx";
 
 function Gallery() {
-    
     const [ photoData, setPhotoData ] = useState([]);
     const [ photoInfo, setPhotoInfo ] = useState([]);
     const { id } = useParams();
     const categoryTitle = new URLSearchParams(window.location.search).get("categoryTitle");
 
     useEffect(() => {
-        http.get("api/subcategories?populate[0]=photos.src")
+        http.get("/api/subcategories?populate[0]=photos.src")
             .then(({data}) => setPhotoData(data.data[id - 1].attributes.photos.data))
     }, []);
 
@@ -25,7 +24,7 @@ function Gallery() {
 
     function extractPhotoData(array) {
         const photoObject = array.map(photo => ({
-            url: `http://localhost:1337${photo.attributes.src.data[0].attributes.url}`,
+            url: import.meta.env.VITE_REACT_APP_URL + photo.attributes.src.data[0].attributes.url,
             legend: photo.attributes.Legend
         }));
         return photoObject;

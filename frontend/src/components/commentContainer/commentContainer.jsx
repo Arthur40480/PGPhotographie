@@ -15,7 +15,7 @@ function CommentContainer() {
     const currentComments = commentObject.filter(comment => comment.attributes.validate === true).slice(indexOfFirstComment, indexOfLastComment);
 
     useEffect(() => {
-        http.get("api/comments?populate=*")
+        http.get("/api/comments?populate=*")
         .then(({ data }) => reverseData(data.data))
         .catch((error) => console.log(error))
     }, []);

@@ -8,7 +8,7 @@ function News() {
     const [events, setEvents] = useState([])
 
     useEffect(() => {
-        http.get("api/events")
+        http.get("/api/events")
         .then(( { data } ) => setEvents(data.data))
         .catch((error) => setError(error))
     }, []);

@@ -32,7 +32,7 @@ function Form() {
         const handleSubmit = (event) => {
             recaptchaRef.current.executeAsync()
                 .then((token) => {
-                return http.post("api/comments",
+                return http.post("/api/comments",
                     {
                     "data": {
                         firstname: formData.firstname,
