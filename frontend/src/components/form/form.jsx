@@ -11,7 +11,7 @@ function Form() {
 
         const recaptchaRef = React.useRef();
         const nameRegEx = /^(?=.{0,30}$)[a-zA-ZÀ-ÿ]+(?: [a-zA-ZÀ-ÿ]+)?$/;
-        const commentRegEx = /^[a-zA-ZÀ-ÿ0-9\s\.,!?()\-\_+=*&#@%$£€:;"'\/]{2,800}$/;
+        const commentRegEx = /^[a-zA-ZÀ-ÿ0-9\s,!?()\-+=*&#@%$£€:;"']{2,800}$/;
         const siteKey = "6Lc6aewnAAAAABdRrE1jz03zeT63vVNux58wdH8H";
 
         const [isFormValid, setIsFormValid] = useState(false);
