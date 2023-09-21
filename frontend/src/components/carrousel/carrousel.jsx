@@ -2,6 +2,7 @@ import "./carrousel.css";
 import buttonClose from "../../../public/croix.svg";
 import buttonNext from "../../../public/nextcarrousel.svg"
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
 function Carrousel({ onClose, data, selectedImg }) {
     
@@ -84,6 +85,12 @@ function Carrousel({ onClose, data, selectedImg }) {
             </div>
         </>
     )
+}
+
+Carrousel.propTypes = {
+    onClose: PropTypes.func,
+    data: PropTypes.array,
+    selectedImg: PropTypes.number
 };
 
 export default Carrousel;

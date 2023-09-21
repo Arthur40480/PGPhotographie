@@ -1,6 +1,6 @@
 import "./gallery.css";
 import http from "./../../services/http.js";
-import { useParams, useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PhotoContainer from "../../components/photoContainer/photoContainer.jsx";
 
@@ -13,7 +13,7 @@ function Gallery() {
     useEffect(() => {
         http.get("/api/subcategories?populate[0]=photos.src")
             .then(({data}) => setPhotoData(data.data[id - 1].attributes.photos.data))
-    }, []);
+    }, [id]);
 
     useEffect(() => {
         if(photoData.length > 0) {

@@ -1,7 +1,7 @@
 import "./form.css";
 import img from "../../assets/form_img.jpg";
 import send from "../../../public/send.svg";
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import http from "./../../services/http.js";
 import ReCAPTCHA from "react-google-recaptcha";
 import React from 'react';
@@ -11,7 +11,7 @@ function Form() {
 
         const recaptchaRef = React.useRef();
         const nameRegEx = /^(?=.{0,30}$)[a-zA-ZÀ-ÿ]+(?: [a-zA-ZÀ-ÿ]+)?$/;
-        const commentRegEx = /^[a-zA-ZÀ-ÿ0-9\s\.,!?()\-\_+=*&#@%$£€:;"'\/]{2,800}$/;
+        const commentRegEx = /^[a-zA-ZÀ-ÿ0-9\s,!?()\-+=*&#@%$£€:;"']{2,800}$/;
         const siteKey = "6Lc6aewnAAAAABdRrE1jz03zeT63vVNux58wdH8H";
 
         const [isFormValid, setIsFormValid] = useState(false);
@@ -92,7 +92,7 @@ function Form() {
 
             setformErrors(newError);
             return isValid;
-        };
+        }
         
         const handleInputChange = (event) => {
             const { name, value } = event.target;
@@ -157,6 +157,6 @@ function Form() {
         )}
         </>
     )
-};
+}
 
 export default Form;

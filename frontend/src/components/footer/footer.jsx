@@ -27,13 +27,13 @@ function Footer() {
             <ul className="footer-list">
                 <li><NavLink exact to="/" className="footer-link">Accueil</NavLink></li>
                 <li><NavLink to="/category" className="footer-link">Galerie</NavLink></li>
-                <li><NavLink to="/golden-book" className="footer-link">Livre d'Or</NavLink></li>
+                <li><NavLink to="/golden-book" className="footer-link">Livre d&lsquo;Or</NavLink></li>
                 <a href={`mailto:${email}`} className="footer-link">Contact</a>
             </ul>
             <p className="copyright">Copyright 2023 Pierre Gibert Photographie.</p>
             <p className="copyright end">Tous droits réservés.</p>
         </footer>
     )
-};
+}
 
 export default Footer;
