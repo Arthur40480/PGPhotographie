@@ -1,4 +1,4 @@
-import axios from "axios";
+import http from "./../../services/http.js";
 import { useState, useEffect } from "react";
 import "./category.css";
 import Collapse from "../../components/collapse/collapse";
@@ -22,7 +22,7 @@ function Category() {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:1337/api/categories?populate=*")
+    http.get("/api/categories?populate=*")
     .then(({ data }) => setCategories(data.data))
   }, []);
 

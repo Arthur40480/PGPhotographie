@@ -1,5 +1,5 @@
 import "./commentContainer.css";
-import axios from "axios";
+import http from "./../../services/http.js";
 import { useState, useEffect, useRef } from "react";
 
 function CommentContainer() {
@@ -15,7 +15,7 @@ function CommentContainer() {
     const currentComments = commentObject.filter(comment => comment.attributes.validate === true).slice(indexOfFirstComment, indexOfLastComment);
 
     useEffect(() => {
-        axios.get("http://localhost:1337/api/comments?populate=*")
+        http.get("/api/comments?populate=*")
         .then(({ data }) => reverseData(data.data))
         .catch((error) => console.log(error))
     }, []);
