@@ -8,19 +8,15 @@ RUN yarn config set network-timeout 600000 -g && yarn install
 ENV PATH /opt/node_modules/.bin:$PATH
 WORKDIR /opt/app
 COPY . .
+COPY .env.prod .env
 COPY vite.config.prod.js ./vite.config.js
 RUN yarn build
 
-# Creating final production image
-FROM node:18-alpine
-RUN apk add --no-cache vips-dev
-WORKDIR /opt/
-COPY --from=build /opt/node_modules ./node_modules
-WORKDIR /opt/app
-COPY --from=build /opt/app ./
-ENV PATH /opt/node_modules/.bin:$PATH
+FROM nginx:stable-alpine
 
-RUN chown -R node:node /opt/app
-USER node
-EXPOSE 8000
-CMD ["yarn", "start"]
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/
+COPY --from=build /opt/app/dist /usr/share/nginx/html
+EXPOSE 80 
+EXPOSE 443
+CMD ["nginx", "-g", "daemon off;"]
