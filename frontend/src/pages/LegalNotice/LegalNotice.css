@@ -1,3 +1,9 @@
+.legal-notice-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .legal-notice-container-title {
     margin: 100px auto;
     width: 60%;

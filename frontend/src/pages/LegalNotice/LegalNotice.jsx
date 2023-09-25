@@ -1,5 +1,5 @@
 import "./LegalNotice.css";
-import legalNoticeContent from "../../components/legalNoticeContent/legalNoticeContent";
+import LegalNoticeContent from "../../components/legalNoticeContent/legalNoticeContent";
 
 function LegalNotice() {
     return (
@@ -7,7 +7,7 @@ function LegalNotice() {
             <div className="legal-notice-container-title">
                 <h1 className="legal-notice-title"><span>Mentions légales</span></h1>
             </div>
-            <legalNoticeContent />
+            <LegalNoticeContent />
         </main>
     )
 }
