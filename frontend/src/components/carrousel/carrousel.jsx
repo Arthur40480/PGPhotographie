@@ -91,6 +91,6 @@ Carrousel.propTypes = {
     onClose: PropTypes.func,
     data: PropTypes.array,
     selectedImg: PropTypes.number
-};
+}
 
 export default Carrousel;

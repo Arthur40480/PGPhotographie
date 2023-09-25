@@ -49,6 +49,6 @@ function Collapse({ data: { attributes: { title, subcategories } }, style }) {
 Collapse.propTypes = {
     data: PropTypes.array,
     style: PropTypes.object
-};
+}
 
 export default Collapse;

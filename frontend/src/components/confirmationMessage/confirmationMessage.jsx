@@ -23,6 +23,6 @@ function ConfirmationMessage({ handleClose }) {
 
 ConfirmationMessage.propTypes = {
     handleClose: PropTypes.func
-};
+}
 
 export default ConfirmationMessage;
