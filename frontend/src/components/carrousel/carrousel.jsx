@@ -1,6 +1,6 @@
 import "./carrousel.css";
-import buttonClose from "../../../public/croix.svg";
-import buttonNext from "../../../public/nextcarrousel.svg"
+import buttonClose from "../../../public/close.svg";
+import buttonNext from "../../../public/nextCarrousel.svg"
 import { useState } from "react";
 import PropTypes from 'prop-types';
 

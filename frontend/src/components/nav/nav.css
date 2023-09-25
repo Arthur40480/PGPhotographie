@@ -92,6 +92,8 @@
 }
 
 .menu-nav li {
+    display: flex;
+    align-items: center;
     margin: 50px;
     font-size:  26px;
     font-weight: bold;
@@ -119,6 +121,11 @@
 .nav-link {
     text-decoration: none;
     color: inherit;
+}
+
+.icone-nav {
+    margin-left: 20px;
+    width: 40px;
 }
 
 .black-box {     
