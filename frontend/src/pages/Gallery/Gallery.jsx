@@ -3,7 +3,6 @@ import http from "./../../services/http.js";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PhotoContainer from "../../components/photoContainer/photoContainer.jsx";
-import http from "../../services/http.js";
 
 function Gallery() {
     const [ photoData, setPhotoData ] = useState([]);
@@ -32,12 +31,12 @@ function Gallery() {
     }
 
     return (
-        <>
+        <main className="gallery-main">
             <div className="container-gallery-title">
                 <h1 className="gallery-title"><span>{categoryTitle}</span></h1>
             </div>
             <PhotoContainer data={photoInfo} />
-        </>
+        </main>
     )
 }
 export default Gallery;
