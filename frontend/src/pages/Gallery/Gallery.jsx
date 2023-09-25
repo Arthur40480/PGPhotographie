@@ -3,6 +3,7 @@ import http from "./../../services/http.js";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PhotoContainer from "../../components/photoContainer/photoContainer.jsx";
+import http from "../../services/http.js";
 
 function Gallery() {
     const [ photoData, setPhotoData ] = useState([]);
