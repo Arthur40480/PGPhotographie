@@ -2,6 +2,7 @@ import "./news.css";
 import http from "./../../services/http.js";
 import { useState, useEffect } from "react";
 import separator from "../../../public/separateur.svg";
+
 function News() {
 
     const [error, setError] = useState(null)

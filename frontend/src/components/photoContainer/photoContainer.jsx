@@ -48,6 +48,6 @@ function PhotoContainer({ data }) {
 
 PhotoContainer.propTypes = {
     data: PropTypes.array
-};
+}
 
 export default PhotoContainer;

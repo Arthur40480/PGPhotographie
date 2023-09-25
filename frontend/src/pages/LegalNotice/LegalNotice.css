@@ -1,21 +1,27 @@
-.container-gallery-title {
+.legal-notice-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.legal-notice-container-title {
     margin: 100px auto;
     width: 60%;
     overflow: hidden;
     font-family: 'Cinzel', sans-serif;
 }
 
-.gallery-title {
+.legal-notice-title {
     font-size: 50px;
     text-align: center;
 }
 
-.gallery-title span {
+.legal-notice-title span {
     position: relative;
     padding: 1em;
 }
 
-.gallery-title span::before {
+.legal-notice-title span::before {
     content: "";
     display: block;
     position: absolute;
@@ -27,7 +33,7 @@
     right: 100%;
 }
 
-.gallery-title span::after {
+.legal-notice-title span::after {
     content: "";
     display: block;
     position: absolute;
@@ -41,12 +47,12 @@
 
 @media screen and (max-width: 1024px) {
 
-    .gallery-title {
+    .legal-notice-title {
         font-size: 36px;
         margin-bottom: 50px;
     }
 
-    .container-gallery-title {
+    .legal-notice-container-title {
         margin: 50px auto 0 auto;
         width: 60%;
     }
@@ -54,11 +60,18 @@
 
 @media screen and (max-width: 767px) {
 
-    .container-gallery-title {
+    .legal-notice-container-title {
         width: 80%;
     }
 
-    .gallery-title {
+    .legal-notice-title {
         font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .legal-notice-title {
+        font-size: 25px;
     }
 }
