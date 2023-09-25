@@ -28,7 +28,8 @@ function Footer() {
                 <li><NavLink exact to="/" className="footer-link">Accueil</NavLink></li>
                 <li><NavLink to="/category" className="footer-link">Galerie</NavLink></li>
                 <li><NavLink to="/golden-book" className="footer-link">Livre d&lsquo;Or</NavLink></li>
-                <a href={`mailto:${email}`} className="footer-link">Contact</a>
+                <li><a href={`mailto:${email}`} className="footer-link">Contact</a></li>
+                <li><NavLink to="/legal-notice" className="footer-link">Mentions légales</NavLink></li>
             </ul>
             <p className="copyright">Copyright 2023 Pierre Gibert Photographie.</p>
             <p className="copyright end">Tous droits réservés.</p>
