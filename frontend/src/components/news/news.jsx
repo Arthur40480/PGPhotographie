@@ -21,7 +21,10 @@ function News() {
                 </div>
                 { error ? (
                     <p className="news-error">Une erreur est survenue !</p>
-                ) : ( events.map(( { id, attributes }) => (
+                ) : events.length === 0 ? (
+                    <p className="news-error">Aucun évènement à venir !</p>
+                ) : ( 
+                    events.map(( { id, attributes }) => (
                         <div key={id} className="news-content">
                             <h3 className="news-content-title">{attributes.name}</h3>
                             <p><span>Lieu:</span> {attributes.place}</p>
