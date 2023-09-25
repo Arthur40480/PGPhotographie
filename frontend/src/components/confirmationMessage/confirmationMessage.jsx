@@ -1,5 +1,5 @@
 import "./confirmationMessage.css";
-import closeConfirmationMsg from "../../../public/croix.svg";
+import closeConfirmationMsg from "../../../public/close.svg";
 import sendIcon from "../../../public/confirmationMessage.svg";
 import PropTypes from 'prop-types';
 
