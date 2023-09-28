@@ -3,17 +3,26 @@ import http from "./../../services/http.js";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PhotoContainer from "../../components/photoContainer/photoContainer.jsx";
+import LoadingPage from "../../components/loadingPage/loadingPage";
 
 function Gallery() {
     const [ photoData, setPhotoData ] = useState([]);
     const [ photoInfo, setPhotoInfo ] = useState([]);
+    const [ isLoading, setIsLoading ] = useState(true);
+
     const { id } = useParams();
     const categoryTitle = new URLSearchParams(window.location.search).get("categoryTitle");
 
     useEffect(() => {
         http.get("/api/subcategories?populate[0]=photos.src")
-            .then(({data}) => setPhotoData(data.data[id - 1].attributes.photos.data))
-    }, [id]);
+            .then(({data}) => {
+                setPhotoData(data.data[id - 1].attributes.photos.data);
+                setIsLoading(false);
+            })
+            .catch((error) => {
+                console.error('Erreur lors du chargement des données:', error);
+            });
+        }, [id]);
 
     useEffect(() => {
         if(photoData.length > 0) {
@@ -31,12 +40,18 @@ function Gallery() {
     }
 
     return (
-        <main className="gallery-main">
-            <div className="container-gallery-title">
-                <h1 className="gallery-title"><span>{categoryTitle}</span></h1>
-            </div>
-            <PhotoContainer data={photoInfo} />
-        </main>
+        <>
+            {isLoading ? (
+                <LoadingPage />
+            ) : (
+                <main className="gallery-main">
+                    <div className="container-gallery-title">
+                        <h1 className="gallery-title"><span>{categoryTitle}</span></h1>
+                    </div>
+                    <PhotoContainer data={photoInfo} />
+                </main>
+            )}          
+        </>
     )
 }
 export default Gallery;
