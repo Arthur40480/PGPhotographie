@@ -3,6 +3,7 @@ import buttonClose from "../../../public/close.svg";
 import buttonNext from "../../../public/nextCarrousel.svg"
 import { useState } from "react";
 import PropTypes from 'prop-types';
+import LittleCarrousel from "../littleCarrousel/littleCarrousel.jsx";
 
 function Carrousel({ onClose, data, selectedImg }) {
 
@@ -47,6 +48,7 @@ function Carrousel({ onClose, data, selectedImg }) {
                 </div>
                 <div className="thumbnail-carrousel">
                     <img src={buttonNext} className="button-arrow-carrousel previous" onClick={handlePreviousImage} alt="Boutton pour parcourir les photos" />
+                    <LittleCarrousel data={data} activeImageId={currentIndex}/>
                     <img src={buttonNext} className="button-arrow-carrousel next" onClick={handleNextImage} alt="Boutton pour parcourir les photos" />
                 </div>
             </div>
