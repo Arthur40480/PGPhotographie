@@ -1,5 +1,6 @@
 @import "../../styles/variables.css";
 
+/* --- Keyframes -- */
 @keyframes rotateIcon {
     to {
         transform: rotate(-45deg);
@@ -59,6 +60,7 @@
     animation: rotateIcon 2s forwards;
 }
 
+/* --- Media Queries -- */
 @media screen and (max-width: 1230px) {
 
     .picture-section {

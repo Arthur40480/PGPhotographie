@@ -1,5 +1,6 @@
 @import "../../styles/variables.css";
 
+/* --- Keyframes -- */
 @keyframes blink {
     0% {
         opacity: 0;
