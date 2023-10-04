@@ -34,8 +34,10 @@ function Gallery() {
     function extractPhotoData(array) {
         const photoObject = array.map(photo => ({
             url: import.meta.env.VITE_REACT_APP_URL + photo.attributes.src.data[0].attributes.url,
-            legend: photo.attributes.Legend
+            legend: photo.attributes.Legend,
+            id: photo.id
         }));
+        console.log(photoObject);
         return photoObject;
     }
 

@@ -29,7 +29,7 @@ function PhotoContainer({ data }) {
                     <div 
                         key={index} 
                         className="picture-card" 
-                        onClick={() => openCarrousel(index)}
+                        onClick={() => openCarrousel(photo.id)}
                         onMouseEnter={() => setHoveredImgIndex(index)}
                         onMouseLeave={() => setHoveredImgIndex(null)}
                     >
