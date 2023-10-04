@@ -44,6 +44,7 @@
     border-bottom: 2px solid var(--tertiary-color);
 }
 
+/* --- Media Queries -- */
 @media screen and (max-width: 1024px) {
 
     .error-title {

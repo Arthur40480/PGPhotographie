@@ -57,6 +57,7 @@
     width: 350px;
 }
 
+/* --- Media Queries -- */
 @media screen and (max-width: 1024px) {
     
     .container-golden-book-title {
@@ -77,5 +78,4 @@
     .golden-book-separator {
         width: 250px;
     }
-
 }
