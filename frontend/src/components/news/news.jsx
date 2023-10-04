@@ -5,10 +5,11 @@ import separator from "../../../public/separateur.svg";
 
 function News() {
 
+    // -- Déclaration de state --//
     const [error, setError] = useState(null)
     const [events, setEvents] = useState([])
 
-    useEffect(() => {
+    useEffect(() => {   // Appel API en méthode "GET" pour récupérer les évènements
         http.get("/api/events")
         .then(( { data } ) => setEvents(data.data))
         .catch((error) => setError(error))

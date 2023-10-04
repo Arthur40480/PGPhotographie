@@ -75,8 +75,7 @@
     font-size: 22px;
 }
 
-/* PETIT CARROUSEL */
-
+/* --- Petit Carrousel --- */
 .thumbnail-carrousel {
     display: flex;
     align-items: center;
@@ -102,6 +101,7 @@
     border: 6px solid white;
 }
 
+/* --- Media Queries -- */
 @media screen and (max-width: 1250px) {
     
     .button-close-popup {

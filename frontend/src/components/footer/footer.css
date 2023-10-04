@@ -45,6 +45,7 @@ footer {
     margin-bottom: 20px;
 }
 
+/* --- Media Queries -- */
 @media screen and (max-width: 1024px) {
 
     .footer-link {

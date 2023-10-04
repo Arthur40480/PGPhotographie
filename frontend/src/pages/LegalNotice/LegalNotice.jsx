@@ -2,6 +2,7 @@ import "./LegalNotice.css";
 import LegalNoticeContent from "../../components/legalNoticeContent/legalNoticeContent";
 
 function LegalNotice() {
+    
     return (
         <main className="legal-notice-main">
             <div className="legal-notice-container-title">

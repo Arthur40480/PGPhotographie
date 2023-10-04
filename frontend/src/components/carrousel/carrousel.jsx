@@ -7,13 +7,16 @@ import LittleCarrousel from "../littleCarrousel/littleCarrousel.jsx";
 
 function Carrousel({ onClose, data, selectedImg }) {
 
+    // -- Déclaration de state --//
     const [isImageTransitioning, setImageTransitioning] = useState(false);
     const [currentImageId, setCurrentImageId] = useState(selectedImg);
     const [currentIndex, setCurrentIndex] = useState(
         data.findIndex((image) => image.id === selectedImg)
     );
     
-    const handleNextImage = () => {
+    const selectedData = data[currentIndex];
+    
+    const handleNextImage = () => { // Fonction pour aller à l'image suivante
         setImageTransitioning(true);
         setTimeout(() => {
             setCurrentIndex((prevIndex) =>
@@ -27,7 +30,7 @@ function Carrousel({ onClose, data, selectedImg }) {
         }, 300);
     };
     
-    const handlePreviousImage = () => {
+    const handlePreviousImage = () => { // Fonction pour aller à l'image précédente
         setImageTransitioning(true);
         setTimeout(() => {
             setCurrentIndex((prevIndex) =>
@@ -41,6 +44,10 @@ function Carrousel({ onClose, data, selectedImg }) {
         }, 300);
     };
 
+    /**
+     * Fonction pour aller à l'image sélectionnée (Depuis le petit carrousel)
+     * @param {number} newImageId 
+     */
     const handleThumbnailClick = (newImageId) => {
         const newIndex = data.findIndex((image) => image.id === newImageId);
         if (newIndex !== -1) {
@@ -49,8 +56,6 @@ function Carrousel({ onClose, data, selectedImg }) {
         setCurrentImageId(newImageId);
     };
     
-    const selectedData = data[currentIndex];
-
     return (
         <>
             <div className="popup-container">

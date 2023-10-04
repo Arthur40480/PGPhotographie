@@ -5,6 +5,8 @@ import battery from "../../../public/battery.svg";
 import flash from "../../../public/flash.svg";
 
 function LoadingPage() {
+    
+    // -- Déclaration de state --//
     const [progress, setProgress] = useState(0);
     
     useEffect(() => {

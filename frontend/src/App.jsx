@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import Home from "./pages/Home/Home";
-import Category from "./pages/Category/category";
+import Category from "./pages/Category/Category";
 import Gallery from "./pages/Gallery/Gallery";
 import GoldenBook from "./pages/GoldenBook/GoldenBook";
 import LegalNotice from "./pages/LegalNotice/LegalNotice";

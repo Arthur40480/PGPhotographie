@@ -45,6 +45,7 @@
     left: 100%;
 }
 
+/* --- Media Queries -- */
 @media screen and (max-width: 1024px) {
 
     .legal-notice-title {
