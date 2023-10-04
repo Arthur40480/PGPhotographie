@@ -31,10 +31,15 @@ function Form() {
     const commentRegEx = /^[a-zA-ZÀ-ÿ0-9\s,!?()\-+=*&#@%$£€:;"']{2,800}$/;
     const siteKey = "6Lc6aewnAAAAABdRrE1jz03zeT63vVNux58wdH8H";
 
-    const handleSubmit = (event) => {   // Fonction qui permet de gérer la soumission du formulaire
+    /**
+     * Fonction qui permet de gérer la soumission du formulaire
+     * Avec requête HTTP POST avec les données des commentaires
+     * @param {event} event 
+     */
+    const handleSubmit = (event) => {
         recaptchaRef.current.executeAsync()
             .then((token) => {
-            return http.post("/api/comments",   // Requête HTTP POST avec les données des commentaires
+            return http.post("/api/comments",
                 {
                 "data": {
                     firstname: formData.firstname,
@@ -60,7 +65,11 @@ function Form() {
             });
     };
 
-    const handleFormSubmit = async (event) => { //  Fonction qui vérifie la validité du formulaire
+    /**
+     * Fonction qui vérifie la validité du formulaire
+     * @param {event} event 
+     */
+    const handleFormSubmit = async (event) => { 
         event.preventDefault();
         const isValid = validForm();
         if (isValid) {
@@ -91,7 +100,11 @@ function Form() {
         return isValid;
     }
 
-    const handleInputChange = (event) => {  // Fonction qui sert à gérer les changements dans les champs de formulaire lorsque l'utilisateur saisit des données
+    /**
+     * Fonction qui sert à gérer les changements dans les champs de formulaire lorsque l'utilisateur saisit des données
+     * @param {event} event 
+     */
+    const handleInputChange = (event) => {
         const { name, value } = event.target;
         setFormData((prevData) => ({
             ...prevData,
@@ -103,6 +116,10 @@ function Form() {
         }))
     };
 
+    /**
+     * 
+     * @param {string} value 
+     */
     function onChange(value) {
         console.log("Captcha value:", value);
     }

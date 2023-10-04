@@ -17,6 +17,11 @@ function Collapse({ data: { attributes: { title, subcategories } }, style }) {
         setIsOpen(!isOpen);
     }
 
+    /**
+     * 
+     * @param {array} array 
+     * @returns {React.ReactNode}
+     */
     function listEltCreation(array) {   // Fonction pour afficher chaque sous-catégorie dans le collapse
         return (
             <ul className="collapse-nav-list"

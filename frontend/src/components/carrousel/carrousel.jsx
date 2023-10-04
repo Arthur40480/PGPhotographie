@@ -44,7 +44,11 @@ function Carrousel({ onClose, data, selectedImg }) {
         }, 300);
     };
 
-    const handleThumbnailClick = (newImageId) => {  // Fonction pour aller à l'image sélectionnée (Depuis le petit carrousel)
+    /**
+     * Fonction pour aller à l'image sélectionnée (Depuis le petit carrousel)
+     * @param {number} newImageId 
+     */
+    const handleThumbnailClick = (newImageId) => {
         const newIndex = data.findIndex((image) => image.id === newImageId);
         if (newIndex !== -1) {
             setCurrentIndex(newIndex);

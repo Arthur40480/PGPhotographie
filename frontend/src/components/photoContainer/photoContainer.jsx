@@ -11,7 +11,11 @@ function PhotoContainer({ data }) {
     const [ selectedImg, setSelectedImg ] = useState(null);
     const [ hoveredImgIndex, setHoveredImgIndex ] = useState(null);
 
-    function openCarrousel(index) { // Fonction pour ouvrir le carrousel, et passer l'index de notre photo séléctionnée au state selectedImg
+    /**
+     * Fonction pour ouvrir le carrousel, et passer l'index de notre photo séléctionnée au state selectedImg
+     * @param {number} index 
+     */
+    function openCarrousel(index) {
         setSelectedImg(index);
         setCarrouselOpen(true);
         document.body.style.overflow = 'hidden';   

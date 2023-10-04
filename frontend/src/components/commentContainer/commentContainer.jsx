@@ -23,12 +23,21 @@ function CommentContainer() {
         .catch((error) => console.log(error))
     }, []);
 
-    function reverseData(data) {    // Fonction qui inverse l'ordre des commentaires et les envoie dans l'état (state) commentObject
+    /**
+     * Fonction qui inverse l'ordre des commentaires et les envoie dans l'état (state) commentObject
+     * @param {object} data 
+     */
+    function reverseData(data) {
         const reversed = [...data].reverse();
         setCommentObject(reversed);
     }
 
-    function formatDate(string) {   // Fonction qui vient formater les dates reçues 
+    /**
+     * Fonction qui vient formater les dates reçues 
+     * @param {string} string 
+     * @returns {string}
+     */
+    function formatDate(string) {
         const originalDate = string;
         const newDate = originalDate.slice(0, 10);
         const reverseDate = newDate.split('-');
@@ -37,7 +46,12 @@ function CommentContainer() {
         return formattedDate;
     }
 
-    function firstLetter(string) {  // Fonction qui récupère la première lettre du commentateur
+    /**
+     * Fonction qui récupère la première lettre du commentateur
+     * @param {string} string 
+     * @returns {string}
+     */
+    function firstLetter(string) {
         const originalName = string;
         const firstLetter = originalName.charAt(0);
         
@@ -53,7 +67,11 @@ function CommentContainer() {
         return color;
     }
 
-    function changeCommentPage(page) {  // Fonction qui permet de changer de page
+    /**
+     * Fonction qui permet de changer de page
+     * @param {number} page 
+     */
+    function changeCommentPage(page) {
         setCurrentPage(page);
         setTimeout(() => {
             commentContainerRef.current.scrollIntoView({

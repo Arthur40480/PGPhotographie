@@ -34,7 +34,12 @@ function Gallery() {
         }
     }, [photoData]);
 
-    function extractPhotoData(array) {  // Fonction qui permet d'extraire les données de chaques photos dans un tableau
+    /**
+     * Fonction qui permet d'extraire les données de chaques photos dans un tableau
+     * @param {array} array 
+     * @returns {array}
+     */
+    function extractPhotoData(array) {
         const photoObject = array.map(photo => ({
             url: import.meta.env.VITE_REACT_APP_URL + photo.attributes.src.data[0].attributes.url,
             legend: photo.attributes.Legend,
