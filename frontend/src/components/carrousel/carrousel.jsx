@@ -8,6 +8,7 @@ import LittleCarrousel from "../littleCarrousel/littleCarrousel.jsx";
 function Carrousel({ onClose, data, selectedImg }) {
 
     const [isImageTransitioning, setImageTransitioning] = useState(false);
+    const [currentImageId, setCurrentImageId] = useState(selectedImg);
     const [currentIndex, setCurrentIndex] = useState(
         data.findIndex((image) => image.id === selectedImg)
     );
@@ -16,8 +17,12 @@ function Carrousel({ onClose, data, selectedImg }) {
         setImageTransitioning(true);
         setTimeout(() => {
             setCurrentIndex((prevIndex) =>
-            prevIndex === data.length - 1 ? 0 : prevIndex + 1
+                prevIndex === data.length - 1 ? 0 : prevIndex + 1
             );
+            setCurrentImageId((prevImageId) => {
+                const currentIndex = data.findIndex((image) => image.id === prevImageId);
+                return currentIndex === data.length - 1 ? data[0].id : data[currentIndex + 1].id;
+                });
             setImageTransitioning(false);
         }, 300);
     };
@@ -26,11 +31,22 @@ function Carrousel({ onClose, data, selectedImg }) {
         setImageTransitioning(true);
         setTimeout(() => {
             setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? data.length - 1 : prevIndex - 1
+                prevIndex === 0 ? data.length - 1 : prevIndex - 1
             );
+            setCurrentImageId((prevImageId) => {
+                const currentIndex = data.findIndex((image) => image.id === prevImageId);
+                return currentIndex === 0 ? data[data.length - 1].id : data[currentIndex - 1].id;
+                });
             setImageTransitioning(false);
         }, 300);
+    };
 
+    const handleThumbnailClick = (newImageId) => {
+        const newIndex = data.findIndex((image) => image.id === newImageId);
+        if (newIndex !== -1) {
+            setCurrentIndex(newIndex);
+        }
+        setCurrentImageId(newImageId);
     };
     
     const selectedData = data[currentIndex];
@@ -48,7 +64,7 @@ function Carrousel({ onClose, data, selectedImg }) {
                 </div>
                 <div className="thumbnail-carrousel">
                     <img src={buttonNext} className="button-arrow-carrousel previous" onClick={handlePreviousImage} alt="Boutton pour parcourir les photos" />
-                    <LittleCarrousel data={data} activeImageId={currentIndex}/>
+                    <LittleCarrousel data={data} activeImageId={currentImageId} onThumbnailClick={handleThumbnailClick}/>
                     <img src={buttonNext} className="button-arrow-carrousel next" onClick={handleNextImage} alt="Boutton pour parcourir les photos" />
                 </div>
             </div>
