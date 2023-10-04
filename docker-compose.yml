@@ -1,6 +1,6 @@
 version: "3"
 services:
-  strapi:
+  backend:
     container_name: strapi
     image: pgphotographie/app:backend-latest
     pull_policy: always
@@ -9,8 +9,19 @@ services:
       - "1337:1337"
     networks:
       - strapi
+  frontend:
+    container_name: frontend
+    image: pgphotographie/app:frontend-latest
+    pull_policy: always
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - strapi
+    volumes:
+      - /etc/letsencrypt/:/etc/letsencrypt/
 
 networks:
   strapi:
     name: Strapi
-    driver: bridge

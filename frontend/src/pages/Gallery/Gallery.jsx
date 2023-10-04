@@ -1,4 +1,4 @@
-import "./gallery.css";
+import "./Gallery.css";
 import http from "./../../services/http.js";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
