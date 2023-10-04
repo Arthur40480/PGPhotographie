@@ -110,6 +110,7 @@
     background: none;
 }
 
+/* --- Media Queries -- */
 @media screen and (max-width: 1680px) {
 
     .large-field {
@@ -168,7 +169,6 @@
     .large-label {
         width: 80%;
     }
-
 }
 
 @media screen and (max-width: 480px) {
@@ -180,5 +180,4 @@
     .large-label {
         width: 95%;
     }
-
 }

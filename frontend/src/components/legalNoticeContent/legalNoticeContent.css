@@ -1,0 +1,54 @@
+@import "../../styles/variables.css";
+
+.legal-notice-section {
+    margin-bottom: 100px;
+    padding: 40px 20px 20px 20px;
+    width: 98%;
+    font-size: 22px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px var(--text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.legal-notice-content {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.legal-notice-title-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.legal-notice-list {
+    list-style-type: none;
+    padding: 0 0 0 50px;
+    margin-bottom: 40px;
+}
+
+.legal-notice-text {
+    padding: 0 0 0 50px;
+    margin-bottom: 40px;
+}
+
+.proprietary-information {
+    font-weight: bold;
+    font-family: 'Cinzel', sans-serif;
+    text-decoration: underline;
+}
+
+/* --- Media Queries -- */
+@media screen and (max-width: 1024px) {
+    
+    .legal-notice-section{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+    .legal-notice-section{
+        font-size: 16px;
+    }
+}

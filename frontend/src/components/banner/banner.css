@@ -9,6 +9,7 @@
     width: 150px;
 }
 
+/* --- Media Queries -- */
 @media screen and (max-width: 767px) {
 
     .logo-img {

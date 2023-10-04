@@ -2,12 +2,14 @@ import "./news.css";
 import http from "./../../services/http.js";
 import { useState, useEffect } from "react";
 import separator from "../../../public/separateur.svg";
+
 function News() {
 
+    // -- Déclaration de state --//
     const [error, setError] = useState(null)
     const [events, setEvents] = useState([])
 
-    useEffect(() => {
+    useEffect(() => {   // Appel API en méthode "GET" pour récupérer les évènements
         http.get("/api/events")
         .then(( { data } ) => setEvents(data.data))
         .catch((error) => setError(error))
@@ -20,7 +22,10 @@ function News() {
                 </div>
                 { error ? (
                     <p className="news-error">Une erreur est survenue !</p>
-                ) : ( events.map(( { id, attributes }) => (
+                ) : events.length === 0 ? (
+                    <p className="news-error">Aucun évènement à venir !</p>
+                ) : ( 
+                    events.map(( { id, attributes }) => (
                         <div key={id} className="news-content">
                             <h3 className="news-content-title">{attributes.name}</h3>
                             <p><span>Lieu:</span> {attributes.place}</p>
@@ -33,6 +38,6 @@ function News() {
                 )))}
             </section>
         )
-};
+}
 
 export default News;

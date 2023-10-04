@@ -1,6 +1,6 @@
 @import "../../styles/variables.css";
 
-/* Keyframes */
+/* --- Keyframes --- */
 @keyframes nav-trigger-anim {
     from {
         opacity: 0;
@@ -21,7 +21,6 @@
     }
 }
 
-/* Bouton du menu de navigation */
 .trigger-nav {
     display: none;
     align-items: center;
@@ -54,7 +53,6 @@
     height: 2px;
 }
 
-/* Menu de navigation */
 .nav {
     display: flex;
     justify-content: center;
@@ -92,6 +90,8 @@
 }
 
 .menu-nav li {
+    display: flex;
+    align-items: center;
     margin: 50px;
     font-size:  26px;
     font-weight: bold;
@@ -121,6 +121,11 @@
     color: inherit;
 }
 
+.icone-nav {
+    margin-left: 20px;
+    width: 40px;
+}
+
 .black-box {     
     display: flex;     
     position: fixed;     
@@ -129,8 +134,7 @@
     z-index: 999;
 }
 
-/* Tablet */
-
+/* --- Media Queries -- */
 @media screen and (max-width: 1024px) {
 
     .nav {

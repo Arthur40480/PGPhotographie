@@ -8,6 +8,6 @@ function ModalWindow() {
             </div>
         </>
     )
-};
+}
 
 export default ModalWindow;

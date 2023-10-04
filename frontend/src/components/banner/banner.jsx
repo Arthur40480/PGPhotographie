@@ -1,17 +1,16 @@
 import "./banner.css";
-import Logo1 from "../../assets/logo1.png";
-
+import Logo from "../../assets/logo1.png";
 
 function Banner() {
     return (
         <>
             <a href="/">
                 <div className="banner">
-                    <img src={Logo1} alt="Premier logo du site" className="logo-img"/>
+                    <img src={Logo} alt="Logo du site PGPhotographie" className="logo-img"/>
                 </div>
             </a>
         </>
     )
-};
+}
 
 export default Banner;

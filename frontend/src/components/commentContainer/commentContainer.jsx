@@ -3,30 +3,40 @@ import http from "./../../services/http.js";
 import { useState, useEffect, useRef } from "react";
 
 function CommentContainer() {
-
+    
+    // -- Déclaration de state --//
     const [commentObject, setCommentObject] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     console.log(currentPage);
 
-    const commentsPerPage = 8;
+    // -- Déclaration de référence --//
     const commentContainerRef = useRef(null);
+
+    const commentsPerPage = 8;
     const indexOfLastComment = currentPage * commentsPerPage;
     const indexOfFirstComment = indexOfLastComment - commentsPerPage;
     const currentComments = commentObject.filter(comment => comment.attributes.validate === true).slice(indexOfFirstComment, indexOfLastComment);
 
-    useEffect(() => {
+    useEffect(() => {   // Appel API en méthode "GET" pour récupérer les commentaires
         http.get("/api/comments?populate=*")
         .then(({ data }) => reverseData(data.data))
         .catch((error) => console.log(error))
     }, []);
 
+    /**
+     * Fonction qui inverse l'ordre des commentaires et les envoie dans l'état (state) commentObject
+     * @param {object} data 
+     */
     function reverseData(data) {
-        console.log(data);
         const reversed = [...data].reverse();
-        console.log(reversed);
         setCommentObject(reversed);
-    };
+    }
 
+    /**
+     * Fonction qui vient formater les dates reçues 
+     * @param {string} string 
+     * @returns {string}
+     */
     function formatDate(string) {
         const originalDate = string;
         const newDate = originalDate.slice(0, 10);
@@ -34,24 +44,33 @@ function CommentContainer() {
         const formattedDate = `${reverseDate[2]} - ${reverseDate[1]} - ${reverseDate[0]}`
         
         return formattedDate;
-    };
+    }
 
+    /**
+     * Fonction qui récupère la première lettre du commentateur
+     * @param {string} string 
+     * @returns {string}
+     */
     function firstLetter(string) {
         const originalName = string;
         const firstLetter = originalName.charAt(0);
         
         return firstLetter;
-    };
+    }
 
-    function getRandomColor() {
+    function getRandomColor() { // Fonction qui renvoi une couleur aléatoire
         var letters = '0123456789ABCDEF';
         var color = '#';
         for (var i = 0; i < 3; i++) {
             color += letters[Math.floor(Math.random() * 10) + 6];
         }
         return color;
-    };
+    }
 
+    /**
+     * Fonction qui permet de changer de page
+     * @param {number} page 
+     */
     function changeCommentPage(page) {
         setCurrentPage(page);
         setTimeout(() => {
@@ -60,7 +79,7 @@ function CommentContainer() {
                 block: "start"
             });
         }, 0)
-    };
+    }
 
     return (
         <>
@@ -85,6 +104,6 @@ function CommentContainer() {
             </section>
         </>
     )
-};
+}
 
 export default CommentContainer;

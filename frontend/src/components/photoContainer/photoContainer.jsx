@@ -1,21 +1,27 @@
 import "./photoContainer.css";
 import Carrousel from "../carrousel/carrousel";
-import { useState, useEffect } from "react";
 import loupe from "../../../public/loupe.svg";
+import { useState } from "react";
+import PropTypes from 'prop-types';
 
 function PhotoContainer({ data }) {
 
+    // -- Déclaration de state --//
     const [ carrouselOpen, setCarrouselOpen ] = useState(false);
     const [ selectedImg, setSelectedImg ] = useState(null);
     const [ hoveredImgIndex, setHoveredImgIndex ] = useState(null);
 
+    /**
+     * Fonction pour ouvrir le carrousel, et passer l'index de notre photo séléctionnée au state selectedImg
+     * @param {number} index 
+     */
     function openCarrousel(index) {
         setSelectedImg(index);
         setCarrouselOpen(true);
         document.body.style.overflow = 'hidden';   
     }
     
-    function closeCarrousel() {
+    function closeCarrousel() { // Fonction pour fermer le carrousel
         setSelectedImg(null);
         setCarrouselOpen(false);
         document.body.style.overflow = 'auto';
@@ -28,7 +34,7 @@ function PhotoContainer({ data }) {
                     <div 
                         key={index} 
                         className="picture-card" 
-                        onClick={() => openCarrousel(index)}
+                        onClick={() => openCarrousel(photo.id)}
                         onMouseEnter={() => setHoveredImgIndex(index)}
                         onMouseLeave={() => setHoveredImgIndex(null)}
                     >
@@ -43,6 +49,10 @@ function PhotoContainer({ data }) {
             </section>
         </>
     )
-};
+}
+
+PhotoContainer.propTypes = {
+    data: PropTypes.array
+}
 
 export default PhotoContainer;

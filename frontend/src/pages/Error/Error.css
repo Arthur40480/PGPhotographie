@@ -14,9 +14,14 @@
 }
 
 .error-title {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: var(--tertiary-color);
     font-size: 60px;
+}
+
+.error-icone {
+    margin-bottom: 20px;
+    width: 80px;
 }
 
 .error-content {
@@ -39,6 +44,7 @@
     border-bottom: 2px solid var(--tertiary-color);
 }
 
+/* --- Media Queries -- */
 @media screen and (max-width: 1024px) {
 
     .error-title {
@@ -50,6 +56,10 @@
 
     .error-title {
         font-size: 30px;
+    }
+
+    .error-icone {
+        width: 50px;
     }
     
     .error-home-link {
