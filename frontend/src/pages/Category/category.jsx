@@ -1,7 +1,7 @@
-import http from "./../../services/http.js";
+import http from "../../services/http.js";
 import { useState, useEffect } from "react";
 import "./category.css";
-import Collapse from "../../components/collapse/collapse";
+import Collapse from "../../components/collapse/collapse.jsx";
 import backgroundGallery1 from "../../assets/categorie1_galerie.jpg"
 import backgroundGallery2 from "../../assets/categorie2_galerie.jpg"
 import separator from "../../../public/separateur.svg"
