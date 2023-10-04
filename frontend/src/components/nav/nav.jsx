@@ -9,7 +9,9 @@ import home from "../../../public/home.svg";
 
 function Nav() {
 
+    // -- Déclaration de state --//
     const [isOpen, setIsOpen] = useState(false);
+
     const email = [
         'p', 'i', 'e', 'r', 'r', 'e', 'g', 'i', 'b', 'e', 'r', 't', 
         '.', 
@@ -19,7 +21,7 @@ function Nav() {
         '.', 'c', 'o', 'm'
     ].join('');
 
-    function openOrCloseNav() {
+    function openOrCloseNav() { // Fonction pour ouvrir ou fermer la nav
         const navItems = document.querySelectorAll(".menu-nav li");
         setIsOpen(!isOpen);
 

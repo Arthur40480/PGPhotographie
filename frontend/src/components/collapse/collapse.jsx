@@ -1,21 +1,23 @@
+import "./collapse.css";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "./collapse.css";
 import arrow_icon from "./../../../public/arrowCollapse1.svg";
 import arrow_icon2 from "./../../../public/arrowCollapse2.svg";
 import PropTypes from 'prop-types';
 
 function Collapse({ data: { attributes: { title, subcategories } }, style }) {
     
+    // -- Déclaration de state --//
     const [ isOpen, setIsOpen ] = useState(false);
+
     const listSubCategories = subcategories.data;
     console.log(listSubCategories);
 
-    function openCollapse() {
+    function openCollapse() {   // Fonction pour ouvrir la collapse
         setIsOpen(!isOpen);
     }
 
-    function listEltCreation(array) {
+    function listEltCreation(array) {   // Fonction pour afficher chaque sous-catégorie dans le collapse
         return (
             <ul className="collapse-nav-list"
             style={{display: isOpen ? "block" : "none"}}>

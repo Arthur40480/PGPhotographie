@@ -7,6 +7,8 @@ import backgroundGallery2 from "../../assets/categorie2_galerie.jpg"
 import separator from "../../../public/separateur.svg"
 
 function Category() {
+
+  // -- Déclaration de state --//
   const [ categories, setCategories ] = useState([]);
 
   const collapseStyle1 = {
@@ -21,7 +23,7 @@ function Category() {
     left: "10%", 
   };
 
-  useEffect(() => {
+  useEffect(() => { // Appel API en méthode "GET" pour récupérer les catégories
     http.get("/api/categories?populate=*")
     .then(({ data }) => setCategories(data.data))
   }, []);

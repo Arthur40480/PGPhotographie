@@ -6,7 +6,9 @@ import { useEffect } from 'react';
 
 function Footer() {
 
+    // -- Déclaration de state --//
     const location = useLocation();
+    
     const email = [
         'p', 'i', 'e', 'r', 'r', 'e', 'g', 'i', 'b', 'e', 'r', 't', 
         '.', 

@@ -4,7 +4,8 @@ import separator from "./../../../public/separateur.svg";
 import CommentContainer from "../../components/commentContainer/commentContainer";
 
 function GoldenBook() {
-    return(
+    
+    return (
         <main className="golden-book-main">
             <div className="container-golden-book-title">
                 <h1 className="golden-book-title"><span>Livre d&lsquo;Or</span></h1>

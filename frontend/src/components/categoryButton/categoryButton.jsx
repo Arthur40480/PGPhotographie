@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
 import "./categoryButton.css";
+import { NavLink } from "react-router-dom";
 
 function CategoryButton() {
     return (

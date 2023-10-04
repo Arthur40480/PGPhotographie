@@ -9,110 +9,107 @@ import ConfirmationMessage from "../confirmationMessage/confirmationMessage";
 
 function Form() {
 
-        const recaptchaRef = React.useRef();
-        const nameRegEx = /^(?=.{0,30}$)[a-zA-ZÀ-ÿ]+(?: [a-zA-ZÀ-ÿ]+)?$/;
-        const commentRegEx = /^[a-zA-ZÀ-ÿ0-9\s,!?()\-+=*&#@%$£€:;"']{2,800}$/;
-        const siteKey = "6Lc6aewnAAAAABdRrE1jz03zeT63vVNux58wdH8H";
+    // -- Déclaration de state --//
+    const [isFormValid, setIsFormValid] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+    const [ formData, setFormData ] = useState({
+        firstname: '',
+        lastname: '',
+        comment: ''
+    });
+    const [ formErrors, setformErrors ] = useState({
+        firstname: '',
+        lastname: '',
+        comment: ''
+    });
 
-        const [isFormValid, setIsFormValid] = useState(false);
-        const [isVisible, setIsVisible] = useState(false);
+    // -- Déclaration de référence --//
+    const recaptchaRef = React.useRef();
 
-        const [ formData, setFormData ] = useState({
-            firstname: '',
-            lastname: '',
-            comment: ''
-        });
+    // -- Déclaration des expressions régulières (RegEx) --//
+    const nameRegEx = /^(?=.{0,30}$)[a-zA-ZÀ-ÿ]+(?: [a-zA-ZÀ-ÿ]+)?$/;
+    const commentRegEx = /^[a-zA-ZÀ-ÿ0-9\s,!?()\-+=*&#@%$£€:;"']{2,800}$/;
+    const siteKey = "6Lc6aewnAAAAABdRrE1jz03zeT63vVNux58wdH8H";
 
-        const [ formErrors, setformErrors ] = useState({
-            firstname: '',
-            lastname: '',
-            comment: ''
-        });
-    
-        const handleSubmit = (event) => {
-            recaptchaRef.current.executeAsync()
-                .then((token) => {
-                return http.post("/api/comments",
-                    {
-                    "data": {
-                        firstname: formData.firstname,
-                        lastname: formData.lastname,
-                        comment: formData.comment,
-                        recaptchaToken: token
-                    }
-                });
+    const handleSubmit = (event) => {   // Fonction qui permet de gérer la soumission du formulaire
+        recaptchaRef.current.executeAsync()
+            .then((token) => {
+            return http.post("/api/comments",   // Requête HTTP POST avec les données des commentaires
+                {
+                "data": {
+                    firstname: formData.firstname,
+                    lastname: formData.lastname,
+                    comment: formData.comment,
+                    recaptchaToken: token
+                }
+            });
                 
-            }).then((response) => {
-                event.preventDefault();
-                setFormData({
-                    firstname: '',
-                    lastname: '',
-                    comment: ''
-                });
-                console.log("Réponse de la requête:", response.data);
-                console.log("Formulaire envoyé avec succès !"); 
-                setIsFormValid(true);
-                setIsVisible(true);
-                })
-                .catch((error) => {
-                console.log("ERREUR", error);
-                console.log("Formulaire erroné !");
-                });
-        };
-        
-        const handleFormSubmit = async (event) => {
+        }).then((response) => {
             event.preventDefault();
-            const isValid = validForm();
-            if (isValid) {
-                handleSubmit(event);
-                console.log("Formulaire envoyé avec succès !");
-            } else {
-                console.log("Formulaire erroné !");
+            setFormData({
+                firstname: '',
+                lastname: '',
+                comment: ''
+            });
+            setIsFormValid(true);
+            setIsVisible(true);
+            })
+
+            .catch((error) => {
+                return error
+            });
+    };
+
+    const handleFormSubmit = async (event) => { //  Fonction qui vérifie la validité du formulaire
+        event.preventDefault();
+        const isValid = validForm();
+        if (isValid) {
+            handleSubmit(event);
             }
         };
 
-        function validForm() {
-            var isValid = true;
-            const newError = {};
+    function validForm() {  // Fonction qui fait respecter les RegEx dans le formulaire
+        var isValid = true;
+        const newError = {};
 
-            if(!nameRegEx.test(formData.lastname)) {
-                newError.lastname = "Le nom doit contenir 30 caractères alphabétiques maximum."
-                isValid = false
-            }
-
-            if(!nameRegEx.test(formData.firstname)) {
-                newError.firstname = "Le prénom doit contenir entre 2 et 30 caractères alphabétiques maximum."
-                isValid = false
-            }
-
-            if(!commentRegEx.test(formData.comment)) {
-                newError.comment = "Le commentaire doit contenir entre 2 et 800 caractères maximum."
-                isValid = false
-            }
-
-            setformErrors(newError);
-            return isValid;
-        }
-        
-        const handleInputChange = (event) => {
-            const { name, value } = event.target;
-            setFormData((prevData) => ({
-                ...prevData,
-                [name]: value
-            }));
-            setformErrors((prevErrors) => ({
-                ...prevErrors,
-                [name]: ""
-            }))
-        };
-
-        function onChange(value) {
-            console.log("Captcha value:", value);
+        if(!nameRegEx.test(formData.lastname)) {
+            newError.lastname = "Le nom doit contenir 30 caractères alphabétiques maximum."
+            isValid = false
         }
 
-        const handleCloseConfirmation = () => {
-            setIsVisible(false); 
-        };
+        if(!nameRegEx.test(formData.firstname)) {
+            newError.firstname = "Le prénom doit contenir entre 2 et 30 caractères alphabétiques maximum."
+            isValid = false
+        }
+
+        if(!commentRegEx.test(formData.comment)) {
+            newError.comment = "Le commentaire doit contenir entre 2 et 800 caractères maximum."
+            isValid = false
+        }
+
+        setformErrors(newError);
+        return isValid;
+    }
+
+    const handleInputChange = (event) => {  // Fonction qui sert à gérer les changements dans les champs de formulaire lorsque l'utilisateur saisit des données
+        const { name, value } = event.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value
+        }));
+        setformErrors((prevErrors) => ({
+            ...prevErrors,
+            [name]: ""
+        }))
+    };
+
+    function onChange(value) {
+        console.log("Captcha value:", value);
+    }
+
+    const handleCloseConfirmation = () => { // Fonction qui met à jour le state pour afficher ou non le message de confirmation
+        setIsVisible(false); 
+    };
 
     return (
         <>

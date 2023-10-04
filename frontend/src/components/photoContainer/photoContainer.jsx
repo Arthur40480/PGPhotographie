@@ -6,17 +6,18 @@ import PropTypes from 'prop-types';
 
 function PhotoContainer({ data }) {
 
+    // -- Déclaration de state --//
     const [ carrouselOpen, setCarrouselOpen ] = useState(false);
     const [ selectedImg, setSelectedImg ] = useState(null);
     const [ hoveredImgIndex, setHoveredImgIndex ] = useState(null);
 
-    function openCarrousel(index) {
+    function openCarrousel(index) { // Fonction pour ouvrir le carrousel, et passer l'index de notre photo séléctionnée au state selectedImg
         setSelectedImg(index);
         setCarrouselOpen(true);
         document.body.style.overflow = 'hidden';   
     }
     
-    function closeCarrousel() {
+    function closeCarrousel() { // Fonction pour fermer le carrousel
         setSelectedImg(null);
         setCarrouselOpen(false);
         document.body.style.overflow = 'auto';
