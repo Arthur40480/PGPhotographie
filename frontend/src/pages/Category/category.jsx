@@ -28,6 +28,8 @@ function Category() {
     .then(({ data }) => setCategories(data.data))
   }, []);
 
+  console.log(categories);
+  
     return (
       <main className="category-main">
         <div className="container-category-title">
@@ -44,9 +46,9 @@ function Category() {
         </section>
         <section className="container-category">
           <img className="background-img-category" src={backgroundGallery2} alt="Photo d'un bar laisser à l'abandon"></img>
-          {/* { categories[0] && (
+          { categories[0] && (
             <Collapse data={categories[1]} style={collapseStyle2} />
-          )} */}
+          )}
         </section>
       </main>
     )

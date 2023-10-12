@@ -13,13 +13,21 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "subcategories": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::subcategory.subcategory",
       "mappedBy": "category"
+    },
+    "rank": {
+      "required": true,
+      "unique": true,
+      "default": 0,
+      "type": "integer"
     }
   }
 }
