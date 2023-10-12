@@ -23,12 +23,23 @@ function Category() {
     left: "10%", 
   };
 
-  useEffect(() => { // Appel API en méthode "GET" pour récupérer les catégories
+useEffect(() => { // Appel API en méthode "GET" pour récupérer les catégories
     http.get("/api/categories?populate=*")
-    .then(({ data }) => setCategories(data.data))
+    .then(({ data }) => {
+      setCategories(data.data);
+      console.log(data.data);
+      displayCategories(data.data);
+    });
   }, []);
 
-  console.log(categories);
+  function displayCategories(array) {
+    array.map((cat, index) => {
+      console.log("Index : " + index);
+      console.log("Categorie : " + cat);
+      console.log("Nom de la categorie : " + cat.attributes.title);
+      console.log("Rank de la categorie : " + cat.attributes.rank);
+    });
+  }
   
     return (
       <main className="category-main">

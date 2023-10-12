@@ -28,6 +28,17 @@
       "unique": true,
       "default": 0,
       "type": "integer"
+    },
+    "picture": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }
