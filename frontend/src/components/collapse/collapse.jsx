@@ -17,11 +17,11 @@ function Collapse({ data: { attributes: { title, subcategories } }, style }) {
     }
 
     /**
-     * 
+     * Fonction pour afficher chaque sous-catégorie dans le collapse
      * @param {array} array 
      * @returns {React.ReactNode}
      */
-    function listEltCreation(array) {   // Fonction pour afficher chaque sous-catégorie dans le collapse
+    function listEltCreation(array) {
         return (
             <ul className="collapse-nav-list"
             style={{display: isOpen ? "block" : "none"}}>
