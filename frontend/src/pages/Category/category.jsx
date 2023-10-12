@@ -23,33 +23,47 @@ function Category() {
     left: "10%", 
   };
 
-  useEffect(() => { // Appel API en méthode "GET" pour récupérer les catégories
+useEffect(() => { // Appel API en méthode "GET" pour récupérer les catégories
     http.get("/api/categories?populate=*")
-    .then(({ data }) => setCategories(data.data))
+    .then(({ data }) => {
+      setCategories(data.data);
+      displayCategories(data.data);
+    });
   }, []);
+
+  /**
+   * Fonction pour afficher chaque catégorie 
+   * @param {array} array 
+   * @returns {React.ReactNode}
+   */
+  function displayCategories(array) {
+    return (
+      <>
+        {array.map((cat, index) => (
+          <>
+            <section className="container-category" key={index}>
+              <img className="background-img-category" src={`http://localhost:1337${cat.attributes.picture.data.attributes.url}`} alt={`Photo de la catégorie ${cat.attributes.rank}`}></img>
+              { array.length !== 0 && (
+                <Collapse data={cat} style={cat.attributes.rank % 2 === 0 ? collapseStyle2 : collapseStyle1} />
+              )}
+            </section>
+            <section className="separator-category-container">
+              <img src={separator} alt={`Séparateur ${cat.attributes.rank}`} />
+            </section>
+          </>
+        ))}
+      </>
+    )
+  }
 
     return (
       <main className="category-main">
         <div className="container-category-title">
           <h1 className="category-title"><span>Galerie</span></h1>
         </div>
-        <section className="container-category">
-          <img className="background-img-category" src={backgroundGallery1} alt="Photo d'un bar laisser à l'abandon"></img>
-          { categories[0] && (
-            <Collapse data={categories[0]} style={collapseStyle1} />
-          )}
-        </section>
-        <section className="separator-category-container">
-          <img src={separator} alt="Séparateur des deux catégories" />
-        </section>
-        <section className="container-category">
-          <img className="background-img-category" src={backgroundGallery2} alt="Photo d'un bar laisser à l'abandon"></img>
-          {/* { categories[0] && (
-            <Collapse data={categories[1]} style={collapseStyle2} />
-          )} */}
-        </section>
+        {categories.length > 0 && displayCategories(categories)}
       </main>
     )
   }
-  
+
   export default Category;
