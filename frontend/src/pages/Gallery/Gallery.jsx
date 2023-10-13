@@ -27,7 +27,7 @@ function Gallery() {
                 console.error('Erreur lors du chargement des données:', error);
             });
         }, [id]);
-
+    
     useEffect(() => {   // On apelle la fonction extractPhotoData
         if(photoData.length > 0) {
             const photoObject = extractPhotoData(photoData);
@@ -45,7 +45,8 @@ function Gallery() {
         const foundItem = data.find((item) => item.id === id);
 
         if(foundItem) {
-            return foundItem;
+            const photoArray = foundItem.attributes.photos.data
+            return photoArray;
         }else {
             console.log("Aucune photos trouvées.");
         }
