@@ -14,12 +14,13 @@ function Gallery() {
 
     // -- Extraction de l'id via l'URL --//
     const { id } = useParams();
+    const convertingIdNumber = parseInt(id);
     const categoryTitle = new URLSearchParams(window.location.search).get("categoryTitle");
 
     useEffect(() => {
         http.get("/api/subcategories?populate[0]=photos.src")   // Appel API en méthode "GET" pour récupérer les photos de la sous-catégorie
             .then(({data}) => {
-                setPhotoData(data.data[id - 1].attributes.photos.data);
+                setPhotoData(findDataById(convertingIdNumber, data.data));
                 setIsLoading(false);
             })
             .catch((error) => {
@@ -32,7 +33,23 @@ function Gallery() {
             const photoObject = extractPhotoData(photoData);
             setPhotoInfo(photoObject);
         }
-    }, [photoData]);
+    }, [convertingIdNumber]);
+
+    /**
+     * Fonction permettant de comparer l'id de l'url avec l'id des sous-catégories
+     * @param {number} id 
+     * @param {array} data 
+     * @returns {Object}
+     */
+    function findDataById(id, data) {
+        const foundItem = data.find((item) => item.id === id);
+
+        if(foundItem) {
+            return foundItem;
+        }else {
+            console.log("Aucune photos trouvées.");
+        }
+    }
 
     /**
      * Fonction qui permet d'extraire les données de chaques photos dans un tableau
