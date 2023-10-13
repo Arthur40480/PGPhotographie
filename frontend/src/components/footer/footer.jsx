@@ -25,7 +25,7 @@ function Footer() {
     return (
         <footer>
             <scrollToTop />
-            <img className="footer-logo" src={logo} alt="Troisième logo du site" />
+            <img className="footer-logo" src={logo} alt="Logo du pied de page" />
             <ul className="footer-list">
                 <li><NavLink exact to="/" className="footer-link">Accueil</NavLink></li>
                 <li><NavLink to="/category" className="footer-link">Galerie</NavLink></li>

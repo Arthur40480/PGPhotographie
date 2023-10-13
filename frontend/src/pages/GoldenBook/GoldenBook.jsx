@@ -13,7 +13,7 @@ function GoldenBook() {
                 <p className="golden-book-introduction">Merci.</p>
             </div>
             <Form />
-            <img src={separator} alt="Image de séparateur" className="golden-book-separator"/>
+            <img src={separator} alt="Image de séparateur du formulaire" className="golden-book-separator"/>
             <CommentContainer />
         </main>
     )

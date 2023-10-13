@@ -38,7 +38,7 @@ function Nav() {
         <>
             <nav className="nav" 
             style={{right: isOpen ? "0px" : "-100%" }}>
-                <img className="close-nav" src={croix} onClick={openOrCloseNav} alt="Image de croix"/>
+                <img className="close-nav" src={croix} onClick={openOrCloseNav} alt="Image de croix pour fermer le menu de navigation"/>
                 <ul className="menu-nav">
                     <li>
                         <NavLink exact to="/" activeClassName="active" className="nav-link">Accueil</NavLink>

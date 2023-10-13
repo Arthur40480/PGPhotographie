@@ -38,8 +38,8 @@ function PhotoContainer({ data }) {
                         onMouseEnter={() => setHoveredImgIndex(index)}
                         onMouseLeave={() => setHoveredImgIndex(null)}
                     >
-                        <img src={photo.url} className={`picture-img ${hoveredImgIndex === index ? "img-flown-over" : ""}`} alt="Photographie"/>
-                        <img src={loupe} className={`icon-img ${hoveredImgIndex === index ? "icon-flown-over" : ""}`} alt="Image d'une loupe" />
+                        <img src={photo.url} className={`picture-img ${hoveredImgIndex === index ? "img-flown-over" : ""}`} alt={`Photographie: ${photo.legend}`}/>
+                        <img src={loupe} className={`icon-img ${hoveredImgIndex === index ? "icon-flown-over" : ""}`} alt={`Image d'une loupe ${index}`} />
                     </div>
                 ))}
 
