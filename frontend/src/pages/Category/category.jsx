@@ -41,8 +41,8 @@ useEffect(() => { // Appel API en méthode "GET" pour récupérer les catégorie
       <>
         {array.map((cat, index) => (
           <>
-            <section className="container-category" key={index}>
-              <img className="background-img-category" src={`./${cat.attributes.picture.data.attributes.url}`} alt={`Photo de la catégorie ${cat.attributes.rank}`}></img>
+            <section className="container-category" key={cat.attributes.title}>
+              <img className="background-img-category" src={import.meta.env.VITE_REACT_APP_URL + cat.attributes.picture.data.attributes.url} alt={`Photo de la catégorie ${cat.attributes.rank}`}></img>
               { array.length !== 0 && (
                 <Collapse data={cat} style={cat.attributes.rank % 2 === 0 ? collapseStyle2 : collapseStyle1} />
               )}
