@@ -7,7 +7,6 @@ function CommentContainer() {
     // -- Déclaration de state --//
     const [commentObject, setCommentObject] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    console.log(currentPage);
 
     // -- Déclaration de référence --//
     const commentContainerRef = useRef(null);
