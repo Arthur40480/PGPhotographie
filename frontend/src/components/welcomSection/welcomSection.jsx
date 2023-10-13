@@ -8,7 +8,7 @@ function WelcomSection() {
         <>
             <section className="welcom-section">
                 <div className="welcom-container-img">
-                    <img className="welcom-img" src={img1} alt="Photo d'une corbeille de fruit"/>
+                    <img className="welcom-img" src={img1} alt="Photo d'accueil 1 : Une corbeille de fruit"/>
                 </div>
                 <div className="content-container">
                     <div className="content">
@@ -19,7 +19,7 @@ function WelcomSection() {
                     <CategoryButton />
                 </div>
                 <div className="welcom-container-img">
-                    <img className="welcom-img" src={img2} alt="Photo de paysage"/>
+                    <img className="welcom-img" src={img2} alt="Photo d'accueil 2 : paysage"/>
                 </div>
             </section>
         </>

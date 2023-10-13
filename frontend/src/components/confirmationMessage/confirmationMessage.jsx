@@ -10,10 +10,10 @@ function ConfirmationMessage({ handleClose }) {
         <div className="confirmation-msg-overlay" onClick={handleClose}>
             <div className="confirmation-msg-container">
                 <div className="confirmation-msg-content">
-                    <img className="confirmation-msg-close" src={closeConfirmationMsg} onClick={handleClose} alt="Image de croix" />
+                    <img className="confirmation-msg-close" src={closeConfirmationMsg} onClick={handleClose} alt="Image de croix pour fermer le message" />
                     <p className="confirmation-msg-txt">Votre commentaire à bien été envoyer.</p>
                     <p className="confirmation-msg-txt">Merci !</p>
-                    <img className="confirmation-msg-icon" src={sendIcon} alt="Îcone d'envoi de mail" />
+                    <img className="confirmation-msg-icon" src={sendIcon} alt="Îcone d'avion en papier 2" />
                 </div>
             </div>
         </div>

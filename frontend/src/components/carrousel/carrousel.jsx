@@ -68,9 +68,9 @@ function Carrousel({ onClose, data, selectedImg }) {
                     <p className="legend">{selectedData.legend}</p>
                 </div>
                 <div className="thumbnail-carrousel">
-                    <img src={buttonNext} className="button-arrow-carrousel previous" onClick={handlePreviousImage} alt="Boutton pour parcourir les photos" />
+                    <img src={buttonNext} className="button-arrow-carrousel previous" onClick={handlePreviousImage} alt="Boutton pour aller à la photo prècedente" />
                     <LittleCarrousel data={data} activeImageId={currentImageId} onThumbnailClick={handleThumbnailClick}/>
-                    <img src={buttonNext} className="button-arrow-carrousel next" onClick={handleNextImage} alt="Boutton pour parcourir les photos" />
+                    <img src={buttonNext} className="button-arrow-carrousel next" onClick={handleNextImage} alt="Boutton pour aller à la photo suivante" />
                 </div>
             </div>
         </>

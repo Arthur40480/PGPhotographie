@@ -27,7 +27,7 @@ function Collapse({ data: { attributes: { title, subcategories } }, style }) {
             style={{display: isOpen ? "block" : "none"}}>
                 {array.map((cat, index) => (
                     <li className="collapse-nav-li" key={cat + "" + index}>
-                        <img className="collapse-li-nav-icon" src={arrow_icon2} alt="Îcone de flêche"></img>
+                        <img className="collapse-li-nav-icon" src={arrow_icon2} alt={`Îcon de flêche ${index}`}></img>
                         <NavLink className="collapse-nav-link" 
                         to={`/gallery/${cat.id}?categoryTitle=${encodeURIComponent(cat.attributes.title)}`}>{cat.attributes.title}</NavLink>
                     </li>
@@ -44,7 +44,7 @@ function Collapse({ data: { attributes: { title, subcategories } }, style }) {
                     <img 
                     onClick={openCollapse} 
                     className={ isOpen ? "collapse-nav-icon closing" : "collapse-nav-icon opening" } 
-                    src={arrow_icon} alt="Îcone de flêche"></img>
+                    src={arrow_icon} alt="Îcone de flêche pour ouvrir le menu collapse"></img>
                 </div>
                 {listEltCreation(listSubCategories)}
             </nav>

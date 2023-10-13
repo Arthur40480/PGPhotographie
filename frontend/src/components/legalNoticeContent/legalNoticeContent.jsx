@@ -12,7 +12,7 @@ function LegalNoticeContent() {
 
             <section className="first-legal-notice legal-notice-content">
                 <div className="legal-notice-title-container">
-                    <img src={one} className="chapter-number-icon" alt="Numéro de la section" />
+                    <img src={one} className="chapter-number-icon" alt="Numéro de la première section" />
                     <h2 className="legal-notice-title-content">Informations générales :</h2>
                 </div>
                 <ul className="legal-notice-list">
@@ -30,7 +30,7 @@ function LegalNoticeContent() {
 
             <section className="second-legal-notice legal-notice-content">
                 <div className="legal-notice-title-container">
-                    <img src={two} className="chapter-number-icon" alt="Numéro de la section" />
+                    <img src={two} className="chapter-number-icon" alt="Numéro de la deuxième section" />
                     <h2 className="legal-notice-title-content">Propriété intellectuelle :</h2>
                 </div>
                 <p className="legal-notice-text">
@@ -42,7 +42,7 @@ function LegalNoticeContent() {
 
             <section className="third-legal-notice legal-notice-content">
                 <div className="legal-notice-title-container">
-                    <img src={three} className="chapter-number-icon" alt="Numéro de la section" />
+                    <img src={three} className="chapter-number-icon" alt="Numéro de la troisième section" />
                     <h2 className="legal-notice-title-content">Responsabilité :</h2>
                 </div>
                 <p className="legal-notice-text">
@@ -54,7 +54,7 @@ function LegalNoticeContent() {
 
             <section className="fourth-legal-notice legal-notice-content">
                 <div className="legal-notice-title-container">
-                    <img src={four} className="chapter-number-icon" alt="Numéro de la section" />
+                    <img src={four} className="chapter-number-icon" alt="Numéro de la quatrième section" />
                     <h2 className="legal-notice-title-content">Commentaires et Données Personnelles :</h2>
                 </div>
                 <p className="legal-notice-text">
@@ -68,7 +68,7 @@ function LegalNoticeContent() {
 
             <section className="fifth-legal-notice legal-notice-content">
                 <div className="legal-notice-title-container">
-                    <img src={five} className="chapter-number-icon" alt="Numéro de la section" />
+                    <img src={five} className="chapter-number-icon" alt="Numéro de la cinquième section" />
                     <h2 className="legal-notice-title-content">Liens vers des sites tiers :</h2>
                 </div>
                 <p className="legal-notice-text">

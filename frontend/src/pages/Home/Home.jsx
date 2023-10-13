@@ -11,7 +11,7 @@ function Home() {
             <News />
             <div className="home-cover">
                 <div className="home-cover-container">
-                    <img className="home-cover-img" src={img3} alt="Photo de paysage" />
+                    <img className="home-cover-img" src={img3} alt="Photo de l'accueil 3 : paysage" />
                 </div>
             </div>
         </main>

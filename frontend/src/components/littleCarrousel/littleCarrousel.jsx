@@ -19,7 +19,7 @@ function LittleCarrousel({ data, activeImageId, onThumbnailClick }) {
                     className={`thumbnail-container ${index === 0 ? 'current-thumbnail' : ''}`}
                     key={image.id}
                     onClick={() => {onThumbnailClick(image.id);}}>
-                        <img src={image.url} alt={image.legend} />
+                        <img src={image.url} alt={`Photo miniature: ${image.legend}`} />
                     </div>
                 ))}
             </div>

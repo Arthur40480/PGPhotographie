@@ -159,11 +159,11 @@ function Form() {
                 </label>
                 <button type="submit" className="form-golden-book-button">
                     Envoyer
-                    <img src={send} alt="Îcon d'avion en papier" />
+                    <img src={send} alt="Îcon d'avion en papier 1" />
                 </button>
             </form>
             <div className="img-form-container">
-                <img src={img} alt="Photo de paysage" />
+                <img src={img} alt="Photo du formulaire" />
             </div>
         </section>
         {isFormValid && isVisible && (
