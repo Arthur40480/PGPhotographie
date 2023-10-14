@@ -1,43 +1,14 @@
-# PGPhotographie
-Site de photo
+# PGPhotographie - Site Web
 
+Le projet "PGPhotographie" est un site web dédié à mettre en valeur le travail d'un photographe. Ce site offre une expérience immersive pour les amateurs de photographie, leur permettant de découvrir et d'apprécier les œuvres du photographe, de laisser des commentaires, de rester informés sur les prochains événements auxquels il participera, et même de le contacter directement.
 
-## Clonage du Repo
+## Fonctionnalités Principales
 
-Pour commencer, clonez le repo du projet en utilisant la commande suivante :
+### 1. Visualisation des Photos
+Les visiteurs du site peuvent parcourir et visualiser les photographies captivantes. Les images sont présentées de manière attrayante, mettant en valeur le talent du photographe.
 
-`git clone [https://lien-du-repo.git](https://github.com/Arthur40480/PGPhotographie.git)https://github.com/Arthur40480/PGPhotographie.git`
+### 2. Commentaires
+Les utilisateurs ont la possibilité d'exprimer leur appréciation en laissant des commentaires sur la page Livre d'or. Cela crée une interaction entre l'artiste et son public, permettant des échanges constructifs et des retours sur les œuvres.
 
-## Installation des Dépendances
-
-Après avoir cloné le repo, accédez au répertoire du projet et installez les dépendances nécessaires en utilisant npm (Node Package Manager) :
-`cd nom-du-projet
-npm install`
-
-## Scripts Disponibles
-
-Démarrer l'application en mode développement:
-`npm run dev`
-
-## Structure du Projet
-
-- public
-  - index.html (Fichier HTML principal de l'application. C'est ici que le point d'entrée pour l'application est défini)
-
-- src
-  - assets (Dossier pour stocker les ressources comme les images, vidéos, etc.)
-  - components (Dossier pour stocker les composants réutilisables de l'application)
-  - pages (Dossier pour stocker les pages de l'application)
-  - styles (Dossier pour stocker les fichiers CSS globaux, variables)
-  - App.jsx (Fichier principal qui contient le composant racine de l'application)
-  - App.css (Fichier CSS spécifique au composant racine de l'application)
-  - index.css (Fichier CSS global pour styler l'application)
-  - main.jsx (Fichier principal pour le rendu de l'application dans le DOM)
-
-- .gitignore (Fichier pour ignorer certains fichiers/dossiers lors du suivi par Git)
-- package-lock.json (Fichier généré automatiquement qui stocke les versions exactes des dépendances installées)
-- package.json (Fichier de configuration de l'application et des dépendances)
-- vite.config.js (Fichier de configuration pour Vite, le serveur de développement)
-  
-  
-A venir
+### 3. Prochains Événements
+Les visiteurs peuvent consulter les informations sur les prochains événements auxquels le photographe participera. Cela inclut des expositions, des ateliers, etc. Les détails sur ces événements sont présentés de manière claire sur la page d'accueil, facilitant la participation et la planification pour ceux qui souhaitent y assister.
