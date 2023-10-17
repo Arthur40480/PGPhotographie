@@ -1,6 +1,6 @@
 # PGPhotographie - Site Web
-![Logo PGPhotographie 1](frontend/src/assets/logo1.png){width=100px height=100px}
-![Logo PGPhotographie 2](frontend/src/assets/Logo3.png){width=100px height=100px}
+
+![Logo PGPhotographie 2](frontend/src/assets/Logo3.png)
 
 Le projet "PGPhotographie" est un site web dédié à mettre en valeur le travail d'un photographe. Ce site offre une expérience immersive pour les amateurs de photographie, leur permettant de découvrir et d'apprécier les œuvres du photographe, de laisser des commentaires, de rester informés sur les prochains événements auxquels il participera, et même de le contacter directement.
 
