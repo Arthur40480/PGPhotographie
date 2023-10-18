@@ -15,25 +15,26 @@ function Gallery() {
     // -- Extraction de l'id via l'URL --//
     const { id } = useParams();
     const convertingIdNumber = parseInt(id);
-    const categoryTitle = new URLSearchParams(window.location.search).get("categoryTitle");
+    const categoryTitle = new URLSearchParams(window.location.search).get("categoryTitle"); // Appel API en méthode "GET" pour récupérer les photos de la sous-catégorie
 
-    useEffect(() => {
-        http.get("/api/subcategories?populate[0]=photos.src")   // Appel API en méthode "GET" pour récupérer les photos de la sous-catégorie
-            .then(({data}) => {
-                setPhotoData(findDataById(convertingIdNumber, data.data));
+    useEffect(() => {   // Appel API en méthode "GET" pour récupérer les photos de la sous-catégorie
+        http.get("/api/subcategories?populate[0]=photos.src")
+            .then(({ data }) => {
+                const loadedData = findDataById(convertingIdNumber, data.data);
+                setPhotoData(loadedData);
+
+                if (loadedData.length > 0) {
+                    const photoObject = extractPhotoData(loadedData);
+                    setPhotoInfo(photoObject);
+                }
+
                 setIsLoading(false);
             })
             .catch((error) => {
                 console.error('Erreur lors du chargement des données:', error);
-            });
-        }, [id]);
-    
-    useEffect(() => {   // On apelle la fonction extractPhotoData
-        if(photoData.length > 0) {
-            const photoObject = extractPhotoData(photoData);
-            setPhotoInfo(photoObject);
-        }
-    }, [convertingIdNumber]);
+                setIsLoading(false);
+            }, [id]);
+    });
 
     /**
      * Fonction permettant de comparer l'id de l'url avec l'id des sous-catégories
