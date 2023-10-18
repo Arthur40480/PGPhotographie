@@ -18,8 +18,12 @@ Les visiteurs peuvent consulter les informations sur les prochains événements 
 ## Technologies
 Voici un résumé des technologies utilisées dans votre projet "pgPhotographie" et les raisons de leur choix :
 
+### Javascript :  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+[Documentation de Javascript](https://developer.mozilla.org/fr/docs/Web/JavaScript)  
+JavaScript est un langage de programmation essentiel pour le développement web. Il est utilisé pour créer des fonctionnalités interactives et dynamiques sur le site.
+
 ### React : 
-[Documentation de React](https://fr.legacy.reactjs.org/)
+[Documentation de React](https://fr.legacy.reactjs.org/)  
 React est une bibliothèque JavaScript largement utilisée pour la création d'interfaces utilisateur interactives et réactives. Il a été choisi pour sa flexibilité, ses performances élevées et sa grande communauté de développeurs, ce qui en fait un excellent choix pour créer une expérience utilisateur immersive sur le site.
 
 ### Vite.js :
