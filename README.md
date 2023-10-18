@@ -18,7 +18,7 @@ Les visiteurs peuvent consulter les informations sur les prochains événements 
 ## Technologies
 Voici un résumé des technologies utilisées dans votre projet "pgPhotographie" et les raisons de leur choix :
 
-### React :
+### React : [Documentation]([https://fr.legacy.reactjs.org/])
 React est une bibliothèque JavaScript largement utilisée pour la création d'interfaces utilisateur interactives et réactives. Il a été choisi pour sa flexibilité, ses performances élevées et sa grande communauté de développeurs, ce qui en fait un excellent choix pour créer une expérience utilisateur immersive sur le site.
 
 ### Vite.js :
