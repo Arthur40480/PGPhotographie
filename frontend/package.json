@@ -1,7 +1,8 @@
 {
-  "name": "projetpg",
+  "name": "pg-photographie-frontend",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Site de photo - PGPhotographie",
   "type": "module",
   "scripts": {
     "develop": "vite",
@@ -27,5 +28,9 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
     "vite": "^4.4.0"
-  }
+  },
+  "author": {
+    "name": "Arthur Gibert"
+  },
+  "license": "MIT"
 }
