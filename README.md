@@ -61,5 +61,6 @@ Nginx est un serveur web réputé pour sa haute performance et sa capacité à g
 [Documentation de Google Recaptcha](https://developers.google.com/recaptcha/docs/v3)  
 Google reCAPTCHA est un service de vérification de l'authenticité des utilisateurs et de prévention des abus. Son utilisation dans le formulaire de commentaire renforce la sécurité en empêchant les activités frauduleuses et en garantissant que les messages proviennent de véritables utilisateurs.
 
-##Prérequis
+## Prérequis  
+Suivez ces étapes pour mettre en route le projet :
 
