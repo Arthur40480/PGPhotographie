@@ -64,3 +64,46 @@ Google reCAPTCHA est un service de vérification de l'authenticité des utilisat
 ## Prérequis  
 Suivez ces étapes pour mettre en route le projet :
 
+### Cloner le dépôt  
+### Frontend - Partie developpement
+```
+cd frontend
+```
+Pour installer les dépendances nécessaire, exécutez les commandes suivantes:  
+```
+yarn install
+```
+Pour lancer le frontend: 
+```
+yarn develop
+```
+Le frontend devrait être accessible à l'adresse "http://localhost:5173/"
+### Backend - Partie developpement
+```
+cd backend
+```
+Pour installer les dépendances nécessaire, exécutez les commandes suivantes:  
+```
+yarn install
+```
+Pour lancer le backend: 
+```
+yarn develop
+```
+### Création des images Docker  :whale:
+Pour créer les images Docker pour le frontend et le backend, exécutez les scripts build.sh dans les répertoires correspondants :  
+Backend :  
+```
+cd backend
+./build.sh
+```
+Frontend :  
+```
+cd frontend
+./build.sh
+```
+Ensuite, nous poussons les images vers un registre Docker :  
+```
+docker push (nom de l'image docker)(le tag de l'image)
+```
+
