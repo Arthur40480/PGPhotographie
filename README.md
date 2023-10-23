@@ -1,6 +1,8 @@
 # PGPhotographie - Site Web
-<img src=frontend/src/assets/Logo3.png alt="Description de l'image" width="100" height="100">
-![Logo PGPhotographie 2](frontend/src/assets/Logo3.png)
+
+<div style="text-align: center;">
+    <img src=frontend/src/assets/Logo3.png alt="Description de l'image" width="300" height="300">
+</div>
 
 Le projet "PGPhotographie" est un site web dédié à mettre en valeur le travail d'un photographe. Ce site offre une expérience immersive pour les amateurs de photographie, leur permettant de découvrir et d'apprécier les œuvres du photographe, de laisser des commentaires, de rester informés sur les prochains événements auxquels il participera, et même de le contacter directement.
 
@@ -91,7 +93,8 @@ Pour lancer le backend:
 yarn develop
 ```
 ### Création des images Docker :whale:
-Pour créer les images Docker pour le frontend et le backend, exécutez les scripts build.sh dans les répertoires correspondants :  
+Pour créer les images Docker pour le frontend et le backend, exécutez les scripts build.sh dans les répertoires correspondants : 
+
 Backend :  
 ```
 cd backend
