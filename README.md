@@ -1,5 +1,5 @@
 # PGPhotographie - Site Web
-
+<img src=frontend/src/assets/Logo3.png alt="Description de l'image" width="100" height="100">
 ![Logo PGPhotographie 2](frontend/src/assets/Logo3.png)
 
 Le projet "PGPhotographie" est un site web dédié à mettre en valeur le travail d'un photographe. Ce site offre une expérience immersive pour les amateurs de photographie, leur permettant de découvrir et d'apprécier les œuvres du photographe, de laisser des commentaires, de rester informés sur les prochains événements auxquels il participera, et même de le contacter directement.
@@ -61,10 +61,10 @@ Nginx est un serveur web réputé pour sa haute performance et sa capacité à g
 [Documentation de Google Recaptcha](https://developers.google.com/recaptcha/docs/v3)  
 Google reCAPTCHA est un service de vérification de l'authenticité des utilisateurs et de prévention des abus. Son utilisation dans le formulaire de commentaire renforce la sécurité en empêchant les activités frauduleuses et en garantissant que les messages proviennent de véritables utilisateurs.
 
-## Prérequis  
+## Prérequis :clipboard:  
 Suivez ces étapes pour mettre en route le projet :
 
-### Cloner le dépôt  
+### Cloner le dépôt :computer:   
 ### Frontend - Partie developpement
 ```
 cd frontend
@@ -90,7 +90,7 @@ Pour lancer le backend:
 ```
 yarn develop
 ```
-### Création des images Docker  :whale:
+### Création des images Docker :whale:
 Pour créer les images Docker pour le frontend et le backend, exécutez les scripts build.sh dans les répertoires correspondants :  
 Backend :  
 ```
@@ -106,4 +106,12 @@ Ensuite, nous poussons les images vers un registre Docker :
 ```
 docker push (nom de l'image docker)(le tag de l'image)
 ```
-
+### Partie production
+On se connecte au serveur distant via SSH :
+```
+ssh (nom d'utilisateur)@XX.XXX.XXX.XXX(adresse IP du serveur distant)
+```
+On entre notre mot de passe :
+```
+(nom d'utilisateur)@XX.XXX.XXX.XXX(adresse IP du serveur distant) password :
+```
