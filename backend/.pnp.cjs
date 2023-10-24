@@ -12,14 +12,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],\
     "dependencyTreeRoots": [\
       {\
-        "name": "pg-photographie",\
+        "name": "pg-photographie-backend",\
         "reference": "workspace:."\
       }\
     ],\
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
-      ["pg-photographie", ["workspace:."]]\
+      ["pg-photographie-backend", ["workspace:."]]\
     ],\
     "fallbackPool": [\
     ],\
@@ -28,13 +28,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@strapi/plugin-i18n", "virtual:ddc78f884079832d0257903d64d38450f924fa9f7660e3bacc3d184150f5cbc1554b4abb45a0fb56f447e84b214b5e6a5735d96b4922f7e7e7aef8e72603bedc#npm:4.11.7"],\
-            ["@strapi/plugin-users-permissions", "virtual:ddc78f884079832d0257903d64d38450f924fa9f7660e3bacc3d184150f5cbc1554b4abb45a0fb56f447e84b214b5e6a5735d96b4922f7e7e7aef8e72603bedc#npm:4.11.7"],\
+            ["@strapi/plugin-i18n", "virtual:60c62d1c0c3ec3140b7f22c680b231dfbbfc3e482fe2a27078bbf0310310d2aaa69936663bdeda99959f52206fdf5844b98650e2b30ed6711c82fe65fcb7bb3c#npm:4.11.7"],\
+            ["@strapi/plugin-users-permissions", "virtual:60c62d1c0c3ec3140b7f22c680b231dfbbfc3e482fe2a27078bbf0310310d2aaa69936663bdeda99959f52206fdf5844b98650e2b30ed6711c82fe65fcb7bb3c#npm:4.11.7"],\
             ["@strapi/strapi", "npm:4.11.7"],\
             ["@strapi/utils", "npm:4.11.7"],\
             ["axios", "npm:1.5.0"],\
             ["better-sqlite3", "npm:8.0.1"],\
-            ["pg", "virtual:ddc78f884079832d0257903d64d38450f924fa9f7660e3bacc3d184150f5cbc1554b4abb45a0fb56f447e84b214b5e6a5735d96b4922f7e7e7aef8e72603bedc#npm:8.8.0"]\
+            ["pg", "virtual:60c62d1c0c3ec3140b7f22c680b231dfbbfc3e482fe2a27078bbf0310310d2aaa69936663bdeda99959f52206fdf5844b98650e2b30ed6711c82fe65fcb7bb3c#npm:8.8.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -3354,10 +3354,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:ddc78f884079832d0257903d64d38450f924fa9f7660e3bacc3d184150f5cbc1554b4abb45a0fb56f447e84b214b5e6a5735d96b4922f7e7e7aef8e72603bedc#npm:4.11.7", {\
-          "packageLocation": "./.yarn/__virtual__/@strapi-plugin-i18n-virtual-c6521fb292/0/cache/@strapi-plugin-i18n-npm-4.11.7-42d69182b6-095fc203fd.zip/node_modules/@strapi/plugin-i18n/",\
+        ["virtual:60c62d1c0c3ec3140b7f22c680b231dfbbfc3e482fe2a27078bbf0310310d2aaa69936663bdeda99959f52206fdf5844b98650e2b30ed6711c82fe65fcb7bb3c#npm:4.11.7", {\
+          "packageLocation": "./.yarn/__virtual__/@strapi-plugin-i18n-virtual-01c54cf776/0/cache/@strapi-plugin-i18n-npm-4.11.7-42d69182b6-095fc203fd.zip/node_modules/@strapi/plugin-i18n/",\
           "packageDependencies": [\
-            ["@strapi/plugin-i18n", "virtual:ddc78f884079832d0257903d64d38450f924fa9f7660e3bacc3d184150f5cbc1554b4abb45a0fb56f447e84b214b5e6a5735d96b4922f7e7e7aef8e72603bedc#npm:4.11.7"],\
+            ["@strapi/plugin-i18n", "virtual:60c62d1c0c3ec3140b7f22c680b231dfbbfc3e482fe2a27078bbf0310310d2aaa69936663bdeda99959f52206fdf5844b98650e2b30ed6711c82fe65fcb7bb3c#npm:4.11.7"],\
             ["@strapi/design-system", "virtual:e1c770d640ab2a4b9510172814697bed802adb6681123f0d50b207ba687173195be72e46b4f11f8b2690d4564d4255251b58b9cc771e1a9365181d65a20c5687#npm:1.8.2"],\
             ["@strapi/helper-plugin", "virtual:e1c770d640ab2a4b9510172814697bed802adb6681123f0d50b207ba687173195be72e46b4f11f8b2690d4564d4255251b58b9cc771e1a9365181d65a20c5687#npm:4.11.7"],\
             ["@strapi/icons", "virtual:e1c770d640ab2a4b9510172814697bed802adb6681123f0d50b207ba687173195be72e46b4f11f8b2690d4564d4255251b58b9cc771e1a9365181d65a20c5687#npm:1.8.2"],\
@@ -3462,10 +3462,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:ddc78f884079832d0257903d64d38450f924fa9f7660e3bacc3d184150f5cbc1554b4abb45a0fb56f447e84b214b5e6a5735d96b4922f7e7e7aef8e72603bedc#npm:4.11.7", {\
-          "packageLocation": "./.yarn/__virtual__/@strapi-plugin-users-permissions-virtual-56e5f7c6b2/0/cache/@strapi-plugin-users-permissions-npm-4.11.7-b33ccd2343-f88509ee0d.zip/node_modules/@strapi/plugin-users-permissions/",\
+        ["virtual:60c62d1c0c3ec3140b7f22c680b231dfbbfc3e482fe2a27078bbf0310310d2aaa69936663bdeda99959f52206fdf5844b98650e2b30ed6711c82fe65fcb7bb3c#npm:4.11.7", {\
+          "packageLocation": "./.yarn/__virtual__/@strapi-plugin-users-permissions-virtual-d3187fdc8b/0/cache/@strapi-plugin-users-permissions-npm-4.11.7-b33ccd2343-f88509ee0d.zip/node_modules/@strapi/plugin-users-permissions/",\
           "packageDependencies": [\
-            ["@strapi/plugin-users-permissions", "virtual:ddc78f884079832d0257903d64d38450f924fa9f7660e3bacc3d184150f5cbc1554b4abb45a0fb56f447e84b214b5e6a5735d96b4922f7e7e7aef8e72603bedc#npm:4.11.7"],\
+            ["@strapi/plugin-users-permissions", "virtual:60c62d1c0c3ec3140b7f22c680b231dfbbfc3e482fe2a27078bbf0310310d2aaa69936663bdeda99959f52206fdf5844b98650e2b30ed6711c82fe65fcb7bb3c#npm:4.11.7"],\
             ["@strapi/design-system", "virtual:e1c770d640ab2a4b9510172814697bed802adb6681123f0d50b207ba687173195be72e46b4f11f8b2690d4564d4255251b58b9cc771e1a9365181d65a20c5687#npm:1.8.2"],\
             ["@strapi/helper-plugin", "virtual:e1c770d640ab2a4b9510172814697bed802adb6681123f0d50b207ba687173195be72e46b4f11f8b2690d4564d4255251b58b9cc771e1a9365181d65a20c5687#npm:4.11.7"],\
             ["@strapi/icons", "virtual:e1c770d640ab2a4b9510172814697bed802adb6681123f0d50b207ba687173195be72e46b4f11f8b2690d4564d4255251b58b9cc771e1a9365181d65a20c5687#npm:1.8.2"],\
@@ -3476,7 +3476,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/styled-components", null],\
             ["bcryptjs", "npm:2.4.3"],\
             ["formik", "virtual:cba9cdd0545f8e51c58e201ff0e6ce0479947c5df6408c20ccff6d91ccd23c203a9e09e09b4b3f837128acc451358597a6e186b0fd2ddfbe817d08349643ae8c#npm:2.4.0"],\
-            ["grant-koa", "virtual:56e5f7c6b24e974e20043961460552e7975a9886652077a550f57b2a600d9bca0ce907051b28bf0bb76368e4cdb38e7037c1882b55fd95add27448714914edb9#npm:5.4.8"],\
+            ["grant-koa", "virtual:d3187fdc8b165e1a7bcac63502fc411a78c5a2bc408a8abc9e73513b0f2fe137f9bd2ffd758f9b9d1e0d61ad57057249d47d6366961dd27e6086d72865a7432e#npm:5.4.8"],\
             ["immer", "npm:9.0.19"],\
             ["jsonwebtoken", "npm:9.0.0"],\
             ["jwk-to-pem", "npm:2.0.5"],\
@@ -8438,10 +8438,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:56e5f7c6b24e974e20043961460552e7975a9886652077a550f57b2a600d9bca0ce907051b28bf0bb76368e4cdb38e7037c1882b55fd95add27448714914edb9#npm:5.4.8", {\
-          "packageLocation": "./.yarn/__virtual__/grant-koa-virtual-b3953f447a/0/cache/grant-koa-npm-5.4.8-c659f74665-744f2c57b4.zip/node_modules/grant-koa/",\
+        ["virtual:d3187fdc8b165e1a7bcac63502fc411a78c5a2bc408a8abc9e73513b0f2fe137f9bd2ffd758f9b9d1e0d61ad57057249d47d6366961dd27e6086d72865a7432e#npm:5.4.8", {\
+          "packageLocation": "./.yarn/__virtual__/grant-koa-virtual-2f208c3245/0/cache/grant-koa-npm-5.4.8-c659f74665-744f2c57b4.zip/node_modules/grant-koa/",\
           "packageDependencies": [\
-            ["grant-koa", "virtual:56e5f7c6b24e974e20043961460552e7975a9886652077a550f57b2a600d9bca0ce907051b28bf0bb76368e4cdb38e7037c1882b55fd95add27448714914edb9#npm:5.4.8"],\
+            ["grant-koa", "virtual:d3187fdc8b165e1a7bcac63502fc411a78c5a2bc408a8abc9e73513b0f2fe137f9bd2ffd758f9b9d1e0d61ad57057249d47d6366961dd27e6086d72865a7432e#npm:5.4.8"],\
             ["@types/koa", null],\
             ["grant", "npm:5.4.21"],\
             ["koa", "npm:2.14.2"]\
@@ -12198,16 +12198,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:ddc78f884079832d0257903d64d38450f924fa9f7660e3bacc3d184150f5cbc1554b4abb45a0fb56f447e84b214b5e6a5735d96b4922f7e7e7aef8e72603bedc#npm:8.8.0", {\
-          "packageLocation": "./.yarn/__virtual__/pg-virtual-c76c7f1f29/0/cache/pg-npm-8.8.0-69c9e9f8ac-fa30a85814.zip/node_modules/pg/",\
+        ["virtual:60c62d1c0c3ec3140b7f22c680b231dfbbfc3e482fe2a27078bbf0310310d2aaa69936663bdeda99959f52206fdf5844b98650e2b30ed6711c82fe65fcb7bb3c#npm:8.8.0", {\
+          "packageLocation": "./.yarn/__virtual__/pg-virtual-606aedffbd/0/cache/pg-npm-8.8.0-69c9e9f8ac-fa30a85814.zip/node_modules/pg/",\
           "packageDependencies": [\
-            ["pg", "virtual:ddc78f884079832d0257903d64d38450f924fa9f7660e3bacc3d184150f5cbc1554b4abb45a0fb56f447e84b214b5e6a5735d96b4922f7e7e7aef8e72603bedc#npm:8.8.0"],\
+            ["pg", "virtual:60c62d1c0c3ec3140b7f22c680b231dfbbfc3e482fe2a27078bbf0310310d2aaa69936663bdeda99959f52206fdf5844b98650e2b30ed6711c82fe65fcb7bb3c#npm:8.8.0"],\
             ["@types/pg-native", null],\
             ["buffer-writer", "npm:2.0.0"],\
             ["packet-reader", "npm:1.0.0"],\
             ["pg-connection-string", "npm:2.6.1"],\
             ["pg-native", null],\
-            ["pg-pool", "virtual:c76c7f1f29364be2160e76e1c03d33ea338c0bb066bdd90d4a460cb8786f7dd6a532769de8d8f7e4a885c8ce2ec703c5002159108746d7787d816859b9cb588d#npm:3.6.1"],\
+            ["pg-pool", "virtual:606aedffbd7c0749784b17f528ad2de4c32c6e323749ba002bfdcd904151a167d8f185c2baeae6e9891e93481e8d9e4c6f7377253bc1ddb01c5be6cf5a2dd6b9#npm:3.6.1"],\
             ["pg-protocol", "npm:1.6.0"],\
             ["pg-types", "npm:2.2.0"],\
             ["pgpass", "npm:1.0.5"]\
@@ -12237,18 +12237,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["pg-photographie", [\
+      ["pg-photographie-backend", [\
         ["workspace:.", {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["pg-photographie", "workspace:."],\
-            ["@strapi/plugin-i18n", "virtual:ddc78f884079832d0257903d64d38450f924fa9f7660e3bacc3d184150f5cbc1554b4abb45a0fb56f447e84b214b5e6a5735d96b4922f7e7e7aef8e72603bedc#npm:4.11.7"],\
-            ["@strapi/plugin-users-permissions", "virtual:ddc78f884079832d0257903d64d38450f924fa9f7660e3bacc3d184150f5cbc1554b4abb45a0fb56f447e84b214b5e6a5735d96b4922f7e7e7aef8e72603bedc#npm:4.11.7"],\
+            ["pg-photographie-backend", "workspace:."],\
+            ["@strapi/plugin-i18n", "virtual:60c62d1c0c3ec3140b7f22c680b231dfbbfc3e482fe2a27078bbf0310310d2aaa69936663bdeda99959f52206fdf5844b98650e2b30ed6711c82fe65fcb7bb3c#npm:4.11.7"],\
+            ["@strapi/plugin-users-permissions", "virtual:60c62d1c0c3ec3140b7f22c680b231dfbbfc3e482fe2a27078bbf0310310d2aaa69936663bdeda99959f52206fdf5844b98650e2b30ed6711c82fe65fcb7bb3c#npm:4.11.7"],\
             ["@strapi/strapi", "npm:4.11.7"],\
             ["@strapi/utils", "npm:4.11.7"],\
             ["axios", "npm:1.5.0"],\
             ["better-sqlite3", "npm:8.0.1"],\
-            ["pg", "virtual:ddc78f884079832d0257903d64d38450f924fa9f7660e3bacc3d184150f5cbc1554b4abb45a0fb56f447e84b214b5e6a5735d96b4922f7e7e7aef8e72603bedc#npm:8.8.0"]\
+            ["pg", "virtual:60c62d1c0c3ec3140b7f22c680b231dfbbfc3e482fe2a27078bbf0310310d2aaa69936663bdeda99959f52206fdf5844b98650e2b30ed6711c82fe65fcb7bb3c#npm:8.8.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -12261,12 +12261,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:c76c7f1f29364be2160e76e1c03d33ea338c0bb066bdd90d4a460cb8786f7dd6a532769de8d8f7e4a885c8ce2ec703c5002159108746d7787d816859b9cb588d#npm:3.6.1", {\
-          "packageLocation": "./.yarn/__virtual__/pg-pool-virtual-3041535133/0/cache/pg-pool-npm-3.6.1-477c9660b9-8a6513e6f7.zip/node_modules/pg-pool/",\
+        ["virtual:606aedffbd7c0749784b17f528ad2de4c32c6e323749ba002bfdcd904151a167d8f185c2baeae6e9891e93481e8d9e4c6f7377253bc1ddb01c5be6cf5a2dd6b9#npm:3.6.1", {\
+          "packageLocation": "./.yarn/__virtual__/pg-pool-virtual-a563e8e355/0/cache/pg-pool-npm-3.6.1-477c9660b9-8a6513e6f7.zip/node_modules/pg-pool/",\
           "packageDependencies": [\
-            ["pg-pool", "virtual:c76c7f1f29364be2160e76e1c03d33ea338c0bb066bdd90d4a460cb8786f7dd6a532769de8d8f7e4a885c8ce2ec703c5002159108746d7787d816859b9cb588d#npm:3.6.1"],\
+            ["pg-pool", "virtual:606aedffbd7c0749784b17f528ad2de4c32c6e323749ba002bfdcd904151a167d8f185c2baeae6e9891e93481e8d9e4c6f7377253bc1ddb01c5be6cf5a2dd6b9#npm:3.6.1"],\
             ["@types/pg", null],\
-            ["pg", "virtual:ddc78f884079832d0257903d64d38450f924fa9f7660e3bacc3d184150f5cbc1554b4abb45a0fb56f447e84b214b5e6a5735d96b4922f7e7e7aef8e72603bedc#npm:8.8.0"]\
+            ["pg", "virtual:60c62d1c0c3ec3140b7f22c680b231dfbbfc3e482fe2a27078bbf0310310d2aaa69936663bdeda99959f52206fdf5844b98650e2b30ed6711c82fe65fcb7bb3c#npm:8.8.0"]\
           ],\
           "packagePeers": [\
             "@types/pg",\
