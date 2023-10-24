@@ -1,7 +1,7 @@
 # PGPhotographie - Site Web
 
 <div style="text-align: center;">
-    <img src=frontend/src/assets/Logo3.png alt="Description de l'image" width="300" height="300">
+    <img src=frontend/src/assets/Logo3.png alt="Description de l'image" width="180" height="180">
 </div>
 
 Le projet "PGPhotographie" est un site web dédié à mettre en valeur le travail d'un photographe. Ce site offre une expérience immersive pour les amateurs de photographie, leur permettant de découvrir et d'apprécier les œuvres du photographe, de laisser des commentaires, de rester informés sur les prochains événements auxquels il participera, et même de le contacter directement.
@@ -117,4 +117,23 @@ ssh (nom d'utilisateur)@XX.XXX.XXX.XXX(adresse IP du serveur distant)
 On entre notre mot de passe :
 ```
 (nom d'utilisateur)@XX.XXX.XXX.XXX(adresse IP du serveur distant) password :
+```
+Si on veut arrêter seulement le backend ou le frontend :
+```
+sudo docker-compose stop frontend
+```
+```
+sudo docker-compose stop backend
+```
+Si l'on veut arrêter l'ensemble de l'application :
+```
+sudo docker-compose down
+```
+On pull la/les nouvelle(s) image(s) :
+```
+sudo docker-compose pull
+```
+On relance le serveur : 
+```
+sudo docker-compose up -d
 ```
