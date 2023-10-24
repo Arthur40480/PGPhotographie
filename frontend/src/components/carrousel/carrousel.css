@@ -57,7 +57,6 @@
 }
 
 .button-arrow-carrousel {
-    margin: 20px;
     width: 40px;
     color: white;
     cursor: pointer;
@@ -76,12 +75,20 @@
 }
 
 /* --- Petit Carrousel --- */
-.thumbnail-carrousel {
+.arrows-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.thumbnail-carrousel-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 85px;
-    width: 60%;
+    height: 80px;
+    width: 100%;
 }
 
 .thumbnail-container {
@@ -115,11 +122,6 @@
     .photo-carrousel {
         height: 95%;
     }
-
-    .thumbnail-carrousel {
-        height: 70px;
-        width: 70%;
-    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -134,10 +136,6 @@
 
     .photo-carrousel {
         height: 90%;
-    }
-
-    .button-arrow-carrousel {
-        width: 30px;
     }
 
     .legend {
@@ -155,10 +153,6 @@
         height: 85%;
     }
 
-    .thumbnail-carrousel {
-        width: 80%;
-    }
-
     .legend {
         font-size: 18px;
     }
@@ -172,10 +166,6 @@
 
     .photo-carrousel {
         height: 75%;
-    }
-
-    .thumbnail-carrousel {
-        width: 80%;
     }
 }
 
@@ -192,15 +182,16 @@
     }
 
     .legend {
+        margin-bottom: 40px;
         font-size: 16px;
     }
 
-    .thumbnail-container {
-        display: none;
+    .button-arrow-carrousel {
+        margin: 0px 40px;
     }
 
-    .button-arrow-carrousel {
-        margin: 20px 60px;
+    .thumbnail-carrousel-container {
+        display: none;
     }
 }
 
