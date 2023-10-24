@@ -9600,9 +9600,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pg-photographie@workspace:.":
+"pg-photographie-backend@workspace:.":
   version: 0.0.0-use.local
-  resolution: "pg-photographie@workspace:."
+  resolution: "pg-photographie-backend@workspace:."
   dependencies:
     "@strapi/plugin-i18n": 4.11.7
     "@strapi/plugin-users-permissions": 4.11.7
