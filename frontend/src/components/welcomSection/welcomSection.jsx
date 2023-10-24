@@ -12,9 +12,7 @@ function WelcomSection() {
                 </div>
                 <div className="content-container">
                     <div className="content">
-                        <p>Entrez dans mon univers capturé par l&lsquo;objectif,<br></br>
-                        où chaque instant est figé avec passion et créativité.<br></br>
-                        Bienvenue dans l&lsquo;album de  mes images.</p>
+                        <p>C&lsquo;est la faute aux photons si la photo me botte ...</p>
                     </div>
                     <CategoryButton />
                 </div>
