@@ -2791,6 +2791,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pg-photographie-frontend@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "pg-photographie-frontend@workspace:."
+  dependencies:
+    "@types/react": ^18.2.14
+    "@types/react-dom": ^18.2.6
+    "@vitejs/plugin-react": ^4.0.1
+    axios: ^1.4.0
+    eslint: ^8.44.0
+    eslint-plugin-react: ^7.32.2
+    eslint-plugin-react-hooks: ^4.6.0
+    eslint-plugin-react-refresh: ^0.4.1
+    google-fonts-loader: ^1.0.2
+    prop-types: ^15.8.1
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-google-recaptcha: ^3.1.0
+    react-router-dom: ^6.14.1
+    vite: ^4.4.0
+  languageName: unknown
+  linkType: soft
+
 "picocolors@npm:^1.0.0":
   version: 1.0.0
   resolution: "picocolors@npm:1.0.0"
@@ -2815,28 +2837,6 @@ __metadata:
   checksum: cd192ec0d0a8e4c6da3bb80e4f62afe336df3f76271ac6deb0e6a36187133b6073a19e9727a1ff108cd8b9982e4768850d413baa71214dd80c7979617dca827a
   languageName: node
   linkType: hard
-
-"projetpg@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "projetpg@workspace:."
-  dependencies:
-    "@types/react": ^18.2.14
-    "@types/react-dom": ^18.2.6
-    "@vitejs/plugin-react": ^4.0.1
-    axios: ^1.4.0
-    eslint: ^8.44.0
-    eslint-plugin-react: ^7.32.2
-    eslint-plugin-react-hooks: ^4.6.0
-    eslint-plugin-react-refresh: ^0.4.1
-    google-fonts-loader: ^1.0.2
-    prop-types: ^15.8.1
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-google-recaptcha: ^3.1.0
-    react-router-dom: ^6.14.1
-    vite: ^4.4.0
-  languageName: unknown
-  linkType: soft
 
 "promise-retry@npm:^2.0.1":
   version: 2.0.1
