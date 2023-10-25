@@ -131,3 +131,16 @@
     }
 }
 
+@media screen and (max-width: 480px) {
+
+    .comment-header {
+        margin-bottom: 40px;
+    }
+
+    .comment-date {
+        top: 55px;
+        right: auto;
+        left: 80px;
+        
+    }
+}
