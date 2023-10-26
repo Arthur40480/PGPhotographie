@@ -60,7 +60,7 @@
     top: 0;
     right: -100%;
     height: 100vh;
-    width: 25%;
+    width: 20%;
     opacity: 0.90;
     background-color: var(--tertiary-color);
     color: white;
@@ -84,6 +84,7 @@
 
 .menu-nav {
     display: flex;
+    align-items: center;
     flex-direction: column;
     list-style-type: none;
     margin-top: 45%;
@@ -93,7 +94,7 @@
     display: flex;
     align-items: center;
     margin: 50px;
-    font-size:  26px;
+    font-size: 24px;
     font-weight: bold;
     cursor: pointer;
     opacity: 0;
@@ -123,13 +124,13 @@
 
 .icone-nav {
     margin-left: 20px;
-    width: 40px;
+    width: 38px;
 }
 
 .black-box {     
     display: flex;     
     position: fixed;     
-    width: 75%;     
+    width: 82%;     
     height: 100%; 
     z-index: 999;
 }
@@ -138,11 +139,19 @@
 @media screen and (max-width: 1024px) {
 
     .nav {
-        width: 33%;
+        width: 27%;
+    }
+
+    .black-box {         
+        width: 73%;     
     }
 
     .menu-nav li {
         font-size:  20px;
+    }
+
+    .icone-nav {
+        width: 34px;
     }
 }
 
@@ -153,12 +162,20 @@
         height: 70px;
     }
 
+    .nav {
+        width: 34%;
+    }
+
+    .black-box {         
+        width: 66%;     
+    }
+
     .menu-nav li {
         font-size:  18px;
     }
 
-    .nav {
-        width: 42%;
+    .icone-nav {
+        width: 30px;
     }
 }
 
@@ -170,14 +187,22 @@
     }
 
     .menu-nav li {
-        font-size:  18px;
+        font-size:  16px;
     }
 
     .nav {
-        width: 49%;
+        width: 42%;
+    }
+
+    .black-box {         
+        width: 58%;     
     }
     
     .menu-nav li {
         margin: 40px;
+    }
+
+    .icone-nav {
+        width: 26px;
     }
 }
