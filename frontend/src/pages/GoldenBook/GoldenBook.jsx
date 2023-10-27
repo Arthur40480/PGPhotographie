@@ -8,7 +8,7 @@ function GoldenBook() {
     return (
         <main className="golden-book-main">
             <div className="container-golden-book-title">
-                <h1 className="golden-book-title"><span>Livre d&lsquo;Or</span></h1>
+                <h1 id="golden-book" className="golden-book-title"><span>Livre d&lsquo;Or</span></h1>
                 <p className="golden-book-introduction">N&lsquo;hésitez pas à laisser un commentaire pour partager vos impressions sur mes photos.</p>
                 <p className="golden-book-introduction">Merci.</p>
             </div>

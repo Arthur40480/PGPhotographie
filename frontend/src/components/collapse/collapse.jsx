@@ -28,8 +28,8 @@ function Collapse({ data: { attributes: { title, subcategories } }, style }) {
                 {array.map((cat, index) => (
                     <li className="collapse-nav-li" key={cat + "" + index}>
                         <img className="collapse-li-nav-icon" src={arrow_icon2} alt={`Îcon de flêche ${index}`}></img>
-                        <NavLink className="collapse-nav-link" 
-                        to={`/gallery/${cat.id}?categoryTitle=${encodeURIComponent(cat.attributes.title)}`}>{cat.attributes.title}</NavLink>
+                        <a className="collapse-nav-link" 
+                        href={`/gallery/${cat.id}?categoryTitle=${encodeURIComponent(cat.attributes.title)}#gallerytitle`}>{cat.attributes.title}</a>
                     </li>
                 ))}
             </ul>

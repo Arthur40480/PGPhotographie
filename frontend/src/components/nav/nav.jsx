@@ -34,6 +34,10 @@ function Nav() {
         });
     }
 
+    function closeNav() {
+        setIsOpen(false);
+    }
+
     return (
         <>
             <nav className="nav" 
@@ -41,19 +45,19 @@ function Nav() {
                 <img className="close-nav" src={croix} onClick={openOrCloseNav} alt="Image de croix pour fermer le menu de navigation"/>
                 <ul className="menu-nav">
                     <li>
-                        <NavLink exact to="/" activeClassName="active" className="nav-link">Accueil</NavLink>
+                        <NavLink exact to="/" activeClassName="active" className="nav-link" onClick={closeNav}>Accueil</NavLink>
                         <img src={home} className="icone-nav" alt="Icône pour le lien accueil" />
                     </li>
                     <li>
-                        <NavLink to="/category" activeClassName="active" className="nav-link">Galerie</NavLink>
+                        <a href="/category#galerie" className="nav-link" onClick={closeNav}>Galerie</a>
                         <img src={gallery} className="icone-nav" alt="Icône pour le lien galerie" />
                     </li>
                     <li>
-                        <NavLink to="/golden-book" activeClassName="active" className="nav-link">Livre d&lsquo;Or</NavLink>
+                        <a href="/golden-book#golden-book" className="nav-link" onClick={closeNav}>Livre d&lsquo;Or</a>                        
                         <img src={book} className="icone-nav" alt="Icône pour le lien livre d'or" />
                     </li>
                     <li>
-                        <a href={`mailto:${email}`} className="nav-link">Contact</a>
+                        <a href={`mailto:${email}`} className="nav-link" onClick={closeNav}>Contact</a>
                         <img src={contact} className="icone-nav" alt="Icône pour le lien contact" />
                     </li>                    
                 </ul>

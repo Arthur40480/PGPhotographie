@@ -59,7 +59,7 @@ useEffect(() => { // Appel API en méthode "GET" pour récupérer les catégorie
     return (
       <main className="category-main">
         <div className="container-category-title">
-          <h1 className="category-title"><span>Galerie</span></h1>
+          <h1 id="galerie" className="category-title"><span>Galerie</span></h1>
         </div>
         {categories.length > 0 && displayCategories(categories)}
       </main>
