@@ -3,7 +3,6 @@ import http from "./../../services/http.js";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PhotoContainer from "../../components/photoContainer/photoContainer.jsx";
-import LoadingPage from "../../components/loadingPage/loadingPage";
 
 function Gallery() {
 
@@ -69,16 +68,12 @@ function Gallery() {
 
     return (
         <>
-            {isLoading ? (
-                <LoadingPage />
-            ) : (
-                <main className="gallery-main">
-                    <div className="container-gallery-title">
-                        <h1 className="gallery-title"><span>{categoryTitle}</span></h1>
-                    </div>
-                    <PhotoContainer data={photoInfo} />
-                </main>
-            )}          
+            <main className="gallery-main">
+                <div className="container-gallery-title">
+                    <h1 id="gallerytitle" className="gallery-title"><span>{categoryTitle}</span></h1>
+                </div>
+                <PhotoContainer data={photoInfo} />
+            </main>
         </>
     )
 }
