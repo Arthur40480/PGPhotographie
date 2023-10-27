@@ -42,7 +42,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:5ec8780e9e9001d3377fbd9503eef013b69467fbe2d56ab1a051b15dba96a0dd96e200aac5355d27569e1ad05aaaed1fb4a27cc47c7805dcc6a1acc48911e9f8#npm:18.2.0"],\
             ["react-google-recaptcha", "virtual:5ec8780e9e9001d3377fbd9503eef013b69467fbe2d56ab1a051b15dba96a0dd96e200aac5355d27569e1ad05aaaed1fb4a27cc47c7805dcc6a1acc48911e9f8#npm:3.1.0"],\
             ["react-router-dom", "virtual:5ec8780e9e9001d3377fbd9503eef013b69467fbe2d56ab1a051b15dba96a0dd96e200aac5355d27569e1ad05aaaed1fb4a27cc47c7805dcc6a1acc48911e9f8#npm:6.14.2"],\
-            ["react-scroll", "virtual:5ec8780e9e9001d3377fbd9503eef013b69467fbe2d56ab1a051b15dba96a0dd96e200aac5355d27569e1ad05aaaed1fb4a27cc47c7805dcc6a1acc48911e9f8#npm:1.9.0"],\
             ["vite", "virtual:5ec8780e9e9001d3377fbd9503eef013b69467fbe2d56ab1a051b15dba96a0dd96e200aac5355d27569e1ad05aaaed1fb4a27cc47c7805dcc6a1acc48911e9f8#npm:4.4.7"]\
           ],\
           "linkType": "SOFT"\
@@ -2780,15 +2779,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["lodash.throttle", [\
-        ["npm:4.1.1", {\
-          "packageLocation": "./.yarn/cache/lodash.throttle-npm-4.1.1-856641af92-129c0a28ce.zip/node_modules/lodash.throttle/",\
-          "packageDependencies": [\
-            ["lodash.throttle", "npm:4.1.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["loose-envify", [\
         ["npm:1.4.0", {\
           "packageLocation": "./.yarn/cache/loose-envify-npm-1.4.0-6307b72ccf-6517e24e0c.zip/node_modules/loose-envify/",\
@@ -3302,7 +3292,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:5ec8780e9e9001d3377fbd9503eef013b69467fbe2d56ab1a051b15dba96a0dd96e200aac5355d27569e1ad05aaaed1fb4a27cc47c7805dcc6a1acc48911e9f8#npm:18.2.0"],\
             ["react-google-recaptcha", "virtual:5ec8780e9e9001d3377fbd9503eef013b69467fbe2d56ab1a051b15dba96a0dd96e200aac5355d27569e1ad05aaaed1fb4a27cc47c7805dcc6a1acc48911e9f8#npm:3.1.0"],\
             ["react-router-dom", "virtual:5ec8780e9e9001d3377fbd9503eef013b69467fbe2d56ab1a051b15dba96a0dd96e200aac5355d27569e1ad05aaaed1fb4a27cc47c7805dcc6a1acc48911e9f8#npm:6.14.2"],\
-            ["react-scroll", "virtual:5ec8780e9e9001d3377fbd9503eef013b69467fbe2d56ab1a051b15dba96a0dd96e200aac5355d27569e1ad05aaaed1fb4a27cc47c7805dcc6a1acc48911e9f8#npm:1.9.0"],\
             ["vite", "virtual:5ec8780e9e9001d3377fbd9503eef013b69467fbe2d56ab1a051b15dba96a0dd96e200aac5355d27569e1ad05aaaed1fb4a27cc47c7805dcc6a1acc48911e9f8#npm:4.4.7"]\
           ],\
           "linkType": "SOFT"\
@@ -3529,34 +3518,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:5ec8780e9e9001d3377fbd9503eef013b69467fbe2d56ab1a051b15dba96a0dd96e200aac5355d27569e1ad05aaaed1fb4a27cc47c7805dcc6a1acc48911e9f8#npm:18.2.0"],\
             ["react-router", "virtual:970d5fc2c46733e88e244062cd1f06685abb61f02f2e848fd2c21eb1ff3a1b5faa187f4149e21a75c4061de7573fbc732f9bcc4fddb8e528f4999b24572f4782#npm:6.14.2"]\
-          ],\
-          "packagePeers": [\
-            "@types/react-dom",\
-            "@types/react",\
-            "react-dom",\
-            "react"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["react-scroll", [\
-        ["npm:1.9.0", {\
-          "packageLocation": "./.yarn/cache/react-scroll-npm-1.9.0-b612dd2ab5-b84427d090.zip/node_modules/react-scroll/",\
-          "packageDependencies": [\
-            ["react-scroll", "npm:1.9.0"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:5ec8780e9e9001d3377fbd9503eef013b69467fbe2d56ab1a051b15dba96a0dd96e200aac5355d27569e1ad05aaaed1fb4a27cc47c7805dcc6a1acc48911e9f8#npm:1.9.0", {\
-          "packageLocation": "./.yarn/__virtual__/react-scroll-virtual-b49903b8c4/0/cache/react-scroll-npm-1.9.0-b612dd2ab5-b84427d090.zip/node_modules/react-scroll/",\
-          "packageDependencies": [\
-            ["react-scroll", "virtual:5ec8780e9e9001d3377fbd9503eef013b69467fbe2d56ab1a051b15dba96a0dd96e200aac5355d27569e1ad05aaaed1fb4a27cc47c7805dcc6a1acc48911e9f8#npm:1.9.0"],\
-            ["@types/react", "npm:18.2.16"],\
-            ["@types/react-dom", "npm:18.2.7"],\
-            ["lodash.throttle", "npm:4.1.1"],\
-            ["prop-types", "npm:15.8.1"],\
-            ["react", "npm:18.2.0"],\
-            ["react-dom", "virtual:5ec8780e9e9001d3377fbd9503eef013b69467fbe2d56ab1a051b15dba96a0dd96e200aac5355d27569e1ad05aaaed1fb4a27cc47c7805dcc6a1acc48911e9f8#npm:18.2.0"]\
           ],\
           "packagePeers": [\
             "@types/react-dom",\
