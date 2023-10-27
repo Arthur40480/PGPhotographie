@@ -2,9 +2,8 @@ import http from "../../services/http.js";
 import { useState, useEffect } from "react";
 import "./Category.css";
 import Collapse from "../../components/collapse/collapse.jsx";
-import backgroundGallery1 from "../../assets/categorie1_galerie.jpg"
-import backgroundGallery2 from "../../assets/categorie2_galerie.jpg"
-import separator from "../../../public/separateur.svg"
+import backgroundGallery from "../../assets/categorie_img.jpg";
+import separator from "../../../public/separateur.svg";
 
 function Category() {
 
@@ -38,21 +37,16 @@ useEffect(() => { // Appel API en méthode "GET" pour récupérer les catégorie
    */
   function displayCategories(array) {
     return (
-      <>
-        {array.map((cat, index) => (
-          <>
-            <section className="container-category" key={cat.attributes.title}>
-              <img className="background-img-category" src={import.meta.env.VITE_REACT_APP_URL + cat.attributes.picture.data.attributes.url} alt={`Photo de la catégorie ${cat.attributes.rank}`}></img>
-              { array.length !== 0 && (
-                <Collapse data={cat} style={cat.attributes.rank % 2 === 0 ? collapseStyle2 : collapseStyle1} />
-              )}
-            </section>
-            <section className="separator-category-container">
-              <img src={separator} alt={`Séparateur ${cat.attributes.rank}`} />
-            </section>
-          </>
-        ))}
-      </>
+        <>
+          <section className="container-category">
+            <img className="background-img-category" src={backgroundGallery} alt="Photo du conteneur de catégorie, moitié en noir et blanc à gauche, moitié en couleur à droite"></img>
+            <Collapse data={array[0]} style={collapseStyle1} />
+            <Collapse data={array[1]} style={collapseStyle2} />
+          </section>
+          <section className="separator-category-container">
+            <img src={separator} alt="Image d'un séparateur pour la page catégorie" />
+          </section>
+        </>
     )
   }
 
@@ -64,6 +58,6 @@ useEffect(() => { // Appel API en méthode "GET" pour récupérer les catégorie
         {categories.length > 0 && displayCategories(categories)}
       </main>
     )
-  }
+}
 
   export default Category;
