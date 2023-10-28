@@ -11,6 +11,15 @@ function PhotoContainer({ data }) {
     const [ selectedImg, setSelectedImg ] = useState(null);
     const [ hoveredImgIndex, setHoveredImgIndex ] = useState(null);
 
+    // Vérification si data est vide ou s'il y a une erreur
+    if (!data || data instanceof Error) {
+        if (!data) {
+            return <div>Pas de photo pour l'instant</div>;
+        } else {
+            return <div>Une erreur s'est produite</div>;
+        }
+    }
+    
     /**
      * Fonction pour ouvrir le carrousel, et passer l'index de notre photo séléctionnée au state selectedImg
      * @param {number} index 
