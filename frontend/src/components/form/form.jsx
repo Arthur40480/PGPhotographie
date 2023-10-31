@@ -77,28 +77,32 @@ function Form() {
             }
         };
 
-    function validForm() {  // Fonction qui fait respecter les RegEx dans le formulaire
-        var isValid = true;
-        const newError = {};
+        function validForm() {  // Fonction qui fait respecter les RegEx dans le formulaire
+            let isValid = true;
+            const newError = { ...formErrors };
+        
+            if (formData.firstname.trim() === '') {
+                newError.firstname = "Le prénom est requis.";
+                isValid = false;
 
-        if(!nameRegEx.test(formData.lastname)) {
-            newError.lastname = "Le nom doit contenir 30 caractères alphabétiques maximum."
-            isValid = false
+            } else if (!nameRegEx.test(formData.firstname)) {
+                newError.firstname = "Le prénom doit contenir entre 2 et 30 caractères alphabétiques maximum.";
+                isValid = false;
+            }
+        
+            if (formData.lastname.trim() !== '' && !nameRegEx.test(formData.lastname)) {
+                newError.lastname = "Le nom doit contenir 30 caractères alphabétiques maximum.";
+                isValid = false;
+            }
+        
+            if (!commentRegEx.test(formData.comment)) {
+                newError.comment = "Le commentaire doit contenir entre 2 et 800 caractères maximum.";
+                isValid = false;
+            }
+        
+            setformErrors(newError);
+            return isValid;
         }
-
-        if(!nameRegEx.test(formData.firstname)) {
-            newError.firstname = "Le prénom doit contenir entre 2 et 30 caractères alphabétiques maximum."
-            isValid = false
-        }
-
-        if(!commentRegEx.test(formData.comment)) {
-            newError.comment = "Le commentaire doit contenir entre 2 et 800 caractères maximum."
-            isValid = false
-        }
-
-        setformErrors(newError);
-        return isValid;
-    }
 
     /**
      * Fonction qui sert à gérer les changements dans les champs de formulaire lorsque l'utilisateur saisit des données
@@ -139,16 +143,16 @@ function Form() {
                     onChange={onChange}
             />
                 <label className="short-label">
-                    Votre nom
-                    <input type="text" name="lastname" value={formData.lastname} onChange={handleInputChange}/>
-                    {formErrors.lastname && <p className="error-message">{formErrors.lastname}</p>}
-                </label>
-                <label className="short-label">
                     <div>
                         Votre prénom <span className="required-fields">*</span>
                     </div>
                     <input type="text" name="firstname" value={formData.firstname} onChange={handleInputChange} required/>
                     {formErrors.firstname && <p className="error-message">{formErrors.firstname}</p>}
+                </label>
+                <label className="short-label">
+                    Votre nom
+                    <input type="text" name="lastname" value={formData.lastname} onChange={handleInputChange}/>
+                    {formErrors.lastname && <p className="error-message">{formErrors.lastname}</p>}
                 </label>
                 <label className="large-label">
                     <div>
@@ -157,6 +161,7 @@ function Form() {
                     <textarea name="comment" className="large-field" value={formData.comment} onChange={handleInputChange} required/>
                     {formErrors.comment && <p className="error-message">{formErrors.comment}</p>}
                 </label>
+                <p className="required-fields-message">Les champs marqués d&lsquo;une ( * ) sont obligatoires.</p>
                 <button type="submit" className="form-golden-book-button">
                     Envoyer
                     <img src={send} alt="Îcon d'avion en papier 1" />
