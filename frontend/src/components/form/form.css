@@ -53,6 +53,10 @@
     margin-bottom: 40px;
 }
 
+.form-golden-book label:nth-child(4) {
+    margin-bottom: 0px;
+}
+
 .short-label {
     width: 400px;
 }
@@ -108,6 +112,13 @@
 .required-fields {
     color: var(--tertiary-color);
     background: none;
+}
+
+.required-fields-message {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--tertiary-color);
 }
 
 /* --- Media Queries -- */
@@ -179,5 +190,9 @@
     
     .large-label {
         width: 95%;
+    }
+
+    .required-fields-message {
+        font-size: 12px;
     }
 }
