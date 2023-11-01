@@ -40,8 +40,8 @@ useEffect(() => { // Appel API en méthode "GET" pour récupérer les catégorie
         <>
           <section className="container-category">
             <img className="background-img-category" src={backgroundGallery} alt="Photo du conteneur de catégorie, moitié en noir et blanc à gauche, moitié en couleur à droite"></img>
-            <Collapse data={array[0]} style={collapseStyle1} />
-            <Collapse data={array[1]} style={collapseStyle2} />
+            <Collapse data={array[0]} style={collapseStyle2} />
+            <Collapse data={array[1]} style={collapseStyle1} />
           </section>
           <section className="separator-category-container">
             <img src={separator} alt="Image d'un séparateur pour la page catégorie" />
