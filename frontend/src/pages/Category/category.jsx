@@ -9,17 +9,30 @@ function Category() {
 
   // -- Déclaration de state --//
   const [ categories, setCategories ] = useState([]);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
 
   const collapseStyle1 = {
     position: "absolute",
-    top: "10%",
-    right: "10%",
+    top: windowWidth < 480 ? "2.5%" : "10%",
+    right: windowWidth < 480 ? "2.5%" : "10%",
   };
 
   const collapseStyle2 = {
     position: "absolute",
-    top: "10%",
-    left: "10%", 
+    top: windowWidth < 480 ? "2.5%" : "10%",
+    left: windowWidth < 480 ? "2.5%" : "10%",
   };
 
 useEffect(() => { // Appel API en méthode "GET" pour récupérer les catégories
@@ -40,8 +53,8 @@ useEffect(() => { // Appel API en méthode "GET" pour récupérer les catégorie
         <>
           <section className="container-category">
             <img className="background-img-category" src={backgroundGallery} alt="Photo du conteneur de catégorie, moitié en noir et blanc à gauche, moitié en couleur à droite"></img>
-            <Collapse data={array[0]} style={collapseStyle2} />
-            <Collapse data={array[1]} style={collapseStyle1} />
+            <Collapse data={array[0]} style={collapseStyle1} />
+            <Collapse data={array[1]} style={collapseStyle2} />
           </section>
           <section className="separator-category-container">
             <img src={separator} alt="Image d'un séparateur pour la page catégorie" />
