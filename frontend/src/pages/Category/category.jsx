@@ -9,17 +9,30 @@ function Category() {
 
   // -- Déclaration de state --//
   const [ categories, setCategories ] = useState([]);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
 
   const collapseStyle1 = {
     position: "absolute",
-    top: "10%",
-    right: "10%",
+    top: windowWidth < 480 ? "2.5%" : "10%",
+    right: windowWidth < 480 ? "2.5%" : "10%",
   };
 
   const collapseStyle2 = {
     position: "absolute",
-    top: "10%",
-    left: "10%", 
+    top: windowWidth < 480 ? "2.5%" : "10%",
+    left: windowWidth < 480 ? "2.5%" : "10%",
   };
 
 useEffect(() => { // Appel API en méthode "GET" pour récupérer les catégories
