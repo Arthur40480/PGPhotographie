@@ -3,7 +3,6 @@ import buttonClose from "../../../public/close.svg";
 import buttonNext from "../../../public/nextCarrousel.svg"
 import { useState } from "react";
 import PropTypes from 'prop-types';
-import LittleCarrousel from "../littleCarrousel/littleCarrousel.jsx";
 
 function Carrousel({ onClose, data, selectedImg }) {
 
@@ -43,18 +42,6 @@ function Carrousel({ onClose, data, selectedImg }) {
             setImageTransitioning(false);
         }, 300);
     };
-
-    /**
-     * Fonction pour aller à l'image sélectionnée (Depuis le petit carrousel)
-     * @param {number} newImageId 
-     */
-    const handleThumbnailClick = (newImageId) => {
-        const newIndex = data.findIndex((image) => image.id === newImageId);
-        if (newIndex !== -1) {
-            setCurrentIndex(newIndex);
-        }
-        setCurrentImageId(newImageId);
-    };
     
     return (
         <>
@@ -62,17 +49,18 @@ function Carrousel({ onClose, data, selectedImg }) {
                 <img src={buttonClose} className="button-close-popup" onClick={onClose} alt="Button pour fermer le carrousel" />
                 <p className="paging">{currentIndex + 1}/{data.length}</p>
                 <div className="carrousel-container"> 
-                    <img src={selectedData.url} className={`photo-carrousel ${isImageTransitioning ? "transitioning" : ""}`} alt={`Photo ${selectedData.legend}`} />
+                    <img src={buttonNext} className="button-arrow-carrousel previous" onClick={handlePreviousImage} alt="Boutton pour aller à la photo prècedente" />
+                    <div className="photo-carrousel-container"> 
+                        <img src={selectedData.url} className={`photo-carrousel ${isImageTransitioning ? "transitioning" : ""}`} alt={`Photo ${selectedData.legend}`} />
+                    </div>
+                    <img src={buttonNext} className="button-arrow-carrousel next" onClick={handleNextImage} alt="Boutton pour aller à la photo suivante" />
+                </div>
+                <div className="arrow-mobile-container">
+                    <img src={buttonNext} className="button-arrow-mobile previous mobile" onClick={handlePreviousImage} alt="Boutton pour aller à la photo prècedente" />
+                    <img src={buttonNext} className="button-arrow-mobile next " onClick={handleNextImage} alt="Boutton pour aller à la photo suivante" />
                 </div>
                 <div className="legend-container">
                     <p className="legend">{selectedData.legend}</p>
-                </div>
-                <div className="arrows-container">
-                    <img src={buttonNext} className="button-arrow-carrousel previous" onClick={handlePreviousImage} alt="Boutton pour aller à la photo prècedente" />
-                    <div className="thumbnail-carrousel-container">
-                        <LittleCarrousel data={data} activeImageId={currentImageId} onThumbnailClick={handleThumbnailClick}/>
-                    </div>
-                    <img src={buttonNext} className="button-arrow-carrousel next" onClick={handleNextImage} alt="Boutton pour aller à la photo suivante" />
                 </div>
             </div>
         </>
