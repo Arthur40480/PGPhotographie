@@ -1,6 +1,6 @@
 import http from "../../services/http.js";
 import { useState, useEffect } from "react";
-import "./Category.css";
+import "./category.css";
 import Collapse from "../../components/collapse/collapse.jsx";
 import backgroundGallery from "../../assets/categorie_img.jpg";
 import separator from "../../../public/separateur.svg";
@@ -40,6 +40,7 @@ useEffect(() => { // Appel API en méthode "GET" pour récupérer les catégorie
     .then(({ data }) => {
       setCategories(data.data);
       displayCategories(data.data);
+      console.log(data.data);
     });
   }, []);
 
@@ -53,8 +54,8 @@ useEffect(() => { // Appel API en méthode "GET" pour récupérer les catégorie
         <>
           <section className="container-category">
             <img className="background-img-category" src={backgroundGallery} alt="Photo du conteneur de catégorie, moitié en noir et blanc à gauche, moitié en couleur à droite"></img>
-            <Collapse data={array[0]} style={collapseStyle1} />
-            <Collapse data={array[1]} style={collapseStyle2} />
+            <Collapse data={array[0]} style={collapseStyle2} />
+            <Collapse data={array[1]} style={collapseStyle1} />
           </section>
           <section className="separator-category-container">
             <img src={separator} alt="Image d'un séparateur pour la page catégorie" />
