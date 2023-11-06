@@ -27,8 +27,8 @@
     justify-content: center;
     position: fixed;
     background-color: var(--text-color);
-    width: 90px;
-    height: 90px;   
+    width: 100px;
+    height: 100px;   
     top: 0;
     right: 0;
     cursor: pointer;
@@ -39,18 +39,19 @@
 
 .element-nav {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
     background-color: var(--text-color);
-    width: 25px;
-    height: 12px;
 }
 
-.white-bar {
-    background-color: white;
-    width: 34px;
-    height: 2px;
+.icon-menu {
+    width: 60px;
+}
+
+.icon-mobile {
+    display: none;
 }
 
 .nav {
@@ -153,6 +154,14 @@
     .icone-nav {
         width: 34px;
     }
+
+    .icon-menu {
+        display: none;
+    }
+
+    .icon-mobile {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -176,6 +185,10 @@
 
     .icone-nav {
         width: 30px;
+    }
+
+    .icon-menu {
+        width: 45px;
     }
 }
 
