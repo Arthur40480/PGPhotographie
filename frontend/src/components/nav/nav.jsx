@@ -6,6 +6,9 @@ import book from "../../../public/book.svg";
 import contact from "../../../public/contact.svg";
 import gallery from "../../../public/gallery.svg";
 import home from "../../../public/home.svg";
+import click from "../../../public/menuIcon.svg";
+import clickMobile from "../../../public/menuIconMobile.svg";
+
 
 function Nav() {
 
@@ -68,9 +71,8 @@ function Nav() {
             <div onClick={openOrCloseNav} className="trigger-nav"
             style={{display: isOpen ? "none" : "flex"}}>
                 <div className="element-nav">
-                    <span className="white-bar"></span>
-                    <span className="white-bar"></span>
-                    <span className="white-bar"></span>
+                    <img src={click} className="icon-menu" alt="Icon pour le menu" />
+                    <img src={clickMobile} className="icon-menu icon-mobile" alt="Icon pour le menu mobile" />
                 </div>
             </div>
         </>
