@@ -88,7 +88,7 @@
     align-items: center;
     flex-direction: column;
     list-style-type: none;
-    margin-top: 45%;
+    margin-top: 36%;
 }
 
 .menu-nav li {
@@ -147,8 +147,13 @@
         width: 73%;     
     }
 
+    .menu-nav {
+        margin-top: 49%;
+    }
+
     .menu-nav li {
-        font-size:  20px;
+        margin: 40px 0px;
+        font-size: 20px;
     }
 
     .icone-nav {
@@ -179,8 +184,12 @@
         width: 66%;     
     }
 
+    .menu-nav {
+        margin-top: 60%;
+    }
+
     .menu-nav li {
-        font-size:  18px;
+        font-size: 18px;
     }
 
     .icone-nav {
@@ -199,10 +208,6 @@
         height: 70px;
     }
 
-    .menu-nav li {
-        font-size:  16px;
-    }
-
     .nav {
         width: 42%;
     }
@@ -211,8 +216,13 @@
         width: 58%;     
     }
     
+    .menu-nav {
+        margin-top: 80%;
+    }
+
     .menu-nav li {
-        margin: 40px;
+        margin: 30px;
+        font-size: 16px;
     }
 
     .icone-nav {

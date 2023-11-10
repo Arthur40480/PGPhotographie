@@ -1,18 +1,18 @@
 @import "../../styles/variables.css";
 
-.container-usefull-link-title {
+.container-useful-link-title {
     margin: 100px auto 0 auto;
     width: 60%;
     overflow: hidden;
     font-family: 'Cinzel', sans-serif;
 }
 
-.usefull-link-title span {
+.useful-link-title span {
     position: relative;
     padding: 1em;
 }
 
-.usefull-link-title span::before {
+.useful-link-title span::before {
     content: "";
     display: block;
     position: absolute;
@@ -24,7 +24,7 @@
     right: 100%;
 }
 
-.usefull-link-title span::after {
+.useful-link-title span::after {
     content: "";
     display: block;
     position: absolute;
@@ -36,7 +36,7 @@
     left: 100%;
 }
 
-.usefull-link-title {
+.useful-link-title {
     margin-bottom: 100px;
     font-size: 50px;
     text-align: center;
