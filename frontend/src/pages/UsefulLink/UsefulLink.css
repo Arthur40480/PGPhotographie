@@ -41,3 +41,33 @@
     font-size: 50px;
     text-align: center;
 }
+
+/* --- Media Queries -- */
+@media screen and (max-width: 1024px) {
+    
+    .container-useful-link-title {
+        margin: 50px auto 0 auto;
+    }
+
+    .useful-link-title {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .container-useful-link-title {
+        width: 80%;
+    }
+
+    .useful-link-title {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .useful-link-title {
+        font-size: 25px;
+    }
+}

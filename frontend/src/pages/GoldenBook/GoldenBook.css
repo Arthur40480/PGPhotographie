@@ -75,7 +75,18 @@
         width: 80%;
     }
 
+    .golden-book-title {
+        font-size: 30px;
+    }
+
     .golden-book-separator {
         width: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .golden-book-title {
+        font-size: 25px;
     }
 }

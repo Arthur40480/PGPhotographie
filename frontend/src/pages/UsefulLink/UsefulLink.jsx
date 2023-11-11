@@ -1,3 +1,5 @@
+import "./UsefulLink.css";
+
 function UsefulLink() {
     return (
         <main className="useful-link-main">
