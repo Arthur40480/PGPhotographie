@@ -1,7 +1,7 @@
 import "./linkContainer.css";
 
 
-function linkContainer() {
+function LinkContainer() {
 
     return (
         <section className="links-section">
@@ -12,5 +12,5 @@ function linkContainer() {
     )
 }
 
-export default linkContainer;
+export default LinkContainer;
 
