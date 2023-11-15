@@ -6,6 +6,7 @@ import Category from "./pages/Category/Category";
 import Gallery from "./pages/Gallery/Gallery";
 import GoldenBook from "./pages/GoldenBook/GoldenBook";
 import LegalNotice from "./pages/LegalNotice/LegalNotice";
+import UsefulLink from "./pages/UsefulLink/UsefulLink";
 import Error from "./pages/Error/Error";
 import "./App.css";
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/gallery/:id" element={<Gallery />} />
         <Route path="/golden-book" element={<GoldenBook />} />
         <Route path="/legal-notice" element={<LegalNotice />} />
+        <Route path="/useful-link" element={<UsefulLink />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

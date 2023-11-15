@@ -6,6 +6,7 @@ import book from "../../../public/book.svg";
 import contact from "../../../public/contact.svg";
 import gallery from "../../../public/gallery.svg";
 import home from "../../../public/home.svg";
+import link from "../../../public/usefulLink.svg";
 import click from "../../../public/menuIcon.svg";
 import clickMobile from "../../../public/menuIconMobile.svg";
 
@@ -60,8 +61,12 @@ function Nav() {
                         <img src={book} className="icone-nav" alt="Icône pour le lien livre d'or" />
                     </li>
                     <li>
+                        <a href="/useful-link#useful-link" className="nav-link" onClick={closeNav}>Liens utiles</a>                        
+                        <img src={link} className="icone-nav" alt="Icône pour le lien Liens utile" />
+                    </li>
+                    <li>
                         <a href={`mailto:${email}`} className="nav-link" onClick={closeNav}>Contact</a>
-                        <img src={contact} className="icone-nav" alt="Icône pour le lien contact" />
+                        <img src={contact} className="icone-nav" useful-linkalt="Icône pour le lien contact" />
                     </li>                    
                 </ul>
             </nav>

@@ -1,28 +1,23 @@
-.golden-book-main {
+@import "../../styles/variables.css";
+
+.useful-link-main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-.container-golden-book-title {
+.container-useful-link-title {
     margin: 100px auto 0 auto;
     width: 60%;
     overflow: hidden;
     font-family: 'Cinzel', sans-serif;
 }
 
-.golden-book-title {
-    margin-bottom: 20px;
-    font-size: 50px;
-    text-align: center;
-}
-
-.golden-book-title span {
+.useful-link-title span {
     position: relative;
     padding: 1em;
 }
 
-.golden-book-title span::before {
+.useful-link-title span::before {
     content: "";
     display: block;
     position: absolute;
@@ -34,7 +29,7 @@
     right: 100%;
 }
 
-.golden-book-title span::after {
+.useful-link-title span::after {
     content: "";
     display: block;
     position: absolute;
@@ -46,47 +41,40 @@
     left: 100%;
 }
 
-.golden-book-introduction {
+.useful-link-title {
+    margin-bottom: 100px;
+    font-size: 50px;
     text-align: center;
-    font-family: "Roboto", sans-serif;
-    margin-bottom: 20px;
-}
-
-.golden-book-separator {
-    margin: 40px;
-    width: 350px;
 }
 
 /* --- Media Queries -- */
 @media screen and (max-width: 1024px) {
     
-    .container-golden-book-title {
+    .container-useful-link-title {
         margin: 50px auto 0 auto;
     }
 
-    .golden-book-title {
+    .useful-link-title {
         font-size: 36px;
     }
 }
 
 @media screen and (max-width: 767px) {
 
-    .container-golden-book-title {
+    .container-useful-link-title {
+        margin: 50px auto 0 auto;
         width: 80%;
     }
 
-    .golden-book-title {
+    .useful-link-title {
+        margin-bottom: 50px;
         font-size: 30px;
-    }
-
-    .golden-book-separator {
-        width: 250px;
     }
 }
 
 @media screen and (max-width: 480px) {
 
-    .golden-book-title {
+    .useful-link-title {
         font-size: 25px;
     }
 }
