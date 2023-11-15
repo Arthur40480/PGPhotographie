@@ -32,8 +32,8 @@ function Gallery() {
             .catch((error) => {
                 console.error('Erreur lors du chargement des données:', error);
                 setIsLoading(false);
-            }, [id]);
-    });
+            });
+    }, [id]);
 
     /**
      * Fonction permettant de comparer l'id de l'url avec l'id des sous-catégories

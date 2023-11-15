@@ -29,7 +29,8 @@ function Footer() {
             <ul className="footer-list">
                 <li><NavLink exact to="/" className="footer-link">Accueil</NavLink></li>
                 <li><a href="/category#galerie" className="footer-link">Galerie</a></li>
-                <li><a href="/golden-book#golden-book" className="footer-link">Livre d&lsquo;Or</a>                        </li>
+                <li><a href="/golden-book#golden-book" className="footer-link">Livre d&lsquo;Or</a></li>
+                <li><a href="/useful-link#useful-link" className="footer-link">Liens utiles</a></li>
                 <li><a href={`mailto:${email}`} className="footer-link">Contact</a></li>
                 <li><a href="/legal-notice#legal-notice" className="footer-link">Mentions légales</a></li>
             </ul>

@@ -57,6 +57,19 @@ footer {
     }
 }
 
+@media screen and (max-width: 950px) {
+
+    .footer-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-list li {
+        margin: 10px 0px;
+    }
+}
+
 @media screen and (max-width: 767px) {
 
     .footer-logo {
@@ -64,11 +77,6 @@ footer {
         margin: 10px 0 10px 0;
     }
 
-    .footer-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     .footer-list li {
         margin-top: 10px;
     }
