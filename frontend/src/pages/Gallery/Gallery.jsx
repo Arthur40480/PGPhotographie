@@ -14,7 +14,7 @@ function Gallery() {
     // -- Extraction de l'id via l'URL --//
     const { id } = useParams();
     const convertingIdNumber = parseInt(id);
-    const categoryTitle = new URLSearchParams(window.location.search).get("categoryTitle"); // Appel API en méthode "GET" pour récupérer les photos de la sous-catégorie
+    const categoryTitle = new URLSearchParams(window.location.search).get("categoryTitle");
 
     useEffect(() => {   // Appel API en méthode "GET" pour récupérer les photos de la sous-catégorie
         http.get("/api/subcategories?populate[0]=photos.src")
