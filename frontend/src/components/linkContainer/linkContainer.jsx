@@ -29,7 +29,7 @@ function LinkContainer() {
                 links.map(( { id, attributes }) => (
                     <div key={id} className="link-content">
                         <h3 className="link-content-title">{attributes.titre}</h3>
-                        <p><a href={attributes.url}>rtehrth</a></p> 
+                        <p><a href={attributes.url}>{attributes.url}</a></p> 
                         <p className="link-description">{attributes.description}</p>
                         <div className="separator-link-container">
                             <img className="separator" src={separator} alt="séparateur d'actualités" />
