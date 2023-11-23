@@ -280,106 +280,41 @@
         margin: 0 30px;
     }
 }
-/* @media screen and (max-width: 1250px) {
+
+/* --- Media Queries spécifiques au mode paysage -- */
+@media screen and (orientation: landscape) {
+    
+    .paging {
+        top: 9px;
+        left: 15px;
+    }
     
     .button-close-popup {
+        position: absolute;
+        width: 20px;
+        top: 9px;
         right: 10px;
     }
 
-    .paging {
-        left: 10px;
-    }
-
-    .photo-carrousel {
-        height: 95%;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-
-    .button-close-popup {
-        width: 18px;
-    }
-
-    .paging {
-        width: 18px;
-    }
-
-    .photo-carrousel {
-        height: 90%;
-    }
-
-    .legend {
-        font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 949px) {
-
     .carrousel-container {
-        height: 70%;
-    }
-
-    .photo-carrousel {
-        height: 85%;
-    }
-
-    .legend {
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width: 840px) {
-
-    .carrousel-container {
-        height: 70%;
-    }
-
-    .photo-carrousel {
-        height: 75%;
-    }
-}
-
-@media screen and (max-width: 767px) {
-
-    .carrousel-container {
-        margin-bottom: 40px;
-        width: 95%;
-        height: 50%;
-    }
-
-    .photo-carrousel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
         height: 100%;
     }
 
-    .legend {
-        margin-bottom: 40px;
-        font-size: 16px;
+    .photo-carrousel-container {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
-    .button-arrow-carrousel {
-        margin: 0px 40px;
+    .arrow-mobile-container {
+        display: none;
     }
 
-    .thumbnail-carrousel-container {
+    .legend-container {
         display: none;
     }
 }
-
-@media screen and (max-width: 650px) {
-
-    .carrousel-container {
-        height: 40%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    
-    .carrousel-container {
-        height: 35%;
-    }
-
-    .legend {
-        font-size: 14px;
-    }
-} */

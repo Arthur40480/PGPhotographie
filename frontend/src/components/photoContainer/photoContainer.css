@@ -24,8 +24,8 @@
     position: relative;
     display: flex;
     margin: 20px;
-    width: 30%;
-    height: 400px;
+    width: 10%;
+    height: 100px;
 }
 
 .picture-img {
@@ -46,9 +46,9 @@
 
 .icon-img {
     position: absolute;
-    width: 90px;
-    top: 39%;
-    left: 44%;
+    width: 40px;
+    top: 30%;
+    left: 40%;
     transform: rotate(20deg);
     cursor: pointer;
     opacity: 0;
