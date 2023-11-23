@@ -36,3 +36,12 @@
         margin: 40px;
     }
 }
+
+/* --- Media Queries spécifiques au mode paysage -- */
+@media screen and (orientation: landscape) {
+    
+    .header {
+        height: 100vh;
+    }
+
+}
