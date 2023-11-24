@@ -27,7 +27,7 @@ function PhotoContainer({ data }) {
         document.body.style.overflow = 'auto';
     }
 
-    console.log(data);
+    
     return (
         <>
             <section className="picture-section">
