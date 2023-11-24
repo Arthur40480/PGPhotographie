@@ -1,7 +1,7 @@
 import "./carrousel.css";
 import buttonClose from "../../../public/close.svg";
 import buttonNext from "../../../public/nextCarrousel.svg"
-import { useState } from "react";
+import { useState, useRef } from "react";
 import PropTypes from 'prop-types';
 
 function Carrousel({ onClose, data, selectedImg }) {
@@ -12,8 +12,22 @@ function Carrousel({ onClose, data, selectedImg }) {
     const [currentIndex, setCurrentIndex] = useState(
         data.findIndex((image) => image.id === selectedImg)
     );
+    const touchStartX = useRef(null);
     
     const selectedData = data[currentIndex];
+
+    const handleTouchStart = (e) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+    
+    const handleTouchEnd = (e) => {
+        if (touchStartX.current - e.changedTouches[0].clientX > 50) {
+            handleNextImage();
+        } else if (e.changedTouches[0].clientX - touchStartX.current > 50) {
+            handlePreviousImage();
+        }
+        touchStartX.current = null;
+    };
     
     const handleNextImage = () => { // Fonction pour aller à l'image suivante
         setImageTransitioning(true);
@@ -45,7 +59,11 @@ function Carrousel({ onClose, data, selectedImg }) {
     
     return (
         <>
-            <div className="popup-container">
+            <div 
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}
+                    className="popup-container"
+            >
                 <img src={buttonClose} className="button-close-popup" onClick={onClose} alt="Button pour fermer le carrousel" />
                 <p className="paging">{currentIndex + 1}/{data.length}</p>
                 <div className="carrousel-container"> 
