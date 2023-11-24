@@ -229,3 +229,12 @@
         width: 26px;
     }
 }
+
+/* --- Media Queries spécifiques au mode paysage -- */
+@media screen and (orientation: landscape) {
+    
+    .menu-nav {
+        overflow-y: auto;
+    }
+
+}
