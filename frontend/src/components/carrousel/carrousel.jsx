@@ -57,11 +57,20 @@ function Carrousel({ onClose, data, selectedImg }) {
         }, 300);
     };
     
+    /**
+    * Fonction pour empêcher le click droit
+    * @param {event} event 
+    */
+    function handleRightClick(event) {
+        event.preventDefault();
+    } 
+
     return (
         <>
             <div 
                     onTouchStart={handleTouchStart}
                     onTouchEnd={handleTouchEnd}
+                    onContextMenu={handleRightClick}
                     className="popup-container"
             >
                 <img src={buttonClose} className="button-close-popup" onClick={onClose} alt="Button pour fermer le carrousel" />
