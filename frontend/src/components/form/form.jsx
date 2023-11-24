@@ -32,9 +32,9 @@ function Form() {
     const siteKey = "6Lc6aewnAAAAABdRrE1jz03zeT63vVNux58wdH8H";
 
     /**
-   * Fonction pour empêcher le click droit
-   * @param {event} event 
-   */
+    * Fonction pour empêcher le click droit
+    * @param {event} event 
+    */
     function handleRightClick(event) {
         event.preventDefault();
     } 

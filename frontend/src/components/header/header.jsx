@@ -6,9 +6,9 @@ import Nav from "../nav/nav";
 function Header() {
 
     /**
-   * Fonction pour empêcher le click droit
-   * @param {event} event 
-   */
+    * Fonction pour empêcher le click droit
+    * @param {event} event 
+    */
     function handleRightClick(event) {
         event.preventDefault();
     }
