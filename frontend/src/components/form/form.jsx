@@ -32,6 +32,14 @@ function Form() {
     const siteKey = "6Lc6aewnAAAAABdRrE1jz03zeT63vVNux58wdH8H";
 
     /**
+    * Fonction pour empêcher le click droit
+    * @param {event} event 
+    */
+    function handleRightClick(event) {
+        event.preventDefault();
+    } 
+
+    /**
      * Fonction qui permet de gérer la soumission du formulaire
      * Avec requête HTTP POST avec les données des commentaires
      * @param {event} event 
@@ -167,7 +175,7 @@ function Form() {
                     <img src={send} alt="Îcon d'avion en papier 1" />
                 </button>
             </form>
-            <div className="img-form-container">
+            <div className="img-form-container" onContextMenu={handleRightClick}>
                 <img src={img} alt="Photo du formulaire" />
             </div>
         </section>

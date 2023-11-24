@@ -45,6 +45,14 @@ useEffect(() => { // Appel API en méthode "GET" pour récupérer les catégorie
   }, []);
 
   /**
+   * Fonction pour empêcher le click droit
+   * @param {event} event 
+   */
+  function handleRightClick(event) {
+    event.preventDefault();
+  } 
+
+  /**
    * Fonction pour afficher chaque catégorie 
    * @param {array} array 
    * @returns {React.ReactNode}
@@ -53,7 +61,7 @@ useEffect(() => { // Appel API en méthode "GET" pour récupérer les catégorie
     return (
         <>
           <section className="container-category">
-            <img className="background-img-category" src={backgroundGallery} alt="Photo du conteneur de catégorie, moitié en noir et blanc à gauche, moitié en couleur à droite"></img>
+            <img className="background-img-category" src={backgroundGallery} onContextMenu={handleRightClick} alt="Photo du conteneur de catégorie, moitié en noir et blanc à gauche, moitié en couleur à droite"></img>
             <Collapse data={array[0]} style={collapseStyle2} />
             <Collapse data={array[1]} style={collapseStyle1} />
           </section>

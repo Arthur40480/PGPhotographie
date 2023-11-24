@@ -12,6 +12,14 @@ function PhotoContainer({ data }) {
     const [ hoveredImgIndex, setHoveredImgIndex ] = useState(null);
     
     /**
+    * Fonction pour empêcher le click droit
+    * @param {event} event 
+    */
+    function handleRightClick(event) {
+        event.preventDefault();
+    }
+
+    /**
      * Fonction pour ouvrir le carrousel, et passer l'index de notre photo séléctionnée au state selectedImg
      * @param {number} index 
      */
@@ -27,10 +35,9 @@ function PhotoContainer({ data }) {
         document.body.style.overflow = 'auto';
     }
 
-    
     return (
         <>
-            <section className="picture-section">
+            <section className="picture-section" onContextMenu={handleRightClick}>
                 {data && data.length > 0 ? (
                     data.map((photo, index) => (
                         <div 
