@@ -69,7 +69,7 @@ $RECYCLE.BIN/
 *.log
 *.sqlite
 *.sqlite3
-
+backend/.env.prod
 
 ############################
 # Misc.

@@ -9,6 +9,8 @@ services:
       - "1337:1337"
     networks:
       - strapi
+    volumes:
+      - web_data:/opt/app/public/uploads
   frontend:
     container_name: frontend
     image: pgphotographie/app:frontend-latest
@@ -20,8 +22,18 @@ services:
     networks:
       - strapi
     volumes:
-      - /etc/letsencrypt/:/etc/letsencrypt/
+      - /etc/letsencrypt/:/etc/letsencrypt/  
+  letsencrypt:
+    image: certbot/certbot:latest
+    command: sh -c "certbot certonly --standalone -d ${DOMAINNAME} --text --agree-tos --email you@example.com --server https://acme-v02.api.letsencrypt.org/directory --rsa-key-size 4096 --verbose --keep-until-expiring --preferred-challenges=http"
+    entrypoint: ""
+    volumes:
+      - "/etc/letsencrypt/:/etc/letsencrypt/"
+    environment:
+      - TERM=xterm
 
 networks:
   strapi:
     name: Strapi
+volumes:
+  web_data:
